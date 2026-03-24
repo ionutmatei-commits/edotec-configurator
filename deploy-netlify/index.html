@@ -4013,7 +4013,7 @@ function openDealerOffer(){
   let recLabor = selectedLaborCost || 0;
   if(!recLabor){
     try{
-      const configuredZones = Object.keys(zoneConfig||{}).filter(z=>zoneConfig[z]&&zoneConfig[z].layers>0);
+      const configuredZones=[...new Set((cartItems||[]).filter(it=>it.zone&&it.zone!=='extra').map(it=>it.zone))];
       recLabor = configuredZones.reduce((sum,z)=>sum+getZoneLaborRON(z),0);
     }catch(_){}
   }
