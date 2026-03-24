@@ -4009,16 +4009,19 @@ function openDealerOffer(){
   ['do-err-name','do-err-phone'].forEach(id=>{
     const el=document.getElementById(id); if(el) el.style.display='none';
   });
-  // Afiseaza manopera recomandata din configurator
-  const recLabor = selectedLaborCost || 0;
+  // Calculeaza manopera estimata pentru toate zonele configurate
+  let recLabor = selectedLaborCost || 0;
+  if(!recLabor){
+    try{
+      const configuredZones = Object.keys(zoneConfig||{}).filter(z=>zoneConfig[z]&&zoneConfig[z].layers>0);
+      recLabor = configuredZones.reduce((sum,z)=>sum+getZoneLaborRON(z),0);
+    }catch(_){}
+  }
   const hintEl = document.getElementById('do-labor-hint');
   const hintVal = document.getElementById('do-labor-hint-val');
   if(hintEl && hintVal && recLabor > 0){
     hintVal.textContent = recLabor.toLocaleString('ro-RO');
     hintEl.style.display = 'block';
-    // Pre-completeaza cu valoarea recomandata
-    const laborInput = document.getElementById('do-labor-cost');
-    if(laborInput) laborInput.value = recLabor;
   } else if(hintEl){
     hintEl.style.display = 'none';
   }
