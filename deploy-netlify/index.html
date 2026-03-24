@@ -2026,7 +2026,14 @@ discBarExtraSheets:"или добавете отделни листове мат
 
 function leaveConfirm(e){
   var hasConfig=false;
-  try{var s=localStorage.getItem('edotec_session_v1');if(s){var d=JSON.parse(s);if(d&&d.zones&&Object.keys(d.zones).length>0)hasConfig=true;}}catch(_){}
+  try{
+    var brand=document.getElementById('sel-brand');
+    var model=document.getElementById('sel-model');
+    if(brand&&brand.value)hasConfig=true;
+    if(model&&model.value)hasConfig=true;
+    var zones=document.querySelectorAll('.lbtn.configured-basic,.lbtn.configured-pro,.lbtn.configured-luxury,.lbtn.configured-ev_elite');
+    if(zones&&zones.length>0)hasConfig=true;
+  }catch(_){}
   if(!hasConfig)return true;
   e.preventDefault();
   if(confirm('Dacă pleci de pe configurator, toate setările și configurațiile făcute până acum se vor șterge.\n\nEști sigur că vrei să pleci?')){
