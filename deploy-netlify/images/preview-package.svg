@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f8f9fa" rx="12"/>
+  
+  <!-- Shadow -->
+  <ellipse cx="200" cy="175" rx="140" ry="12" fill="rgba(0,0,0,0.08)"/>
+  
+  <!-- Caroserie principala (gri) -->
+  <path d="M60 145 L60 115 Q65 95 90 80 L140 65 Q160 55 190 52 L250 52 Q280 54 295 65 L330 80 Q345 90 348 115 L350 145 Z" 
+        fill="#d0d3d8" stroke="#b0b3b8" stroke-width="1.5"/>
+  
+  <!-- Plafon (gri inchis) -->
+  <path d="M130 80 L155 60 Q170 52 200 50 L240 50 Q265 52 280 62 L300 80 Z"
+        fill="#b8bcc4" stroke="#a0a3a8" stroke-width="1"/>
+  
+  <!-- Usa fata - ROSIE -->
+  <path d="M140 82 L140 138 L205 138 L205 82 Q185 78 160 79 Z"
+        fill="#d63031" stroke="#b02020" stroke-width="1.5" opacity="0.9"/>
+        
+  <!-- Usa spate - ROSIE -->
+  <path d="M210 82 L210 138 L275 138 L275 82 Q255 80 230 80 Z"
+        fill="#d63031" stroke="#b02020" stroke-width="1.5" opacity="0.9"/>
+  
+  <!-- Portbagaj haion - ROSU -->
+  <path d="M278 82 L278 138 L345 138 L348 115 L340 88 Q320 80 295 78 Z"
+        fill="#d63031" stroke="#b02020" stroke-width="1.5" opacity="0.9"/>
+  
+  <!-- Capota (gri) -->
+  <path d="M62 138 L62 115 L70 95 Q80 82 100 78 L140 78 L140 138 Z"
+        fill="#c8ccd4" stroke="#a8abb3" stroke-width="1.5"/>
+  
+  <!-- Geamuri -->
+  <path d="M145 84 L155 63 L195 55 L205 84 Z" fill="#90c4e8" opacity="0.7"/>
+  <path d="M212 84 L212 62 L250 55 L268 62 L268 84 Z" fill="#90c4e8" opacity="0.7"/>
+  <path d="M272 84 L285 65 L300 72 L295 84 Z" fill="#90c4e8" opacity="0.7"/>
+  
+  <!-- Roata fata -->
+  <circle cx="110" cy="148" r="22" fill="#555" stroke="#333" stroke-width="2"/>
+  <circle cx="110" cy="148" r="12" fill="#888"/>
+  <circle cx="110" cy="148" r="5" fill="#aaa"/>
+  
+  <!-- Roata spate -->
+  <circle cx="295" cy="148" r="22" fill="#555" stroke="#333" stroke-width="2"/>
+  <circle cx="295" cy="148" r="12" fill="#888"/>
+  <circle cx="295" cy="148" r="5" fill="#aaa"/>
+  
+  <!-- Bara fata -->
+  <rect x="58" y="125" width="15" height="18" rx="3" fill="#bbb"/>
+  <!-- Far fata -->
+  <ellipse cx="65" cy="108" rx="6" ry="8" fill="#ffd700" opacity="0.8"/>
+  
+  <!-- Stop spate -->
+  <rect x="342" y="105" width="8" height="20" rx="2" fill="#ff4444" opacity="0.8"/>
+  
+  <!-- Label rosu pe usi -->
+  <rect x="155" y="98" width="65" height="22" rx="5" fill="rgba(214,48,49,0.15)" stroke="#d63031" stroke-width="1"/>
+  <text x="187" y="113" text-anchor="middle" font-family="Arial" font-size="9" font-weight="700" fill="#d63031">4 uși + haion</text>
+  
+  <!-- Titlu pachet -->
+  <text x="200" y="193" text-anchor="middle" font-family="Arial" font-size="11" font-weight="800" fill="#1a1a2e">4 Uși + Portbagaj</text>
+</svg>
