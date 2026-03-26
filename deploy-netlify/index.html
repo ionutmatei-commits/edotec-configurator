@@ -4269,6 +4269,17 @@ function dealerSendOfferEmails({d, clientName, clientPhone, clientEmail, laborCo
       {type:'text/plain;charset=utf-8'})}).catch(()=>{});
   }
 
+  // Salveaza oferta in Google Sheets (tab cu numele dealer-ului)
+  fetch(GAS_URL,{method:'POST',mode:'no-cors',
+    body:new Blob([JSON.stringify({
+      action:'logDealerOffer',
+      timestamp:new Date().toISOString(),
+      dealerUser:d.user, dealerName:d.name, dealerFirm:d.firm,
+      refNr, clientName, clientPhone, clientEmail,
+      car, materialeRon, laborCost, totalRon,
+      zones:cartItems.map(it=>it.zoneName).join(', ')
+    })],{type:'text/plain;charset=utf-8'})}).catch(()=>{});
+
   showToast('✅ Ofertă generată! Emailuri trimise.');
   trackEvent('dealer_offer_generated',{dealer:d.user,car,ref:refNr,total:totalRon});
 }
