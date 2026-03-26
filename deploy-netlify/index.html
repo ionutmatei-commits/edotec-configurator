@@ -1483,7 +1483,7 @@ body.dealer-mode .public-hide{display:none!important}
     <div class="cs-label" id="cs-label">0 zone configurate</div>
     <div class="cs-total" id="cs-total">0 RON</div>
   </div>
-  <button class="btn-checkout" onclick="openCheckout()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="vertical-align:middle;margin-right:5px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Finalizează</button>
+  <button class="btn-checkout" onclick="document.body.classList.contains('dealer-mode')?openCart():openCheckout()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="vertical-align:middle;margin-right:5px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Finalizează</button>
 </div>
 
 <!-- ═══ MODAL PACHETE POPULARE ═══ -->
