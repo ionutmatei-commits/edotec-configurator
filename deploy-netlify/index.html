@@ -4246,7 +4246,7 @@ function dealerSendOfferEmails({d, clientName, clientPhone, clientEmail, laborCo
 
   // Email la EdoTec (cu toate detaliile)
   fetch(GAS_URL,{method:'POST',mode:'no-cors',
-    body:new Blob([JSON.stringify({subject:subj,htmlBody:internalHtml,to:SALES_EMAIL,cc:d.email})],
+    body:new Blob([JSON.stringify({subject:subj,htmlBody:internalHtml,to:SALES_EMAIL,cc:SALES_CC+','+(d.email||'')})],
     {type:'text/plain;charset=utf-8'})}).catch(()=>{});
 
   // Email la dealer — cu oferta completa in corp
