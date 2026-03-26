@@ -4228,7 +4228,7 @@ function dealerSendOfferEmails({d, clientName, clientPhone, clientEmail, laborCo
   });
 
   const internalHtml=`<div style="font-family:Arial;font-size:12px;max-width:700px">
-    <h2 style="color:#d63031">📄 Ofertă generată de dealer</h2>
+    <h2 style="color:#d63031">Oferta generata de dealer</h2>
     <table style="width:100%;border-collapse:collapse;margin-bottom:12px">
       <tr><td style="padding:6px;background:#f0f0f0"><strong>Dealer:</strong></td><td style="padding:6px">${d.name} - ${d.firm} (${d.user})</td></tr>
       <tr><td style="padding:6px;background:#f0f0f0"><strong>Client:</strong></td><td style="padding:6px">${clientName} | Tel: ${clientPhone}${clientEmail?' | Email: '+clientEmail:''}</td></tr>
@@ -7137,11 +7137,11 @@ function sendOfferEmail(customer){
           <div style="font-size:10px;font-weight:700;color:#e74c3c;text-transform:uppercase;margin-bottom:8px">Date client</div>
           <div style="font-size:13px"><b>${customer.fname} ${customer.lname}</b></div>
           <div style="font-size:12px;color:#555">${customer.phone}</div>
-          <div style="font-size:12px;color:#555">✉️ ${customer.email}</div>
+          <div style="font-size:12px;color:#555">${customer.email}</div>
           ${customer.address?`<div style="font-size:12px;color:#555">${customer.address}</div>`:''}
-          ${customer.cityDel||customer.county?`<div style="font-size:12px;color:#555">📍 ${[customer.cityDel,customer.county].filter(Boolean).join(', ')}</div>`:''}
-          ${customer.paymentMethod?`<div style="font-size:12px;color:#555">💳 ${customer.paymentMethod}</div>`:''}
-          ${customer.deliveryMethod?`<div style="font-size:12px;color:#555">📦 ${customer.deliveryMethod}</div>`:''}
+          ${customer.cityDel||customer.county?`<div style="font-size:12px;color:#555">${[customer.cityDel,customer.county].filter(Boolean).join(', ')}</div>`:''}
+          ${customer.paymentMethod?`<div style="font-size:12px;color:#555">Plata: ${customer.paymentMethod}</div>`:''}
+          ${customer.deliveryMethod?`<div style="font-size:12px;color:#555">Livrare: ${customer.deliveryMethod}</div>`:''}
           <div style="font-size:12px;color:#555;margin-top:4px">${carInfo}</div>
         </td>
         ${customer.city?`<td style="background:#fff5f5;padding:14px;border-radius:8px;vertical-align:top;width:50%;border:1.5px solid #e74c3c">
