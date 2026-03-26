@@ -3876,6 +3876,7 @@ const DEALER_LIST_STATIC = [
   {user:'edotec',    pass:'1234',        name:'Ionut Matei', firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461',  email:'ionut.matei@edotec.ro'},
   {user:'viperx',    pass:'viperx1234',  name:'Cristian Rus', firm:'VIPER X',  address:'Regele Mihai',   phone:'744559289',  email:'komodil1@gmail.com'},
   {user:'timea.pop', pass:'1234vbnm',    name:'Timea Pop',    firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461', email:'ionut.matei@edotec.ro'},
+  {user:'demo',      pass:'demo',        name:'Demo',         firm:'DEMO SRL',  address:'Str. Demo 35',   phone:'733445754',  email:'demo@demo.ro'},
 ];
 
 async function loadDealerList(){
@@ -3923,7 +3924,7 @@ async function dealerLogin(){
   // Incarca lista din Sheet
   const list = await loadDealerList();
   if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
-  const dealer=list.find(d=>d.user.toLowerCase()===user && d.pass===pass);
+  const dealer=list.find(d=>d.user.toLowerCase()===user && String(d.pass)===String(pass));
   if(!dealer){document.getElementById('dl-err').textContent='User sau parolă incorectă';document.getElementById('dl-err').style.display='block';return;}
   // Activare dealer mode
   _currentDealer=dealer;
