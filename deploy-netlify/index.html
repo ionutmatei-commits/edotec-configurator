@@ -3009,7 +3009,8 @@ function calcFuelStats(weightKg){
 function calcMarketSavings(){
   const edotecKg=calcCartTotalWeightKg();
   if(!edotecKg) return null;
-  // Piata: acelasi numar de coli la 2.4 kg/m² (medie materiale clasice piata)
+  // Materialele EdoTec sunt cu 12% mai usoare decat media pietei (ICE)
+  // Materialele EdoTec EV sunt cu 30% mai usoare decat alte materiale EV din piata
   let marketKg=0;
   const prodByName={};
   Object.values(prods).forEach(p=>{prodByName[p.name]=p;});
@@ -3022,12 +3023,12 @@ function calcMarketSavings(){
       const prod=prodByName[m[1].trim()];
       if(!prod) return;
 
-
-      // EV materiale: comparatie cu alte materiale EV din piata (~0.85 kg/m² → ~30% diferenta)
-      // ICE materiale: comparatie cu bitum clasic 2.4 kg/m²
+      // EV: 30% mai usoare; ICE: 12% mai usoare decat piata
       const isEvProduct=['ev_silver','ev_blue','ev_integra','ev_vbb'].includes(prod.id);
-      const marketRef=isEvProduct?0.85:2.4;
-      marketKg+=parseInt(m[2])*prod.m2*marketRef;
+      // marketKg = edotecKg / (1 - reducere%) → adica greutatea pietei pentru aceleasi coli
+      const reducerePct = isEvProduct ? 0.30 : 0.12;
+      const prodKg = parseInt(m[2]) * prod.m2 * (prodWeightKgM2[prod.id]||1.2);
+      marketKg += prodKg / (1 - reducerePct);
     });
   });
   marketKg=Math.round(marketKg*10)/10;
