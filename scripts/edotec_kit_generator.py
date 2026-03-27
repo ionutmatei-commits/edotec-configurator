@@ -220,7 +220,8 @@ def generate_all(price_lookup=None):
 def export_csv(rows, filepath='kit_navigatie_export.csv'):
     """Exporta in CSV pentru import pe site"""
     with open(filepath, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=['cod','titlu','pret','kit','tableta','frame'])
+        writer = csv.DictWriter(f, fieldnames=['cod','titlu','pret','kit','tableta','frame'],
+                                extrasaction='ignore')
         writer.writeheader()
         writer.writerows(rows)
     print(f'Exportat {len(rows)} produse in {filepath}')
