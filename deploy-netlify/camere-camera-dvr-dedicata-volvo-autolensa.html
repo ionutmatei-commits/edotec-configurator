@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cameră DVR Dedicată Volvo | EDOTEC.RO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+:root{--red:#c0392b;--red-h:#a93226;--dk:#1a1a2e;--sh:0 2px 12px rgba(0,0,0,.08);--shh:0 8px 30px rgba(0,0,0,.18);--r:12px;--mx:1400px;--p:clamp(14px,3vw,60px)}
+.w{max-width:var(--mx);margin:0 auto;padding:0 var(--p)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a2e,#2d2d4e,#1a1a2e);padding:48px var(--p) 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;opacity:.03;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;gap:36px;position:relative;z-index:1;flex-wrap:wrap}
+.hero-img{width:160px;height:160px;border-radius:16px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.15)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-txt h1{font-size:clamp(26px,4vw,46px);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.5px}
+.hero-txt h1 span{color:#c0392b}
+.hero-txt p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:16px;max-width:520px;line-height:1.6}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:7px 16px;border-radius:999px;transition:all .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
+/* SORT/INFO bar */
+.bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:12px var(--p)}
+.bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bar-count{font-size:13px;color:#666;font-weight:600}
+.bar-count strong{color:#c0392b}
+/* GRID */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;padding:32px 0 48px}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
+.pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
+.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-body{padding:14px 14px 10px;flex:1;display:flex;flex-direction:column}
+.pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.pc-name{font-size:13px;font-weight:700;color:#1a1a2e;line-height:1.4;flex:1;margin-bottom:12px}
+.pc-prices{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.pc-price{font-size:22px;font-weight:900;color:#1a1a2e}
+.pc-old{font-size:13px;color:#aaa;text-decoration:line-through}
+.pc-btns{display:flex;gap:6px}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:12px;padding:10px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:10px 12px;border-radius:8px;text-align:center;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-det:hover{background:#e0e2e5}
+.pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff;text-transform:uppercase}
+/* EMPTY */
+.empty{text-align:center;padding:80px 20px;color:#888}
+.empty h3{font-size:20px;margin-bottom:10px;color:#444}
+.empty a{color:#c0392b;font-weight:700}
+/* FOOTER */
+.ft{background:#1a1a2e;padding:28px var(--p);text-align:center}
+.ft p{color:rgba(255,255,255,.5);font-size:12px}
+.ft a{color:#c0392b;font-weight:700}
+@media(max-width:480px){.hero-img{width:90px;height:90px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2739/jpeg/category_2739_8ad717bc.jpg" alt="Camere DVR Volvo"></div>
+    <div class="hero-txt">
+      <h1>Cameră DVR <span>Volvo</span></h1>
+      <p>Cameră dedicată, integrare perfectă, aspect OEM — zero fire vizibile, mod parcare 48h, protecție baterie inclusă.</p>
+      <a href="landing-camere-bord.html" class="hero-back">← Înapoi la toate mărcile</a>
+    </div>
+  </div>
+</section>
+<div class="bar">
+  <div class="bar-inner">
+    <span class="bar-count"><strong>21</strong> modele disponibile pentru Volvo</span>
+    <a href="https://www.edotec.ro/category/2739/camera-dvr-dedicata-volvo-autolensa.html" style="font-size:12px;font-weight:700;color:#c0392b">Vezi pe edotec.ro →</a>
+  </div>
+</div>
+<div class="w">
+  <div class="pg">
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_140633.jpg" alt="Cameră DVR Volkswagen ID.4 2022-24, cameră față 1080p Autolensa, Model 24\/7  Negru VW18" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VW18</div>
+        <div class="pc-name">Cameră DVR Volkswagen ID.4 2022-24, cameră față 1080p Autolensa, Model 24\/7  Negru VW18</div>
+        <div class="pc-prices"><span class="pc-price">604 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="69138">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/69138/camera-dvr-volkswagen-id-4-2022-24-camera-fata-1080p-autolensa-model-24-7-negru-vw18.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116445.jpg" alt="Cameră DVR Volkswagen ID.4 2022-24, cameră față 1080p Autolensa, Model 24\/7  Negru VW25" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VW25</div>
+        <div class="pc-name">Cameră DVR Volkswagen ID.4 2022-24, cameră față 1080p Autolensa, Model 24\/7  Negru VW25</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55884">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/55884/camera-dvr-volkswagen-id-4-2022-24-camera-fata-1080p-autolensa-model-24-7-negru-vw25.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116475.jpg" alt="Cameră DVR Volvo C40 Long Range 2022, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV12" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo C40 Long Range 2022, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV12</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55988">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/55988/camera-dvr-volvo-c40-long-range-2022-camera-fata-1080p-autolensa-model-24-7-negru-vvevv12.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116476.jpg" alt="Cameră DVR Volvo S60 4S 6\/2022-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo S60 4S 6\/2022-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55991">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/55991/camera-dvr-volvo-s60-4s-6-2022-camera-fata-1080p-autolensa-model-24-7-negru-vvevv11.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116477.jpg" alt="Cameră DVR Volvo V90 2020, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo V90 2020, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55994">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/55994/camera-dvr-volvo-v90-2020-camera-fata-1080p-autolensa-model-24-7-negru-vvevv11.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116478.jpg" alt="Cameră DVR Volvo S90 2022 B5 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo S90 2022 B5 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55997">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/55997/camera-dvr-volvo-s90-2022-b5-camera-fata-1080p-autolensa-model-24-7-negru-vvevv11.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116479.jpg" alt="Cameră DVR Volvo XC60 6\/2021-25 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC60</div>
+        <div class="pc-name">Cameră DVR Volvo XC60 6\/2021-25 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV11</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56000">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56000/camera-dvr-volvo-xc60-6-2021-25-camera-fata-1080p-autolensa-model-24-7-negru-vvevv11.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116480.jpg" alt="Cameră DVR Volvo XC40 Electric 2021-24 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV10" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC40</div>
+        <div class="pc-name">Cameră DVR Volvo XC40 Electric 2021-24 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV10</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56003">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56003/camera-dvr-volvo-xc40-electric-2021-24-camera-fata-1080p-autolensa-model-24-7-negru-vvevv10.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116481.jpg" alt="Cameră DVR Volvo S60,V60 2020- , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV09" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo S60,V60 2020- , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV09</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56006">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56006/camera-dvr-volvo-s60-v60-2020-camera-fata-1080p-autolensa-model-24-7-negru-vvevv09.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116482.jpg" alt="Cameră DVR Volvo XC40 T4 2018-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV08" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC40</div>
+        <div class="pc-name">Cameră DVR Volvo XC40 T4 2018-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV08</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56009">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56009/camera-dvr-volvo-xc40-t4-2018-camera-fata-1080p-autolensa-model-24-7-negru-vvevv08.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116483.jpg" alt="Cameră DVR Volvo modele 2020- (S90), cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo modele 2020- (S90), cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56012">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56012/camera-dvr-volvo-modele-2020-s90-camera-fata-1080p-autolensa-model-24-7-negru-vvevv07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116484.jpg" alt="Cameră DVR Volvo XC60 Full 2020, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC60</div>
+        <div class="pc-name">Cameră DVR Volvo XC60 Full 2020, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56015">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56015/camera-dvr-volvo-xc60-full-2020-camera-fata-1080p-autolensa-model-24-7-negru-vvevv07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116485.jpg" alt="Cameră DVR Volvo XC60 2018-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC60</div>
+        <div class="pc-name">Cameră DVR Volvo XC60 2018-, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56018">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56018/camera-dvr-volvo-xc60-2018-camera-fata-1080p-autolensa-model-24-7-negru-vvevv07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116486.jpg" alt="Cameră DVR Volvo V90 2017 Cross Country , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo V90 2017 Cross Country , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56021">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56021/camera-dvr-volvo-v90-2017-cross-country-camera-fata-1080p-autolensa-model-24-7-negru-vvevv07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116487.jpg" alt="Cameră DVR Volvo S90 2.0T T4 2017-18 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo S90 2.0T T4 2017-18 , cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV07</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56024">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56024/camera-dvr-volvo-s90-2-0t-t4-2017-18-camera-fata-1080p-autolensa-model-24-7-negru-vvevv07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116488.jpg" alt="Cameră DVR Volvo XC90 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV06" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC90</div>
+        <div class="pc-name">Cameră DVR Volvo XC90 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV06</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56027">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56027/camera-dvr-volvo-xc90-2015-18-camera-fata-1080p-autolensa-model-24-7-negru-vvevv06.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116489.jpg" alt="Cameră DVR Volvo V40 Premium 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV05" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo V40 Premium 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV05</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56030">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56030/camera-dvr-volvo-v40-premium-2015-18-camera-fata-1080p-autolensa-model-24-7-negru-vvevv05.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116490.jpg" alt="Cameră DVR Volvo V40 low 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV04" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo V40 low 2015-18, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV04</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56033">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56033/camera-dvr-volvo-v40-low-2015-18-camera-fata-1080p-autolensa-model-24-7-negru-vvevv04.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116491.jpg" alt="Cameră DVR Volvo XC60 high 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV03" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC60</div>
+        <div class="pc-name">Cameră DVR Volvo XC60 high 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV03</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56036">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56036/camera-dvr-volvo-xc60-high-2015-17-camera-fata-1080p-autolensa-model-24-7-negru-vvevv03.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116492.jpg" alt="Cameră DVR Volvo XC60 low 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV02" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">XC60</div>
+        <div class="pc-name">Cameră DVR Volvo XC60 low 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV02</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56039">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56039/camera-dvr-volvo-xc60-low-2015-17-camera-fata-1080p-autolensa-model-24-7-negru-vvevv02.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116493.jpg" alt="Cameră DVR Volvo S60,S80,V60 2012-19, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AUTOLENSA</div>
+        <div class="pc-name">Cameră DVR Volvo S60,S80,V60 2012-19, cameră față 1080p Autolensa, Model 24\/7  Negru VVEVV01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56042">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56042/camera-dvr-volvo-s60-s80-v60-2012-19-camera-fata-1080p-autolensa-model-24-7-negru-vvevv01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="ft">
+  <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
+</footer>
+</body>
+</html>

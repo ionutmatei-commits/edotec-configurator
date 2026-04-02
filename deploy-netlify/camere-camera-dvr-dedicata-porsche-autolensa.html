@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cameră DVR Dedicată Porsche | EDOTEC.RO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+:root{--red:#c0392b;--red-h:#a93226;--dk:#1a1a2e;--sh:0 2px 12px rgba(0,0,0,.08);--shh:0 8px 30px rgba(0,0,0,.18);--r:12px;--mx:1400px;--p:clamp(14px,3vw,60px)}
+.w{max-width:var(--mx);margin:0 auto;padding:0 var(--p)}
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a2e,#2d2d4e,#1a1a2e);padding:48px var(--p) 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;opacity:.03;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;gap:36px;position:relative;z-index:1;flex-wrap:wrap}
+.hero-img{width:160px;height:160px;border-radius:16px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.15)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-txt h1{font-size:clamp(26px,4vw,46px);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.5px}
+.hero-txt h1 span{color:#c0392b}
+.hero-txt p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:16px;max-width:520px;line-height:1.6}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:7px 16px;border-radius:999px;transition:all .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
+/* SORT/INFO bar */
+.bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:12px var(--p)}
+.bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bar-count{font-size:13px;color:#666;font-weight:600}
+.bar-count strong{color:#c0392b}
+/* GRID */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;padding:32px 0 48px}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
+.pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
+.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-body{padding:14px 14px 10px;flex:1;display:flex;flex-direction:column}
+.pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.pc-name{font-size:13px;font-weight:700;color:#1a1a2e;line-height:1.4;flex:1;margin-bottom:12px}
+.pc-prices{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.pc-price{font-size:22px;font-weight:900;color:#1a1a2e}
+.pc-old{font-size:13px;color:#aaa;text-decoration:line-through}
+.pc-btns{display:flex;gap:6px}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:12px;padding:10px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:10px 12px;border-radius:8px;text-align:center;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-det:hover{background:#e0e2e5}
+.pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff;text-transform:uppercase}
+/* EMPTY */
+.empty{text-align:center;padding:80px 20px;color:#888}
+.empty h3{font-size:20px;margin-bottom:10px;color:#444}
+.empty a{color:#c0392b;font-weight:700}
+/* FOOTER */
+.ft{background:#1a1a2e;padding:28px var(--p);text-align:center}
+.ft p{color:rgba(255,255,255,.5);font-size:12px}
+.ft a{color:#c0392b;font-weight:700}
+@media(max-width:480px){.hero-img{width:90px;height:90px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2713/jpeg/category_2713_8ad546ac.jpg" alt="Camere DVR Porsche"></div>
+    <div class="hero-txt">
+      <h1>Cameră DVR <span>Porsche</span></h1>
+      <p>Cameră dedicată, integrare perfectă, aspect OEM — zero fire vizibile, mod parcare 48h, protecție baterie inclusă.</p>
+      <a href="landing-camere-bord.html" class="hero-back">← Înapoi la toate mărcile</a>
+    </div>
+  </div>
+</section>
+<div class="bar">
+  <div class="bar-inner">
+    <span class="bar-count"><strong>8</strong> modele disponibile pentru Porsche</span>
+    <a href="https://www.edotec.ro/category/2713/camera-dvr-dedicata-porsche-autolensa.html" style="font-size:12px;font-weight:700;color:#c0392b">Vezi pe edotec.ro →</a>
+  </div>
+</div>
+<div class="w">
+  <div class="pg">
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116495.jpg" alt="Cameră DVR Porsche Macan, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche Macan, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56050">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56050/camera-dvr-porsche-macan-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116496.jpg" alt="Cameră DVR Porsche Paramera, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche Paramera, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">749 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56055">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56055/camera-dvr-porsche-paramera-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116497.jpg" alt="Cameră DVR Porsche Cayenne, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche Cayenne, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56059">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56059/camera-dvr-porsche-cayenne-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116498.jpg" alt="Cameră DVR Porsche 911 Carrera, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche 911 Carrera, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56064">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56064/camera-dvr-porsche-911-carrera-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116499.jpg" alt="Cameră DVR Porsche Cayman, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche Cayman, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56069">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56069/camera-dvr-porsche-cayman-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116500.jpg" alt="Cameră DVR Porsche Boxster, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">VBSJ01</div>
+        <div class="pc-name">Cameră DVR Porsche Boxster, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri VBSJ01</div>
+        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56074">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56074/camera-dvr-porsche-boxster-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj01.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116728.jpg" alt="Cameră DVR Porsche Cayenne 2018-20, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri AD07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AD07</div>
+        <div class="pc-name">Cameră DVR Porsche Cayenne 2018-20, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri AD07</div>
+        <div class="pc-prices"><span class="pc-price">599 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56851">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56851/camera-dvr-porsche-cayenne-2018-20-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+    <div class="pc">
+      
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116729.jpg" alt="Cameră DVR Porsche Paramera 2018-20, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri AD07" loading="lazy"></div>
+      <div class="pc-body">
+        <div class="pc-code">AD07</div>
+        <div class="pc-name">Cameră DVR Porsche Paramera 2018-20, cameră față-spate 1080p-720p Autolensa, 24\/7 Gri AD07</div>
+        <div class="pc-prices"><span class="pc-price">599 Lei</span></div>
+        <div class="pc-btns">
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56856">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="https://www.edotec.ro/product/56856/camera-dvr-porsche-paramera-2018-20-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad07.html" class="pc-btn-det">Detalii</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="ft">
+  <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
+</footer>
+</body>
+</html>
