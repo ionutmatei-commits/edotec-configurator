@@ -3,70 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cameră DVR Dedicată BMW | Rezoluții & Variante | EDOTEC.RO</title>
+<title>Cameră DVR BMW | Alege varianta | EDOTEC.RO</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-:root{--red:#c0392b;--red-h:#a93226;--dk:#1a1a2e;--sh:0 2px 12px rgba(0,0,0,.08);--shh:0 8px 30px rgba(0,0,0,.18);--r:12px;--mx:1400px;--p:clamp(14px,3vw,60px)}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+:root{--red:#c0392b;--dk:#1a1a2e;--sh:0 2px 12px rgba(0,0,0,.08);--shh:0 8px 30px rgba(0,0,0,.18);--r:12px;--mx:1400px;--p:clamp(14px,3vw,60px)}
 .w{max-width:var(--mx);margin:0 auto;padding:0 var(--p)}
 .hero{background:linear-gradient(135deg,#1a1a2e,#2d2d4e,#1a1a2e);padding:40px var(--p) 48px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;opacity:.03;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px}
 .hero-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;gap:32px;position:relative;z-index:1;flex-wrap:wrap}
-.hero-img{width:140px;height:140px;border-radius:14px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.15)}
+.hero-img{width:130px;height:130px;border-radius:14px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.15)}
 .hero-img img{width:100%;height:100%;object-fit:cover}
-.hero-txt h1{font-size:clamp(24px,3.5vw,42px);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.5px}
+.hero-txt h1{font-size:clamp(22px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:6px}
 .hero-txt h1 span{color:#c0392b}
-.hero-txt p{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:500px;line-height:1.6}
-.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:7px 16px;border-radius:999px;transition:all .15s}
-.hero-back:hover{background:rgba(255,255,255,.18)}
-.bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:11px var(--p)}
-.bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.bar-count{font-size:13px;color:#666;font-weight:600}
-.bar-count strong{color:#c0392b}
-.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:28px 0 48px}
-.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
+.hero-txt p{font-size:13.5px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:480px}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px}
+.bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:10px var(--p)}
+.bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.bar-count{font-size:13px;color:#666;font-weight:600}.bar-count strong{color:#c0392b}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 48px}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
 .pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
 .pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
 .pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
 .pc:hover .pc-img img{transform:scale(1.05)}
-.pc-body{padding:14px;flex:1;display:flex;flex-direction:column}
-.pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
-.pc-name{font-size:13px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
-.pc-desc{font-size:11.5px;color:#666;line-height:1.55;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.pc-variants{margin-bottom:10px}
-.pc-vl{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
-.pc-vtags{display:flex;flex-wrap:wrap;gap:4px}
-.pc-vtag{font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:5px;background:#f0f2f5;color:#333;border:1px solid #e0e2e5}
-.pc-colors{display:flex;gap:5px;margin-bottom:8px;align-items:center}
-.pc-clabel{font-size:10px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-right:2px}
-.pc-col{display:inline-block;width:14px;height:14px;border-radius:50%;border:1.5px solid rgba(0,0,0,.15)}
-.col-gri{background:#9e9e9e}
-.col-negru{background:#1a1a1a}
-.pc-prices{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;margin-top:auto;padding-top:8px}
-.pc-price{font-size:21px;font-weight:900;color:#1a1a2e}
-.pc-old{font-size:13px;color:#bbb;text-decoration:line-through}
-.pc-btns{display:flex;gap:6px}
-.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:12px;padding:10px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
-.pc-btn-cart:hover{background:#a93226}
-.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:10px 12px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-body{padding:13px;flex:1;display:flex;flex-direction:column}
+.pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.pc-name{font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
+.pc-desc{font-size:11px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc-vtags{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px}
+.pc-vtag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:#f0f2f5;color:#555;border:1px solid #e0e2e5}
+.pc-prices{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;margin-bottom:10px}
+.pc-price{font-size:20px;font-weight:900;color:#1a1a2e}
+.pc-old{font-size:12px;color:#bbb;text-decoration:line-through}
+.pc-from{font-size:10px;color:#888;margin-right:2px}
+.pc-btns{display:flex;gap:5px}
+.pc-btn-view{background:#1a1a2e;color:#fff;font-weight:700;font-size:11.5px;padding:9px 10px;border-radius:8px;text-align:center;width:100%;display:block;transition:background .15s}
+.pc-btn-view:hover{background:#2d2d4e}
+.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
 .pc-btn-det:hover{background:#e0e2e5}
-.pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff;text-transform:uppercase}
-.empty{text-align:center;padding:80px 20px;color:#888;grid-column:1/-1}
-.empty h3{font-size:20px;margin-bottom:10px;color:#444}
-.empty a{color:#c0392b;font-weight:700}
-.ft{background:#1a1a2e;padding:24px var(--p);text-align:center}
-.ft p{color:rgba(255,255,255,.5);font-size:12px}
-.ft a{color:#c0392b;font-weight:700}
-@media(max-width:480px){.hero-img{width:80px;height:80px}.pg{grid-template-columns:1fr}}</style>
+.pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff}
+.ft{background:#1a1a2e;padding:22px var(--p);text-align:center}
+.ft p{color:rgba(255,255,255,.5);font-size:12px}.ft a{color:#c0392b;font-weight:700}
+@media(max-width:480px){.pg{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2728/jpeg/category_2728_8ad3a04b.jpg" alt="Camere DVR BMW"></div>
+    <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2728/jpeg/category_2728_8ad3a04b.jpg" alt="BMW"></div>
     <div class="hero-txt">
       <h1>Cameră DVR <span>BMW</span></h1>
-      <p>Cameră dedicată cu integrare OEM — aspect fabrică, mod parcare 24/7, protecție baterie. Disponibile în mai multe rezoluții și culori.</p>
+      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7 — disponibil în mai multe rezoluții. Dai click pe produs și alegi varianta ta direct.</p>
       <a href="landing-camere-bord.html" class="hero-back">← Toate mărcile</a>
     </div>
   </div>
@@ -79,843 +66,603 @@ img{max-width:100%;display:block}
 </div>
 <div class="w">
   <div class="pg">
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56138.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116520.jpg" alt="Cameră DVR Mercedes-Benz  E Klass 2023- low, cameră față 1080p Autolensa, Model 24\/7  Negru MB-55" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116520.jpg" alt="Cameră DVR Mercedes-Benz  E Klass 2023- low, cameră față 1080p Autolensa, Model 24/7  Negru MB-55" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  E Klass 2023- low, cameră față 1080p Autolensa, Model 24\/7  Negru MB-55</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR Mercedes-Benz  E Klass 2023- low, cameră față 1080p Autolensa, Model 24/7  Negru MB-55</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56138">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56138/camera-dvr-mercedes-benz-e-klass-2023-low-camera-fata-1080p-autolensa-model-24-7-negru-mb-55.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56138.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56138/camera-dvr-mercedes-benz-e-klass-2023-low-camera-fata-1080p-autolensa-model-24-7-negru-mb-55.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56683.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116672.jpg" alt="Cameră DVR BMW Seria 7 2023- Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW31" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116672.jpg" alt="Cameră DVR BMW Seria 7 2023- Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW31" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW31</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 2023- Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW31</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 2023- Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW31</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56683">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56683/camera-dvr-bmw-seria-7-2023-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw31.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56683.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56683/camera-dvr-bmw-seria-7-2023-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw31.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56686.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116673.jpg" alt="Cameră DVR BMW Seria 7 2023-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW30" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116673.jpg" alt="Cameră DVR BMW Seria 7 2023-, cameră față 1080p Autolensa, Model 24/7  Negru BMW30" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW30</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 2023-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW30</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 2023-, cameră față 1080p Autolensa, Model 24/7  Negru BMW30</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56686">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56686/camera-dvr-bmw-seria-7-2023-camera-fata-1080p-autolensa-model-24-7-negru-bmw30.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56686.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56686/camera-dvr-bmw-seria-7-2023-camera-fata-1080p-autolensa-model-24-7-negru-bmw30.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56689.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116674.jpg" alt="Cameră DVR BMW X7 2023- Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW29" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116674.jpg" alt="Cameră DVR BMW X7 2023- Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW29" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW29</div>
-        <div class="pc-name">Cameră DVR BMW X7 2023- Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW29</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X7 2023- Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW29</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56689">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56689/camera-dvr-bmw-x7-2023-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw29.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56689.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56689/camera-dvr-bmw-x7-2023-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw29.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56692.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116675.jpg" alt="Cameră DVR BMW Seria 8 GranCoupe 2019-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW28" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116675.jpg" alt="Cameră DVR BMW Seria 8 GranCoupe 2019-, cameră față 1080p Autolensa, Model 24/7  Negru BMW28" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW28</div>
-        <div class="pc-name">Cameră DVR BMW Seria 8 GranCoupe 2019-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW28</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 8 GranCoupe 2019-, cameră față 1080p Autolensa, Model 24/7  Negru BMW28</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56692">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56692/camera-dvr-bmw-seria-8-grancoupe-2019-camera-fata-1080p-autolensa-model-24-7-negru-bmw28.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56692.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56692/camera-dvr-bmw-seria-8-grancoupe-2019-camera-fata-1080p-autolensa-model-24-7-negru-bmw28.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56695.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116676.jpg" alt="Cameră DVR BMW IX Modele Electrice 2022-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW27" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116676.jpg" alt="Cameră DVR BMW IX Modele Electrice 2022-, cameră față 1080p Autolensa, Model 24/7  Negru BMW27" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW27</div>
-        <div class="pc-name">Cameră DVR BMW IX Modele Electrice 2022-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW27</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW IX Modele Electrice 2022-, cameră față 1080p Autolensa, Model 24/7  Negru BMW27</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56695">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56695/camera-dvr-bmw-ix-modele-electrice-2022-camera-fata-1080p-autolensa-model-24-7-negru-bmw27.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56695.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56695/camera-dvr-bmw-ix-modele-electrice-2022-camera-fata-1080p-autolensa-model-24-7-negru-bmw27.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56698.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116677.jpg" alt="Cameră DVR BMW Seria 3 G20 2021- low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW26" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116677.jpg" alt="Cameră DVR BMW Seria 3 G20 2021- low, cameră față 1080p Autolensa, Model 24/7  Negru BMW26" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW26</div>
-        <div class="pc-name">Cameră DVR BMW Seria 3 G20 2021- low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW26</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 3 G20 2021- low, cameră față 1080p Autolensa, Model 24/7  Negru BMW26</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56698">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56698/camera-dvr-bmw-seria-3-g20-2021-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw26.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56698.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56698/camera-dvr-bmw-seria-3-g20-2021-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw26.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56701.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116678.jpg" alt="Cameră DVR BMW Seria 2 Grancoupe, 2 4 usi 2020-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW25" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116678.jpg" alt="Cameră DVR BMW Seria 2 Grancoupe, 2 4 usi 2020-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW25" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW25</div>
-        <div class="pc-name">Cameră DVR BMW Seria 2 Grancoupe, 2 4 usi 2020-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW25</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 2 Grancoupe, 2 4 usi 2020-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW25</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56701">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56701/camera-dvr-bmw-seria-2-grancoupe-2-4-usi-2020-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw25.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56701.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56701/camera-dvr-bmw-seria-2-grancoupe-2-4-usi-2020-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw25.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56704.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116679.jpg" alt="Cameră DVR BMW X5\/X6 M 2013-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116679.jpg" alt="Cameră DVR BMW X5/X6 M 2013-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW24</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 M 2013-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 M 2013-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56704">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56704/camera-dvr-bmw-x5-x6-m-2013-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56704.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56704/camera-dvr-bmw-x5-x6-m-2013-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56707.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116680.jpg" alt="Cameră DVR BMW Z4 2021-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116680.jpg" alt="Cameră DVR BMW Z4 2021-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW24</div>
-        <div class="pc-name">Cameră DVR BMW Z4 2021-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Z4 2021-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56707">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56707/camera-dvr-bmw-z4-2021-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56707.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56707/camera-dvr-bmw-z4-2021-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56710.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116681.jpg" alt="Cameră DVR BMW Seria 8 2019-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116681.jpg" alt="Cameră DVR BMW Seria 8 2019-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW24</div>
-        <div class="pc-name">Cameră DVR BMW Seria 8 2019-, cameră față 1080p Autolensa, Model 24\/7  Negru BMW24</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 8 2019-, cameră față 1080p Autolensa, Model 24/7  Negru BMW24</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56710">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56710/camera-dvr-bmw-seria-8-2019-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56710.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56710/camera-dvr-bmw-seria-8-2019-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56713.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116682.jpg" alt="Cameră DVR BMW X5M\/X6M 2020-22 , cameră față 1080p Autolensa, Model 24\/7  Negru BMW24" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116682.jpg" alt="Cameră DVR BMW X5M/X6M 2020-22 , cameră față 1080p Autolensa, Model 24/7  Negru BMW24" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW24</div>
-        <div class="pc-name">Cameră DVR BMW X5M\/X6M 2020-22 , cameră față 1080p Autolensa, Model 24\/7  Negru BMW24</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5M/X6M 2020-22 , cameră față 1080p Autolensa, Model 24/7  Negru BMW24</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56713">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56713/camera-dvr-bmw-x5m-x6m-2020-22-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56713.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56713/camera-dvr-bmw-x5m-x6m-2020-22-camera-fata-1080p-autolensa-model-24-7-negru-bmw24.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56716.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116683.jpg" alt="Cameră DVR MINI COOPER\/HIGHLANDER CABRIO 2021, cameră față 1080p Autolensa, Model 24\/7  Negru BMW23" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116683.jpg" alt="Cameră DVR MINI COOPER/HIGHLANDER CABRIO 2021, cameră față 1080p Autolensa, Model 24/7  Negru BMW23" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW23</div>
-        <div class="pc-name">Cameră DVR MINI COOPER\/HIGHLANDER CABRIO 2021, cameră față 1080p Autolensa, Model 24\/7  Negru BMW23</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR MINI COOPER/HIGHLANDER CABRIO 2021, cameră față 1080p Autolensa, Model 24/7  Negru BMW23</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56716">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56716/camera-dvr-mini-cooper-highlander-cabrio-2021-camera-fata-1080p-autolensa-model-24-7-negru-bmw23.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56716.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56716/camera-dvr-mini-cooper-highlander-cabrio-2021-camera-fata-1080p-autolensa-model-24-7-negru-bmw23.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56722.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116685.jpg" alt="Cameră DVR BMW Z4 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW22" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116685.jpg" alt="Cameră DVR BMW Z4 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW22" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW22</div>
-        <div class="pc-name">Cameră DVR BMW Z4 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW22</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Z4 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW22</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56722">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56722/camera-dvr-bmw-z4-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw22.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56722.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56722/camera-dvr-bmw-z4-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw22.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56725.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116686.jpg" alt="Cameră DVR BMW X5\/X6 G05\/G06 Low\/Mid 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW21" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116686.jpg" alt="Cameră DVR BMW X5/X6 G05/G06 Low/Mid 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW21" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW21</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 G05\/G06 Low\/Mid 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW21</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 G05/G06 Low/Mid 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW21</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56725">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56725/camera-dvr-bmw-x5-x6-g05-g06-low-mid-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw21.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56725.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56725/camera-dvr-bmw-x5-x6-g05-g06-low-mid-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw21.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56728.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116687.jpg" alt="Cameră DVR BMW X5\/X6 G05\/G06 PREMIUM 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW20" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116687.jpg" alt="Cameră DVR BMW X5/X6 G05/G06 PREMIUM 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW20" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW20</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 G05\/G06 PREMIUM 2019-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW20</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 G05/G06 PREMIUM 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW20</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56728">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56728/camera-dvr-bmw-x5-x6-g05-g06-premium-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw20.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56728.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56728/camera-dvr-bmw-x5-x6-g05-g06-premium-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw20.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56731.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116688.jpg" alt="Cameră DVR BMW i3 2018-19, cameră față 1080p Autolensa, Model 24\/7  Negru BMW19" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116688.jpg" alt="Cameră DVR BMW i3 2018-19, cameră față 1080p Autolensa, Model 24/7  Negru BMW19" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW19</div>
-        <div class="pc-name">Cameră DVR BMW i3 2018-19, cameră față 1080p Autolensa, Model 24\/7  Negru BMW19</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW i3 2018-19, cameră față 1080p Autolensa, Model 24/7  Negru BMW19</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56731">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56731/camera-dvr-bmw-i3-2018-19-camera-fata-1080p-autolensa-model-24-7-negru-bmw19.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56731.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56731/camera-dvr-bmw-i3-2018-19-camera-fata-1080p-autolensa-model-24-7-negru-bmw19.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56734.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116689.jpg" alt="Cameră DVR MINI COOPER,HIGHLANDER\/CLUBMAN 2018-22, cameră față 1080p Autolensa, Model 24\/7  Negru BMW18" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116689.jpg" alt="Cameră DVR MINI COOPER,HIGHLANDER/CLUBMAN 2018-22, cameră față 1080p Autolensa, Model 24/7  Negru BMW18" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW18</div>
-        <div class="pc-name">Cameră DVR MINI COOPER,HIGHLANDER\/CLUBMAN 2018-22, cameră față 1080p Autolensa, Model 24\/7  Negru BMW18</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR MINI COOPER,HIGHLANDER/CLUBMAN 2018-22, cameră față 1080p Autolensa, Model 24/7  Negru BMW18</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56734">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56734/camera-dvr-mini-cooper-highlander-clubman-2018-22-camera-fata-1080p-autolensa-model-24-7-negru-bmw18.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56734.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56734/camera-dvr-mini-cooper-highlander-clubman-2018-22-camera-fata-1080p-autolensa-model-24-7-negru-bmw18.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56740.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116691.jpg" alt="Cameră DVR BMW X5\/X6 19-22 low\/MID, cameră față 1080p Autolensa, Model 24\/7  Negru BMW17" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116691.jpg" alt="Cameră DVR BMW X5/X6 19-22 low/MID, cameră față 1080p Autolensa, Model 24/7  Negru BMW17" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW17</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 19-22 low\/MID, cameră față 1080p Autolensa, Model 24\/7  Negru BMW17</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 19-22 low/MID, cameră față 1080p Autolensa, Model 24/7  Negru BMW17</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56740">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56740/camera-dvr-bmw-x5-x6-19-22-low-mid-camera-fata-1080p-autolensa-model-24-7-negru-bmw17.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56740.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56740/camera-dvr-bmw-x5-x6-19-22-low-mid-camera-fata-1080p-autolensa-model-24-7-negru-bmw17.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56743.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116692.jpg" alt="Cameră DVR BMW Seria 3 2019-22 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW17" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116692.jpg" alt="Cameră DVR BMW Seria 3 2019-22 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW17" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW17</div>
-        <div class="pc-name">Cameră DVR BMW Seria 3 2019-22 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW17</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 3 2019-22 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW17</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56743">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56743/camera-dvr-bmw-seria-3-2019-22-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw17.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56743.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56743/camera-dvr-bmw-seria-3-2019-22-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw17.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56746.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116693.jpg" alt="Cameră DVR BMW X7 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW16" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116693.jpg" alt="Cameră DVR BMW X7 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW16" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW16</div>
-        <div class="pc-name">Cameră DVR BMW X7 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW16</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X7 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW16</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56746">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56746/camera-dvr-bmw-x7-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw16.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56746.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56746/camera-dvr-bmw-x7-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw16.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56749.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116694.jpg" alt="Cameră DVR BMW X3\/X4 G01\/G02 2019-22 M Sport, cameră față 1080p Autolensa, Model 24\/7  Negru BMW15" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116694.jpg" alt="Cameră DVR BMW X3/X4 G01/G02 2019-22 M Sport, cameră față 1080p Autolensa, Model 24/7  Negru BMW15" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW15</div>
-        <div class="pc-name">Cameră DVR BMW X3\/X4 G01\/G02 2019-22 M Sport, cameră față 1080p Autolensa, Model 24\/7  Negru BMW15</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X3/X4 G01/G02 2019-22 M Sport, cameră față 1080p Autolensa, Model 24/7  Negru BMW15</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56749">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56749/camera-dvr-bmw-x3-x4-g01-g02-2019-22-m-sport-camera-fata-1080p-autolensa-model-24-7-negru-bmw15.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56749.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56749/camera-dvr-bmw-x3-x4-g01-g02-2019-22-m-sport-camera-fata-1080p-autolensa-model-24-7-negru-bmw15.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56752.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116695.jpg" alt="Cameră DVR BMW Seria 2 toate vers. 2018-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW14" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116695.jpg" alt="Cameră DVR BMW Seria 2 toate vers. 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW14" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW14</div>
-        <div class="pc-name">Cameră DVR BMW Seria 2 toate vers. 2018-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW14</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 2 toate vers. 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW14</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56752">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56752/camera-dvr-bmw-seria-2-toate-vers-2018-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw14.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56752.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56752/camera-dvr-bmw-seria-2-toate-vers-2018-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw14.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56755.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116696.jpg" alt="Cameră DVR BMW X5\/X6 G05\/G06 2019-22 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW13" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116696.jpg" alt="Cameră DVR BMW X5/X6 G05/G06 2019-22 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW13" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW13</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 G05\/G06 2019-22 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW13</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 G05/G06 2019-22 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW13</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56755">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56755/camera-dvr-bmw-x5-x6-g05-g06-2019-22-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw13.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56755.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56755/camera-dvr-bmw-x5-x6-g05-g06-2019-22-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw13.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56758.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116697.jpg" alt="Cameră DVR BMW X5\/X6 G05\/G06 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW12" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116697.jpg" alt="Cameră DVR BMW X5/X6 G05/G06 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW12" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW12</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 G05\/G06 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW12</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 G05/G06 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW12</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56758">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56758/camera-dvr-bmw-x5-x6-g05-g06-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw12.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56758.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56758/camera-dvr-bmw-x5-x6-g05-g06-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw12.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56761.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116698.jpg" alt="Cameră DVR BMW X3\/X4 G01\/G02 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW11" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116698.jpg" alt="Cameră DVR BMW X3/X4 G01/G02 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW11" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW11</div>
-        <div class="pc-name">Cameră DVR BMW X3\/X4 G01\/G02 2019-22 Premium, cameră față 1080p Autolensa, Model 24\/7  Negru BMW11</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X3/X4 G01/G02 2019-22 Premium, cameră față 1080p Autolensa, Model 24/7  Negru BMW11</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56761">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56761/camera-dvr-bmw-x3-x4-g01-g02-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw11.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56761.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56761/camera-dvr-bmw-x3-x4-g01-g02-2019-22-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw11.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56764.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116699.jpg" alt="Cameră DVR BMW X3\/X4 G01\/G02 2018-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW10" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116699.jpg" alt="Cameră DVR BMW X3/X4 G01/G02 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW10" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW10</div>
-        <div class="pc-name">Cameră DVR BMW X3\/X4 G01\/G02 2018-21, cameră față 1080p Autolensa, Model 24\/7  Negru BMW10</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X3/X4 G01/G02 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru BMW10</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56764">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56764/camera-dvr-bmw-x3-x4-g01-g02-2018-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw10.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56764.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56764/camera-dvr-bmw-x3-x4-g01-g02-2018-21-camera-fata-1080p-autolensa-model-24-7-negru-bmw10.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56767.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116700.jpg" alt="Cameră DVR BMW Seria 7 G11\/12 cu senzor lumina , cameră față 1080p Autolensa, Model 24\/7  Negru BMW09" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116700.jpg" alt="Cameră DVR BMW Seria 7 G11/12 cu senzor lumina , cameră față 1080p Autolensa, Model 24/7  Negru BMW09" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW09</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 G11\/12 cu senzor lumina , cameră față 1080p Autolensa, Model 24\/7  Negru BMW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 G11/12 cu senzor lumina , cameră față 1080p Autolensa, Model 24/7  Negru BMW09</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56767">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56767/camera-dvr-bmw-seria-7-g11-12-cu-senzor-lumina-camera-fata-1080p-autolensa-model-24-7-negru-bmw09.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56767.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56767/camera-dvr-bmw-seria-7-g11-12-cu-senzor-lumina-camera-fata-1080p-autolensa-model-24-7-negru-bmw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56770.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116701.jpg" alt="Cameră DVR BMW X5\/X6 F15\/F16 FL 2017-18, cameră față 1080p Autolensa, Model 24\/7  Negru BMW09" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116701.jpg" alt="Cameră DVR BMW X5/X6 F15/F16 FL 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru BMW09" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW09</div>
-        <div class="pc-name">Cameră DVR BMW X5\/X6 F15\/F16 FL 2017-18, cameră față 1080p Autolensa, Model 24\/7  Negru BMW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X5/X6 F15/F16 FL 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru BMW09</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56770">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56770/camera-dvr-bmw-x5-x6-f15-f16-fl-2017-18-camera-fata-1080p-autolensa-model-24-7-negru-bmw09.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56770.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56770/camera-dvr-bmw-x5-x6-f15-f16-fl-2017-18-camera-fata-1080p-autolensa-model-24-7-negru-bmw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56773.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116702.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-2020 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW08" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116702.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-2020 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW08" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW08</div>
-        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-2020 low, cameră față 1080p Autolensa, Model 24\/7  Negru BMW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-2020 low, cameră față 1080p Autolensa, Model 24/7  Negru BMW08</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56773">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56773/camera-dvr-bmw-seria-5-g30-2017-2020-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw08.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56773.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56773/camera-dvr-bmw-seria-5-g30-2017-2020-low-camera-fata-1080p-autolensa-model-24-7-negru-bmw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56776.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116703.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-2020 midlow, cameră față 1080p Autolensa, Model 24\/7  Negru BMW08-1" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116703.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-2020 midlow, cameră față 1080p Autolensa, Model 24/7  Negru BMW08-1" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW08-1</div>
-        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-2020 midlow, cameră față 1080p Autolensa, Model 24\/7  Negru BMW08-1</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-2020 midlow, cameră față 1080p Autolensa, Model 24/7  Negru BMW08-1</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56776">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56776/camera-dvr-bmw-seria-5-g30-2017-2020-midlow-camera-fata-1080p-autolensa-model-24-7-negru-bmw08-1.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56776.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56776/camera-dvr-bmw-seria-5-g30-2017-2020-midlow-camera-fata-1080p-autolensa-model-24-7-negru-bmw08-1.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56779.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116704.jpg" alt="Cameră DVR BMW Seria 7 G11\/G12 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru BMW07" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116704.jpg" alt="Cameră DVR BMW Seria 7 G11/G12 2015-17, cameră față 1080p Autolensa, Model 24/7  Negru BMW07" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW07</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 G11\/G12 2015-17, cameră față 1080p Autolensa, Model 24\/7  Negru BMW07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 G11/G12 2015-17, cameră față 1080p Autolensa, Model 24/7  Negru BMW07</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56779">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56779/camera-dvr-bmw-seria-7-g11-g12-2015-17-camera-fata-1080p-autolensa-model-24-7-negru-bmw07.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56779.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56779/camera-dvr-bmw-seria-7-g11-g12-2015-17-camera-fata-1080p-autolensa-model-24-7-negru-bmw07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56782.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116705.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-19, cameră față 1080p Autolensa, Model 24\/7  Negru BMW07" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116705.jpg" alt="Cameră DVR BMW Seria 5 G30 2017-19, cameră față 1080p Autolensa, Model 24/7  Negru BMW07" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW07</div>
-        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-19, cameră față 1080p Autolensa, Model 24\/7  Negru BMW07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 5 G30 2017-19, cameră față 1080p Autolensa, Model 24/7  Negru BMW07</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56782">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56782/camera-dvr-bmw-seria-5-g30-2017-19-camera-fata-1080p-autolensa-model-24-7-negru-bmw07.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56782.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56782/camera-dvr-bmw-seria-5-g30-2017-19-camera-fata-1080p-autolensa-model-24-7-negru-bmw07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56785.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116706.jpg" alt="Cameră DVR BMW X1,X2 2016-2020 M SPORT\/PREMIUM, cameră față 1080p Autolensa, Model 24\/7  Negru BMW06" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116706.jpg" alt="Cameră DVR BMW X1,X2 2016-2020 M SPORT/PREMIUM, cameră față 1080p Autolensa, Model 24/7  Negru BMW06" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW06</div>
-        <div class="pc-name">Cameră DVR BMW X1,X2 2016-2020 M SPORT\/PREMIUM, cameră față 1080p Autolensa, Model 24\/7  Negru BMW06</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X1,X2 2016-2020 M SPORT/PREMIUM, cameră față 1080p Autolensa, Model 24/7  Negru BMW06</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56785">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56785/camera-dvr-bmw-x1-x2-2016-2020-m-sport-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw06.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56785.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56785/camera-dvr-bmw-x1-x2-2016-2020-m-sport-premium-camera-fata-1080p-autolensa-model-24-7-negru-bmw06.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56788.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116707.jpg" alt="Cameră DVR MINI  Modele 2015-22 COOPER, COOPER S, cameră față 1080p Autolensa, Model 24\/7  Negru BMW05" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116707.jpg" alt="Cameră DVR MINI  Modele 2015-22 COOPER, COOPER S, cameră față 1080p Autolensa, Model 24/7  Negru BMW05" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW05</div>
-        <div class="pc-name">Cameră DVR MINI  Modele 2015-22 COOPER, COOPER S, cameră față 1080p Autolensa, Model 24\/7  Negru BMW05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR MINI  Modele 2015-22 COOPER, COOPER S, cameră față 1080p Autolensa, Model 24/7  Negru BMW05</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56788">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56788/camera-dvr-mini-modele-2015-22-cooper-cooper-s-camera-fata-1080p-autolensa-model-24-7-negru-bmw05.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56788.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56788/camera-dvr-mini-modele-2015-22-cooper-cooper-s-camera-fata-1080p-autolensa-model-24-7-negru-bmw05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56797.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116710.jpg" alt="Cameră DVR BMW X3 E 83 2004-2010, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116710.jpg" alt="Cameră DVR BMW X3 E 83 2004-2010, cameră față 1080p Autolensa, Model 24/7  Negru BMW03" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW03</div>
-        <div class="pc-name">Cameră DVR BMW X3 E 83 2004-2010, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW X3 E 83 2004-2010, cameră față 1080p Autolensa, Model 24/7  Negru BMW03</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56797">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56797/camera-dvr-bmw-x3-e-83-2004-2010-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56797.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56797/camera-dvr-bmw-x3-e-83-2004-2010-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56800.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116711.jpg" alt="Cameră DVR BMW Seria 7 F01 F02, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116711.jpg" alt="Cameră DVR BMW Seria 7 F01 F02, cameră față 1080p Autolensa, Model 24/7  Negru BMW03" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW03</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 F01 F02, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 F01 F02, cameră față 1080p Autolensa, Model 24/7  Negru BMW03</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56800">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56800/camera-dvr-bmw-seria-7-f01-f02-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56800.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56800/camera-dvr-bmw-seria-7-f01-f02-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56803.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116712.jpg" alt="Cameră DVR BMW Seria 7 E65 E66 2002-2008, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116712.jpg" alt="Cameră DVR BMW Seria 7 E65 E66 2002-2008, cameră față 1080p Autolensa, Model 24/7  Negru BMW03" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW03</div>
-        <div class="pc-name">Cameră DVR BMW Seria 7 E65 E66 2002-2008, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 7 E65 E66 2002-2008, cameră față 1080p Autolensa, Model 24/7  Negru BMW03</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56803">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56803/camera-dvr-bmw-seria-7-e65-e66-2002-2008-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56803.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56803/camera-dvr-bmw-seria-7-e65-e66-2002-2008-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56806.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116713.jpg" alt="Cameră DVR BMW Seria 6 E63\/64 2003-2011, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116713.jpg" alt="Cameră DVR BMW Seria 6 E63/64 2003-2011, cameră față 1080p Autolensa, Model 24/7  Negru BMW03" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW03</div>
-        <div class="pc-name">Cameră DVR BMW Seria 6 E63\/64 2003-2011, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 6 E63/64 2003-2011, cameră față 1080p Autolensa, Model 24/7  Negru BMW03</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56806">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56806/camera-dvr-bmw-seria-6-e63-64-2003-2011-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56806.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56806/camera-dvr-bmw-seria-6-e63-64-2003-2011-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
-    <div class="pc">
+    <div class="pc" onclick="location.href='dvr-produs-56809.html'">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116714.jpg" alt="Cameră DVR BMW Seria 5 E60 E61 2003-2010, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03" loading="lazy"></div>
+      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116714.jpg" alt="Cameră DVR BMW Seria 5 E60 E61 2003-2010, cameră față 1080p Autolensa, Model 24/7  Negru BMW03" loading="lazy"></div>
       <div class="pc-body">
         <div class="pc-code">BMW03</div>
-        <div class="pc-name">Cameră DVR BMW Seria 5 E60 E61 2003-2010, cameră față 1080p Autolensa, Model 24\/7  Negru BMW03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în buclă și un senzor G care poate detecta miscarea si coliziunile. Toate camerele AUTOLENSA ofera atat inregistrare in trafic si in stationare</div>
-        <div class="pc-variants"><div class="pc-vl">Rezoluții disponibile</div><div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p față + 720p spate</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K față + 1080p spate</span><span class="pc-vtag">4K față</span><span class="pc-vtag">4K față + 1080p spate</span></div></div>
-        <div class="pc-colors"><span class="pc-clabel">Culori:</span><span class="pc-col col-negru" title="Negru"></span></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <div class="pc-name">Cameră DVR BMW Seria 5 E60 E61 2003-2010, cameră față 1080p Autolensa, Model 24/7  Negru BMW03</div>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
+        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
         <div class="pc-btns">
-          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
-            <input type="hidden" name="action" value="dmAddToCart">
-            <input type="hidden" name="ProductID" value="56809">
-            <input type="hidden" name="Quantity" value="1">
-            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
-          </form>
-          <a href="https://www.edotec.ro/product/56809/camera-dvr-bmw-seria-5-e60-e61-2003-2010-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det">Detalii</a>
+          <a href="dvr-produs-56809.html" class="pc-btn-view">Selectează varianta →</a>
+          <a href="https://www.edotec.ro/product/56809/camera-dvr-bmw-seria-5-e60-e61-2003-2010-camera-fata-1080p-autolensa-model-24-7-negru-bmw03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
         </div>
       </div>
     </div>
