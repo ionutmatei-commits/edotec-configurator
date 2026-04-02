@@ -3914,7 +3914,7 @@ function closeDealerLogin(){
   document.getElementById('dl-user').value='';
   document.getElementById('dl-pass').value='';
 }
-async async function dealerLogin(){
+async function dealerLogin(){
   const user=document.getElementById('dl-user').value.trim().toLowerCase();
   const pass=document.getElementById('dl-pass').value.trim();
   if(!user){document.getElementById('dl-err').textContent='Introdu utilizatorul';document.getElementById('dl-err').style.display='block';return;}
@@ -3929,20 +3929,22 @@ async async function dealerLogin(){
       document.getElementById('dl-err').style.display='block';return;
     }
     const dealer=data.dealer;
-    // Activare dealer mode
     _currentDealer=dealer;
     document.body.classList.add('dealer-mode');
     if(dealer.role==='superadmin') document.body.classList.add('superadmin-mode');
-  const btn=document.getElementById('dealer-toggle-btn');
-  btn.classList.add('logged-in');
-  document.getElementById('dealer-btn-text').textContent=dealer.name||dealer.user;
-  // Salvare sesiune dealer
-  const dealerData={user:dealer.user,ts:Date.now(),ua:navigator.userAgent};
-  try{localStorage.setItem(DEALER_STORAGE_KEY,JSON.stringify(dealerData));}catch(e){}
-  // Track login
-  dealerTrackLogin(dealer.user);
-  closeDealerLogin();
-  showToast('✅ Bine ai venit, '+dealer.name+'! Mod dealer activat.');
+    const btn=document.getElementById('dealer-toggle-btn');
+    btn.classList.add('logged-in');
+    document.getElementById('dealer-btn-text').textContent=dealer.name||dealer.user;
+    const dealerData={user:dealer.user,ts:Date.now(),ua:navigator.userAgent};
+    try{localStorage.setItem(DEALER_STORAGE_KEY,JSON.stringify(dealerData));}catch(e){}
+    dealerTrackLogin(dealer.user);
+    closeDealerLogin();
+    showToast('✅ Bine ai venit, '+dealer.name+'! Mod dealer activat.');
+  } catch(e) {
+    if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
+    document.getElementById('dl-err').textContent='Eroare conexiune. Încearcă din nou.';
+    document.getElementById('dl-err').style.display='block';
+  }
 }
 function dealerLogout(){
   document.body.classList.remove('dealer-mode');document.body.classList.remove('superadmin-mode');
