@@ -16,23 +16,28 @@ img{max-width:100%;display:block}
 }
 .w{max-width:var(--mx);margin:0 auto;padding:0 var(--p)}
 
-/* RIBBON */
-.ribbon{background:linear-gradient(90deg,#1a1a2e,#c0392b,#1a1a2e,#c0392b,#1a1a2e);background-size:200%;animation:rib 6s linear infinite;height:4px}
-@keyframes rib{to{background-position:200% 0}}
 
-/* HEADER */
-.eh{background:linear-gradient(135deg,#1a1a2e,#2d2d4e,#1a1a2e);padding:12px var(--p);position:sticky;top:0;z-index:100;box-shadow:0 3px 18px rgba(0,0,0,.4)}
-.eh-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.eh-logo{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.5px}
-.eh-logo span{color:#c0392b}
-.eh-promo{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 20px;font-size:13px;font-weight:700;color:#fff}
-.eh-cta{background:#c0392b;color:#fff;font-weight:800;font-size:12.5px;padding:9px 20px;border-radius:999px;transition:all .15s}
-.eh-cta:hover{background:#a93226;transform:scale(1.04)}
 
 /* HERO */
+.hero-cam-txt h1{font-size:clamp(32px,5vw,62px) !important}
+.hero-sub-big{font-size:clamp(15px,1.8vw,19px);color:rgba(255,255,255,.8);max-width:540px;margin-bottom:24px;line-height:1.6}
+.hero-sub-big strong{color:#fff}
+.hero-configurator{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:32px 28px;min-width:340px;max-width:420px;backdrop-filter:blur(8px)}
+.hconf-label{font-size:14px;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.4}
+.hconf-box{display:flex;flex-direction:column;gap:10px}
+.hconf-select{width:100%;padding:14px 16px;border-radius:10px;border:2px solid rgba(255,255,255,.2);background:#fff;font-size:15px;font-weight:600;color:#1a1a2e;cursor:pointer;appearance:auto}
+.hconf-select:focus{outline:none;border-color:#c0392b}
+.hconf-btn{background:#c0392b;color:#fff;font-weight:800;font-size:15px;padding:14px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;width:100%}
+.hconf-btn:hover{background:#a93226;transform:translateY(-1px)}
+.hconf-alt{font-size:12px;color:rgba(255,255,255,.6);margin-top:12px;text-align:center}
+.hconf-alt a{color:rgba(255,255,255,.85);text-decoration:underline}
+@media(max-width:900px){
+  .hero-cam-inner{grid-template-columns:1fr !important}
+  .hero-configurator{min-width:unset;max-width:100%}
+}
 .hero-cam{background:linear-gradient(135deg,#1a1a2e 0%,#2d2d4e 40%,#3a1a2e 70%,#1a1a2e 100%);padding:56px var(--p) 64px;position:relative;overflow:hidden}
 .hero-cam::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-.hero-cam-inner{max-width:var(--mx);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.hero-cam-inner{max-width:var(--mx);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center}
 .hero-cam-txt h1{font-size:clamp(28px,4.5vw,54px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
 .hero-cam-txt h1 em{font-style:normal;color:#c0392b}
 .hero-cam-txt p{font-size:clamp(14px,1.8vw,18px);color:rgba(255,255,255,.75);max-width:580px;margin-bottom:28px;line-height:1.7}
@@ -123,23 +128,14 @@ img{max-width:100%;display:block}
 </head>
 <body>
 
-<div class="ribbon"></div>
 
-<!-- HEADER -->
-<header class="eh">
-  <div class="eh-inner">
-    <a href="https://www.edotec.ro" class="eh-logo">EDO<span>TEC</span>.RO</a>
-    <div class="eh-promo">🎥 Camere de Bord — Universale & Dedicate pe Marcă</div>
-    <a href="https://www.edotec.ro/category/368/camera-de-bord.html" class="eh-cta" target="_blank">Vezi toate →</a>
-  </div>
-</header>
 
-<!-- HERO -->
+<!-- HERO cu configurator marca -->
 <section class="hero-cam">
   <div class="hero-cam-inner">
     <div class="hero-cam-txt">
-      <h1>Cameră de Bord —<br><em>Filmează Tot Ce Contează</em></h1>
-      <p>Camere universale și dedicate pe marcă. Rezoluție 4K, Night Vision avansat, GPS integrat, ADAS. Cel mai mare stoc de camere DVR dedicate din România.</p>
+      <h1>Camere de Bord DVR</h1>
+      <p class="hero-sub-big">Cel mai mare stoc de camere <strong>dedicate pe marcă</strong> din România — integrare perfectă, aspect OEM, zero fire vizibile.</p>
       <div class="hero-pills">
         <span class="hpill">4K Ultra HD</span>
         <span class="hpill">Night Vision</span>
@@ -147,18 +143,53 @@ img{max-width:100%;display:block}
         <span class="hpill">Fată + Spate</span>
         <span class="hpill">ADAS</span>
         <span class="hpill">29 Mărci Dedicate</span>
-        <span class="hpill">Garanție 2 Ani</span>
-      </div>
-      <div class="hero-ctas">
-        <a href="https://www.edotec.ro/category/368/camera-de-bord.html" class="btn-r" target="_blank">🛒 Alege camera ta</a>
-        <a href="https://www.edotec.ro/category/2753/camera-dvr-universala-autolensa.html" class="btn-o" target="_blank">Camere Universale →</a>
       </div>
     </div>
-    <div class="hero-cam-img">
-      <img src="https://www.edotec.ro/userfiles/categoryimages/2753/jpeg/category_2753_8dcc8b65.jpg" alt="Camera DVR Auto">
+    <div class="hero-configurator">
+      <div class="hconf-label">Selectează marca ta pentru o cameră dedicată</div>
+      <div class="hconf-box">
+        <select id="brand-sel" class="hconf-select" onchange="goToBrand()">
+          <option value="">— Alege marca mașinii —</option>
+          <option value="https://www.edotec.ro/category/2706/camera-dvr-dedicata-audi-autolensa.html">Audi</option>
+          <option value="https://www.edotec.ro/category/2728/camera-dvr-dedicata-bmw-autolensa.html">BMW</option>
+          <option value="https://www.edotec.ro/category/2749/camera-dvr-dedicata-citroen-autolensa.html">Citroën</option>
+          <option value="https://www.edotec.ro/category/2748/camera-dvr-dedicata-ds-citroen-autolensa.html">DS Automobiles</option>
+          <option value="https://www.edotec.ro/category/2743/camera-dvr-dedicata-ford-autolensa.html">Ford</option>
+          <option value="https://www.edotec.ro/category/2741/camera-dvr-dedicata-honda-autolensa.html">Honda</option>
+          <option value="https://www.edotec.ro/category/2745/camera-dvr-dedicata-infiniti-autolensa.html">Infiniti</option>
+          <option value="https://www.edotec.ro/category/2731/camera-dvr-dedicata-jaguar-autolensa.html">Jaguar</option>
+          <option value="https://www.edotec.ro/category/2740/camera-dvr-dedicata-jeep-autolensa.html">Jeep</option>
+          <option value="https://www.edotec.ro/category/2746/camera-dvr-dedicata-kia-autolensa.html">Kia</option>
+          <option value="https://www.edotec.ro/category/2730/camera-dvr-dedicata-landrover-autolensa.html">Land Rover</option>
+          <option value="https://www.edotec.ro/category/2734/camera-dvr-dedicata-lexus-autolensa.html">Lexus</option>
+          <option value="https://www.edotec.ro/category/2732/camera-dvr-dedicata-maserati-autolensa.html">Maserati</option>
+          <option value="https://www.edotec.ro/category/2750/camera-dvr-dedicata-mazda-autolensa.html">Mazda</option>
+          <option value="https://www.edotec.ro/category/2727/camera-dvr-dedicata-mercedes-benz-autolensa.html">Mercedes-Benz</option>
+          <option value="https://www.edotec.ro/category/2729/camera-dvr-dedicata-mini-autolensa.html">Mini</option>
+          <option value="https://www.edotec.ro/category/2747/camera-dvr-dedicata-peugeot-autolensa.html">Peugeot</option>
+          <option value="https://www.edotec.ro/category/2713/camera-dvr-dedicata-porsche-autolensa.html">Porsche</option>
+          <option value="https://www.edotec.ro/category/2744/camera-dvr-dedicata-renault-autolensa.html">Renault</option>
+          <option value="https://www.edotec.ro/category/2738/camera-dvr-dedicata-seat-autolensa.html">Seat</option>
+          <option value="https://www.edotec.ro/category/2756/camera-dvr-smart-dedicata-autolensa.html">Smart</option>
+          <option value="https://www.edotec.ro/category/2737/camera-dvr-dedicata-skoda-autolensa.html">Skoda</option>
+          <option value="https://www.edotec.ro/category/2742/camera-dvr-dedicata-suzuki-autolensa.html">Suzuki</option>
+          <option value="https://www.edotec.ro/category/2733/camera-dvr-dedicata-tesla-autolensa.html">Tesla</option>
+          <option value="https://www.edotec.ro/category/2735/camera-dvr-dedicata-toyota-autolensa.html">Toyota</option>
+          <option value="https://www.edotec.ro/category/2736/camera-dvr-dedicata-volkswagen-autolensa.html">Volkswagen</option>
+          <option value="https://www.edotec.ro/category/2739/camera-dvr-dedicata-volvo-autolensa.html">Volvo</option>
+        </select>
+        <button class="hconf-btn" onclick="goToBrand()">Caută camera →</button>
+      </div>
+      <div class="hconf-alt">sau <a href="https://www.edotec.ro/category/2753/camera-dvr-universala-autolensa.html" target="_blank">vezi camerele universale</a></div>
     </div>
   </div>
 </section>
+<script>
+function goToBrand(){
+  var sel = document.getElementById('brand-sel');
+  if(sel.value) window.open(sel.value, '_blank');
+}
+</script>
 
 <!-- STATS -->
 <div class="stats">
