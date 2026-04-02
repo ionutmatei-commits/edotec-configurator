@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senzor unghi mort Mercedes-Benz GLC X253 2015-2022 — oglindă dedicată</title>
+  <style>
+    :root {
+      --red:#d32f2f;
+      --red-dark:#b71c1c;
+      --text:#161616;
+      --muted:#5f6368;
+      --line:#e8e8e8;
+      --bg:#ffffff;
+      --soft:#f7f7f8;
+      --soft2:#f1f2f4;
+      --shadow:0 16px 40px rgba(0,0,0,.08);
+      --radius:24px;
+      --max:1180px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.6;
+    }
+    img { max-width:100%; display:block; }
+    .wrap { max-width:var(--max); margin:0 auto; padding:0 24px; }
+    .hero {
+      padding:56px 0 34px;
+      background:
+        radial-gradient(circle at top right, rgba(211,47,47,.08), transparent 28%),
+        linear-gradient(180deg, #fff 0%, #fff 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:36px;
+      align-items:center;
+    }
+    .eyebrow {
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      background:#fff3f3;
+      color:var(--red-dark);
+      border:1px solid #ffd9d9;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    h1 {
+      font-size:clamp(34px, 5vw, 62px);
+      line-height:1.04;
+      margin:18px 0 18px;
+      letter-spacing:-.03em;
+    }
+    .accent { color:var(--red); }
+    .lead {
+      font-size:clamp(18px, 2vw, 22px);
+      color:#323232;
+      max-width:720px;
+      margin:0 0 22px;
+    }
+    .hero-points {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:24px;
+    }
+    .mini {
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 18px;
+      box-shadow:var(--shadow);
+      font-size:15px;
+    }
+    .hero-media {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .hero-media img {
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+    }
+    .section { padding:58px 0; }
+    .section + .section { border-top:1px solid var(--line); }
+    .section-head {
+      max-width:860px;
+      margin-bottom:28px;
+    }
+    h2 {
+      font-size:clamp(28px, 4vw, 46px);
+      line-height:1.08;
+      margin:0 0 12px;
+      letter-spacing:-.02em;
+    }
+    .sub {
+      font-size:18px;
+      color:var(--muted);
+      margin:0;
+    }
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:24px;
+      align-items:start;
+    }
+    .grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:22px;
+    }
+    .card {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .card .body {
+      padding:22px;
+    }
+    .card h3 {
+      margin:0 0 10px;
+      font-size:25px;
+      line-height:1.15;
+    }
+    .kicker {
+      color:var(--red);
+      font-size:13px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:10px;
+    }
+    .muted { color:var(--muted); }
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+    .pill {
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--soft);
+      font-size:14px;
+      font-weight:700;
+      color:#333;
+    }
+    .specs {
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .spec {
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+    }
+    .spec strong {
+      display:block;
+      color:var(--red);
+      font-size:28px;
+      line-height:1;
+      margin-bottom:8px;
+    }
+    .panel {
+      background:linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+    }
+    .quote {
+      border-left:5px solid var(--red);
+      padding:6px 0 6px 18px;
+      font-size:19px;
+      color:#2d2d2d;
+      margin:22px 0 0;
+    }
+    ul.clean {
+      margin:0;
+      padding-left:20px;
+    }
+    ul.clean li {
+      margin:10px 0;
+    }
+    .cta {
+      background:linear-gradient(180deg, #fff6f6 0%, #fff 100%);
+      border:1px solid #ffdada;
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .cta strong {
+      color:var(--red-dark);
+    }
+    .media-fit {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .cover-portrait {
+      width:100%;
+      max-height:860px;
+      object-fit:contain;
+      background:#fff;
+    }
+    .small {
+      font-size:14px;
+      color:var(--muted);
+    }
+    .foot {
+      padding:28px 0 60px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .grid-2, .grid-3, .specs, .hero-points {
+        grid-template-columns:1fr;
+      }
+      .hero {
+        padding-top:34px;
+      }
+      .wrap {
+        padding:0 16px;
+      }
+      h1 {
+        font-size:38px;
+      }
+    }
+  </style>
+  <style>
+    .site-header { background:#161616; padding:14px 24px; display:flex; align-items:center; gap:16px; }
+    .site-header a { color:#fff; text-decoration:none; font-size:14px; opacity:.7; }
+    .site-header a:hover { opacity:1; }
+    .site-header .logo { color:#fff; font-weight:700; font-size:16px; opacity:1; }
+    .site-header span { color:#fff; opacity:.4; }
+  </style>
+</head>
+<body>
+<div class="site-header">
+  <a class="logo" href="/">configurator.edotec.ro</a>
+  <span>/</span>
+  <a href="/bsd">Sisteme unghi mort BSD</a>
+</div>
+
+  
+<div class="wrap" style="padding-top:32px;">
+<div style="background:#f8f9fa;border-left:4px solid #d32f2f;padding:20px 24px;border-radius:0 12px 12px 0;margin-bottom:8px;">
+<h2 style="margin:0 0 12px;font-size:22px;color:#1a1a1a;">Sistem dedicat monitorizare unghi mort pentru Mercedes-Benz GLC X253 (2015–2022)</h2>
+<p style="margin:0;font-size:15px;color:#444;line-height:1.7;">
+Acest kit de senzori unghi mort este proiectat și fabricat <strong>exclusiv pentru Mercedes-Benz GLC X253</strong>, produs între <strong>2015</strong> și <strong>2022</strong>. 
+Kitul include două oglinzi dedicate cu LED de avertizare unghi mort integrat, doi senzori radar 24 GHz care se montează în bara spate, unitate de control și cablaj complet. 
+Oglinda se înlocuiește direct pe suportul original al mașinii — fără tăiere, fără vopsire, fără modificări la caroserie. 
+Dacă modelul tău de Mercedes-Benz GLC X253 a avut oglinzi cu încălzire din fabrică, funcția se păstrează integral după montaj.
+Sistemul detectează vehiculele din unghiul mort și avertizează prin LED amber în oglindă: lumină continuă când un vehicul e detectat, clipire rapidă și buzzer când semnalizezi spre acea direcție.
+Montajul se realizează de un electrician auto, iar în funcție de marca și modelul mașinii poate dura între 6 și 8 ore, fără intervenție asupra instalației electrice originale.
+</p>
+</div>
+</div>
+
+<section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Sisteme dedicate • 24 GHz • aspect OEM</div>
+          <h1>Sistem dedicat de <span class="accent">monitorizare unghi mort</span> și asistență la schimbarea benzii</h1>
+          <p class="lead">
+            O soluție dedicată pentru siguranță reală în trafic, concepută să avertizeze șoferul exact în momentele în care riscul de accident este cel mai mare:
+            la schimbarea benzii, la ieșirea cu spatele din parcare și la deschiderea portierei.
+          </p>
+
+          <div class="hero-points">
+            <div class="mini"><strong>Avertizare în oglindă</strong><br>Semnal vizual discret, clar și ușor de observat.</div>
+            <div class="mini"><strong>Detecție radar 24 GHz</strong><br>Senzori montați discret pentru monitorizare constantă.</div>
+            <div class="mini"><strong>Funcții esențiale</strong><br>BSM, LCA, RCTA și DOW într-un singur sistem.</div>
+            <div class="mini"><strong>Sistem dedicat</strong><br>Se comandă după model, an și configurație volan.</div>
+          </div>
+
+          <div class="quote">
+            Este extrem de util ca, atunci când semnalizezi, să fii avertizat imediat dacă există un vehicul în unghiul mort. Exact aici apar foarte multe accidente pe șosea.
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="/bsd/imgs2/bsd-mirror-natural.jpg" alt="Oglindă cu avertizare unghi mort">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>De ce acest sistem chiar contează</h2>
+        <p class="sub">
+          În trafic, oglinzile standard nu pot acoperi complet zonele laterale și din spatele mașinii. De aici apar ezitări, manevre riscante și accidente care puteau fi evitate.
+          Sistemul dedicat de monitorizare unghi mort acționează ca un ajutor permanent, care vede unde șoferul nu poate vedea suficient de repede.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="body">
+            <div class="kicker">Siguranță în mers</div>
+            <h3>Te avertizează când vrei să schimbi banda</h3>
+            <p class="muted">
+              Dacă în lateral sau din spate se apropie rapid un alt vehicul, avertizarea din oglindă te face atent înainte să începi manevra.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="body">
+            <div class="kicker">Siguranță la parcare</div>
+            <h3>Te ajută când ieși cu spatele</h3>
+            <p class="muted">
+              La ieșirea din parcare, când vizibilitatea este limitată, sistemul detectează traficul transversal și te avertizează dacă se apropie ceva din lateral.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="body">
+            <div class="kicker">Siguranță la coborâre</div>
+            <h3>Previne deschiderea portierei în fața altui vehicul</h3>
+            <p class="muted">
+              O funcție foarte utilă în oraș, când mașina este oprită și există riscul ca din spate să vină un vehicul, motocicletă sau alt participant la trafic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Funcții principale ale sistemului</h2>
+        
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-02.jpg" alt="Blind Spot Monitoring System" class="media-fit">
+          <div class="body">
+            <div class="kicker">BSM</div>
+            <h3>Monitorizare unghi mort</h3>
+            <p class="muted">
+              Sistemul oferă avertizare timpurie pentru vehiculele aflate în benzile laterale stânga și dreapta, reducând pericolele cauzate de zonele fără vizibilitate ale oglinzilor standard.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-03.jpg" alt="Lane Change Assist" class="media-fit">
+          <div class="body">
+            <div class="kicker">LCA</div>
+            <h3>Asistență la schimbarea benzii</h3>
+            <p class="muted">
+              Când semnalizezi și sistemul detectează un vehicul în apropiere sau în unghiul mort, avertizarea devine imediat relevantă pentru a evita o schimbare periculoasă de bandă.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-04.jpg" alt="Rear Cross Traffic Warning" class="media-fit">
+          <div class="body">
+            <div class="kicker">RCTA</div>
+            <h3>Avertizare trafic transversal la mers înapoi</h3>
+            <p class="muted">
+              Când scoți mașina cu spatele dintr-un loc de parcare și nu vezi bine în lateral, sistemul detectează vehiculele care se apropie și te avertizează vizual și, opțional, sonor.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-05.jpg" alt="Door Open Warning" class="media-fit">
+          <div class="body">
+            <div class="kicker">DOW</div>
+            <h3>Avertizare la deschiderea portierei</h3>
+            <p class="muted">
+              Atunci când vehiculul este staționat, sistemul poate avertiza dacă din spate se apropie rapid un alt vehicul, pentru a evita deschiderea portierei în momentul nepotrivit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Tehnologie radar 24 GHz și integrare discretă</h2>
+        
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3 style="margin-top:0;font-size:28px;">Ce transmite imaginea „Technology in Motion”</h3>
+          <ul class="clean">
+            <li>Doi senzori radar de 24 GHz monitorizează zona laterală și din spatele vehiculului.</li>
+            <li>Detecția urmărește vehiculele care intră în aria critică a unghiului mort.</li>
+            <li>În funcție de poziția și viteza vehiculului detectat, șoferul primește avertizare vizuală și, la nevoie, sonoră.</li>
+            <li>Sistemul este gândit pentru siguranță în trafic real, nu doar pentru confort.</li>
+          </ul>
+
+          <div class="specs">
+            <div class="spec"><strong>24</strong>GHz radar dedicat</div>
+            <div class="spec"><strong>2</strong>senzori laterali/spate</div>
+            <div class="spec"><strong>OEM</strong>aspect discret</div>
+            <div class="spec"><strong>LED</strong>warning în oglindă</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-06.jpg" style="width:100%;height:auto;border-radius:12px;" alt="Tehnologie unghi mort 24GHz" class="cover-portrait">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ce avantaje i-au convins pe clienții noștri</h2>
+        
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="body">
+            <div class="kicker">Beneficii reale</div>
+            <h3>De ce merită montat</h3>
+            <ul class="clean muted">
+              <li>Reduce riscul accidentelor la schimbarea benzii, una dintre cele mai frecvente situații periculoase în trafic.</li>
+              <li>Îți oferă încredere suplimentară pe autostradă, pe drumuri expres și în trafic aglomerat.</li>
+              <li>Te ajută când vizibilitatea este limitată, mai ales la ieșirea cu spatele din parcări înguste.</li>
+              <li>Previne situațiile în care deschizi portiera exact când se apropie un vehicul din spate.</li>
+              <li>Avertizarea în oglindă este naturală și ușor de observat, fără să îți distragă atenția inutil.</li>
+              <li>Montajul discret păstrează estetica mașinii și oferă o integrare elegantă.</li>
+              <li>Este o investiție în siguranță, nu doar un accesoriu de confort.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-img-07.jpg" style="width:100%;height:auto;border-radius:12px;" alt="Prezentare funcții blind spot assist" class="cover-portrait">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sistem dedicat, nu universal</h2>
+        
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="body">
+            <div class="kicker">Aspect și compatibilitate</div>
+            <h3>Integrare apropiată de standardul OEM</h3>
+            <p class="muted">
+              În funcție de aplicație, sistemul vine cu elemente dedicate pentru integrare curată, inclusiv soluții pentru avertizare în oglindă.
+              Scopul este să păstreze aspectul elegant al mașinii și să evite montajele vizibil improvizate.
+            </p>
+
+            <div class="pill-row">
+              <span class="pill">dedicat pe model</span>
+              <span class="pill">după anul mașinii</span>
+              <span class="pill">LHD / RHD</span>
+              <span class="pill">integrare discretă</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/bsd/imgs2/bsd-hilux-real.jpg" alt="Detaliu oglindă dedicată" class="media-fit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Componente și detalii de montaj</h2>
+        <p class="sub">Kit complet — oglindă dedicată, senzori radar, unitate de control, buzzer și cablaj.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="card">
+            <img src="/bsd/imgs2/bsd-oglinda-reala.jpg" alt="Oglinda dedicata cu indicator LED unghi mort" style="width:100%;border-radius:8px 8px 0 0;object-fit:cover;max-height:320px;">
+            <div class="body">
+              <h3>Oglindă cu indicator LED integrat</h3>
+              <p class="muted">LED-ul amber din oglindă se aprinde când un vehicul intră în unghiul mort. La semnalizare — clipește și activează buzzer-ul.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/bsd/imgs2/bsd-img-10.jpg" alt="Spatele oglinzii — conector LED" style="width:100%;border-radius:8px 8px 0 0;object-fit:cover;max-height:280px;">
+            <div class="body">
+              <h3>Sticlă dedicată per model</h3>
+              <p class="muted">Oglinda nu se înlocuiește integral — doar sticla. Se montează în locul celei originale, fără modificări la caroserie.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="height:100%;">
+          <img src="/bsd/imgs2/bsd-img-11.jpg" alt="Schema completa kit BSD" style="width:100%;border-radius:8px 8px 0 0;object-fit:contain;background:#f5f5f5;">
+          <div class="body">
+            <h3>Ce include kitul</h3>
+            <ul style="margin:8px 0 0;padding-left:20px;color:#5f6368;font-size:15px;line-height:1.8;">
+              <li>2× sticlă oglindă cu LED BSD integrat + încălzire (dacă mașina a avut oglinzi încălzite, funcția se păstrează)</li>
+              <li>2× senzori radar 24 GHz (bara spate)</li>
+              <li>1× unitate de control ECU</li>
+              <li>1× buzzer avertizare sonoră</li>
+              <li>Cablaj complet + instrucțiuni montaj</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

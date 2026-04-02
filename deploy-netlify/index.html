@@ -1089,6 +1089,10 @@ body:not(.dealer-mode) .dealer-detail{display:none!important}
 .dealer-btn.logged-in{border-color:#27ae60;color:#27ae60;background:#f0faf4}
 .dealer-only{display:none!important}
 body.dealer-mode .dealer-only{display:initial!important}
+/* superadmin-only: doar conturile superadmin vad m² */
+.superadmin-only{display:none!important}
+body.superadmin-mode .superadmin-only{display:initial!important}
+body.superadmin-mode .superadmin-only-inline{display:inline!important}
 body.dealer-mode .dealer-only-flex{display:flex!important}
 body.dealer-mode .dealer-only-block{display:block!important}
 /* Cart buttons: in dealer mode ascunde Finalizeaza, arata Oferta Client */
@@ -1788,7 +1792,7 @@ thankYouTitle:"Mulțumim, {name}! 🎉",successMsg:"Comanda ta a fost înregistr
 discBarTitle:"🎯 Reduceri automate materiale",
 mcTitle:"Cum vrei să configurezi insonorizarea mașinii?",mcCopy:"Poți merge pe configurare detaliată, poți alege un pachet deja gândit sau poți calcula direct insonorizarea completă. Alege varianta care ți se potrivește și o poți schimba ulterior.",mcManualTitle:"Configurator pe zone",mcManualCopy:"Apeși direct pe mașină și alegi separat straturile și materialele pentru fiecare suprafață.",mcManualSpan:"Control maxim",mcPkgTitle:"Configurare rapidă",mcPkgCopy:"Primești combinații deja pregătite, utile dacă vrei să alegi rapid una dintre variantele cele mai cerute.",mcPkgSpan:"Rapid și simplu",mcFullTitle:"Insonorizare completă",mcFullCopy:"Calculezi dintr-un click varianta completă pentru mașina aleasă, fără configurare manuală pe fiecare zonă.",mcFullSpan:"Toată mașina",
 toastSelectCar:"Selectează mai întâi mașina!",toastSelectEngine:"Selectează mai întâi marca, modelul și tipul motorului!",toastEmptyCart:"Coșul este gol!",toastAddSheet:"Adaugă cel puțin o coală!",toastSheetsAdded:"✓ Coli adăugate în coș!",toastSessionRestored:"✅ Sesiunea ta a fost restaurată!",toastPrevCleaned:"Selecția anterioară a fost ștearsă. Poți continua cu pachetul ales.",toastAdded:"adăugat în coș!",toastAlreadyInCart:"Zona este deja în coș cu aceeași configurație.",
-fpTitle:"🚗 Pachet Complet",fpChooseQ:"Alege calitatea materialelor",fpSelectFirst:"🛒 Selectează o calitate mai întâi",fpAddCart:"🛒 Adaugă în coș",fpLaborTitle:"Estimare manoperă montaj",fpLaborDesc:"Poți alege la pasul următor dacă vrei instalare profesională",fpZonesDetail:"▾ Zone incluse ({n} zone, ~{a} m²)",fpEstNote:"* Estimare. Prețul final depinde de starea mașinii și instalatorul ales.",
+fpTitle:"🚗 Pachet Complet",fpChooseQ:"Alege calitatea materialelor",fpSelectFirst:"🛒 Selectează o calitate mai întâi",fpAddCart:"🛒 Adaugă în coș",fpLaborTitle:"Estimare manoperă montaj",fpLaborDesc:"Poți alege la pasul următor dacă vrei instalare profesională",fpZonesDetail:"▾ Zone incluse ({n} zone<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Estimare. Prețul final depinde de starea mașinii și instalatorul ales.",
 ppTitle:"🎯 Pachete Populare",ppChoosePkg:"Alege combinația potrivită pentru tine",ppNote:"* Click pe material pentru a-l adăuga direct în coș · manopera la pasul următor",ppBack:"← Înapoi",
 stratLabel:"Strat",noCarLabel:"Mașină nespecificată",laborBadge:"🔧 Montaj estimat:",laborBadgePost:"· poate fi adăugat la finalizare",stratStr:"strat",straturiStr:"straturi",
 doorsPartialSuffix:" (doar difuzor)",roofNormalSuffix:" (trapă)",roofPanoramicSuffix:" (trapă panoramică)",portbagajPrefix:"Portbagaj - ",maxLayersN:"{n} straturi",maxLayers1:"1 strat",listenWithSound:"Ascultă cu sunet",
@@ -1858,7 +1862,7 @@ thankYouTitle:"Thank you, {name}! 🎉",successMsg:"Your order has been successf
 discBarTitle:"🎯 Automatic material discounts",
 mcTitle:"How do you want to configure your insulation?",mcCopy:"You can go for detailed configuration, choose a pre-designed package, or calculate directly for the whole car. Choose the option that suits you.",mcManualTitle:"Configure by zones",mcManualCopy:"Click directly on the car and choose layers and materials separately for each surface.",mcManualSpan:"Maximum control",mcPkgTitle:"Popular packages",mcPkgCopy:"Get pre-made combinations, useful if you want to quickly choose one of the most requested options.",mcPkgSpan:"Fast and simple",mcFullTitle:"Full insulation",mcFullCopy:"Calculate the complete option for the chosen car in one click, without manual configuration for each zone.",mcFullSpan:"Whole car",
 toastSelectCar:"Please select your car first!",toastSelectEngine:"Please select brand, model and engine type first!",toastEmptyCart:"Cart is empty!",toastAddSheet:"Add at least one sheet!",toastSheetsAdded:"✓ Sheets added to cart!",toastSessionRestored:"✅ Your session has been restored!",toastPrevCleaned:"Previous selection was cleared. You can continue with the chosen package.",toastAdded:"added to cart!",toastAlreadyInCart:"Zone is already in cart with the same configuration.",
-fpTitle:"🚗 Complete Package",fpChooseQ:"Choose material quality",fpSelectFirst:"🛒 Select a quality first",fpAddCart:"🛒 Add to cart",fpLaborTitle:"Installation labor estimate",fpLaborDesc:"You can choose at the next step if you want professional installation",fpZonesDetail:"▾ Included zones ({n} zones, ~{a} m²)",fpEstNote:"* Estimate. Final price depends on car condition and chosen installer.",
+fpTitle:"🚗 Complete Package",fpChooseQ:"Choose material quality",fpSelectFirst:"🛒 Select a quality first",fpAddCart:"🛒 Add to cart",fpLaborTitle:"Installation labor estimate",fpLaborDesc:"You can choose at the next step if you want professional installation",fpZonesDetail:"▾ Included zones ({n} zones<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Estimate. Final price depends on car condition and chosen installer.",
 ppTitle:"🎯 Popular Packages",ppChoosePkg:"Choose the right combination for you",ppNote:"* Click on material to add directly to cart · labor at next step",ppBack:"← Back",
 stratLabel:"Layer",noCarLabel:"Unspecified vehicle",laborBadge:"🔧 Estimated installation:",laborBadgePost:"· can be added at checkout",stratStr:"layer",straturiStr:"layers",
 doorsPartialSuffix:" (speaker area only)",roofNormalSuffix:" (sunroof)",roofPanoramicSuffix:" (panoramic sunroof)",portbagajPrefix:"Trunk - ",maxLayersN:"{n} layers",maxLayers1:"1 layer",listenWithSound:"Listen with sound",
@@ -1928,7 +1932,7 @@ thankYouTitle:"Köszönjük, {name}! 🎉",successMsg:"Rendelése sikeresen regi
 discBarTitle:"🎯 Automatikus anyagkedvezmények",
 mcTitle:"Hogyan szeretné konfigurálni a hangszigetelést?",mcCopy:"Választhat részletes konfigurálást, előre megtervezett csomagot, vagy az egész autóra számíthat.",mcManualTitle:"Konfigurálás zónánként",mcManualCopy:"Kattintson közvetlenül az autóra és válassza ki külön az egyes felületek rétegeit és anyagait.",mcManualSpan:"Maximális kontroll",mcPkgTitle:"Népszerű csomagok",mcPkgCopy:"Előre elkészített kombinációkat kap a legkeresettebb lehetőségekből.",mcPkgSpan:"Gyors és egyszerű",mcFullTitle:"Teljes szigetelés",mcFullCopy:"Számítsa ki a teljes lehetőséget egy kattintással.",mcFullSpan:"Egész autó",
 toastSelectCar:"Kérjük, először válassza ki autóját!",toastSelectEngine:"Kérjük, először válassza ki a márkát, modellt és motor típusát!",toastEmptyCart:"A kosár üres!",toastAddSheet:"Adjon hozzá legalább egy lapot!",toastSheetsAdded:"✓ Lapok hozzáadva a kosárhoz!",toastSessionRestored:"✅ Munkamenete visszaállítva!",toastPrevCleaned:"Az előző kiválasztás törlésre került.",toastAdded:"kosárba helyezve!",toastAlreadyInCart:"A zóna már a kosárban van ugyanazzal a konfigurációval.",
-fpTitle:"🚗 Teljes csomag",fpChooseQ:"Válassza ki az anyagminőséget",fpSelectFirst:"🛒 Először válasszon minőséget",fpAddCart:"🛒 Kosárba",fpLaborTitle:"Szerelési munkadíj becslése",fpLaborDesc:"A következő lépésnél választhat profi szerelést",fpZonesDetail:"▾ Belefoglalt zónák ({n} zóna, ~{a} m²)",fpEstNote:"* Becslés. A végső ár az autó állapotától függ.",
+fpTitle:"🚗 Teljes csomag",fpChooseQ:"Válassza ki az anyagminőséget",fpSelectFirst:"🛒 Először válasszon minőséget",fpAddCart:"🛒 Kosárba",fpLaborTitle:"Szerelési munkadíj becslése",fpLaborDesc:"A következő lépésnél választhat profi szerelést",fpZonesDetail:"▾ Belefoglalt zónák ({n} zóna<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Becslés. A végső ár az autó állapotától függ.",
 ppTitle:"🎯 Népszerű Csomagok",ppChoosePkg:"Válassza ki az Önnek megfelelő kombinációt",ppNote:"* Kattintson az anyagra a kosárba adáshoz · 10% felesleget tartalmaz · munkadíj következő lépésnél",ppBack:"← Vissza",
 stratLabel:"Réteg",noCarLabel:"Nem meghatározott jármű",laborBadge:"🔧 Becsült szerelés:",laborBadgePost:"· a fizetésnél adható hozzá",stratStr:"réteg",straturiStr:"réteg",
 doorsPartialSuffix:" (csak hangszóró terület)",roofNormalSuffix:" (tetőablak)",roofPanoramicSuffix:" (panoráma tetőablak)",portbagajPrefix:"Csomagtartó - ",maxLayersN:"{n} réteg",maxLayers1:"1 réteg",listenWithSound:"Hallgasson hanggal",
@@ -1998,7 +2002,7 @@ thankYouTitle:"Благодарим, {name}! 🎉",successMsg:"Вашата по
 discBarTitle:"🎯 Автоматични отстъпки за материали",
 mcTitle:"Как искате да конфигурирате звукоизолацията?",mcCopy:"Можете да изберете детайлна конфигурация, предварително проектиран пакет или за цялата кола.",mcManualTitle:"Конфигуриране по зони",mcManualCopy:"Натиснете директно върху колата и изберете отделно слоевете и материалите.",mcManualSpan:"Максимален контрол",mcPkgTitle:"Популярни пакети",mcPkgCopy:"Получавате предварително подготвени комбинации.",mcPkgSpan:"Бързо и просто",mcFullTitle:"Пълна изолация",mcFullCopy:"Изчислете пълния вариант с едно кликване.",mcFullSpan:"Цяла кола",
 toastSelectCar:"Моля, първо изберете вашата кола!",toastSelectEngine:"Моля, първо изберете марка, модел и тип двигател!",toastEmptyCart:"Количката е празна!",toastAddSheet:"Добавете поне един лист!",toastSheetsAdded:"✓ Листовете са добавени в количката!",toastSessionRestored:"✅ Вашата сесия е възстановена!",toastPrevCleaned:"Предишният избор беше изчистен.",toastAdded:"добавено в количката!",toastAlreadyInCart:"Зоната вече е в количката със същата конфигурация.",
-fpTitle:"🚗 Пълен Пакет",fpChooseQ:"Изберете качество на материалите",fpSelectFirst:"🛒 Първо изберете качество",fpAddCart:"🛒 Добави в количката",fpLaborTitle:"Прогнозен труд за монтаж",fpLaborDesc:"Можете да изберете на следващата стъпка",fpZonesDetail:"▾ Включени зони ({n} зони, ~{a} m²)",fpEstNote:"* Прогноза. Крайната цена зависи от автомобила.",
+fpTitle:"🚗 Пълен Пакет",fpChooseQ:"Изберете качество на материалите",fpSelectFirst:"🛒 Първо изберете качество",fpAddCart:"🛒 Добави в количката",fpLaborTitle:"Прогнозен труд за монтаж",fpLaborDesc:"Можете да изберете на следващата стъпка",fpZonesDetail:"▾ Включени зони ({n} зони<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Прогноза. Крайната цена зависи от автомобила.",
 ppTitle:"🎯 Популярни Пакети",ppChoosePkg:"Изберете правилната комбинация за вас",ppNote:"* Кликнете върху материала за добавяне · включва 10% излишък · трудът на следващата стъпка",ppBack:"← Назад",
 stratLabel:"Слой",noCarLabel:"Неуточнено превозно средство",laborBadge:"🔧 Прогнозен монтаж:",laborBadgePost:"· може да се добави при плащане",stratStr:"слой",straturiStr:"слоя",
 doorsPartialSuffix:" (само зона за говорител)",roofNormalSuffix:" (люк)",roofPanoramicSuffix:" (панорамен люк)",portbagajPrefix:"Багажник - ",maxLayersN:"{n} слоя",maxLayers1:"1 слой",listenWithSound:"Слушайте със звук",
@@ -2476,7 +2480,8 @@ const carDB = {
   "Stelvio":["suv_medium",2016,2024],"Tonale":["suv_small",2022,2024]
 },
 "Audi":{
-  "A1":["hatchback",2010,2024],"A2":["hatchback",2000,2005],"A3":["hatchback",2003,2024],
+  "A1"
+  "A4 Allroad":["sedan",2008,2024],"A6 Allroad":["sedan",2006,2024],"RS4":["sedan",2017,2024],"RS5":["large_sedan",2017,2024],"Q6 e-tron":["suv_medium",2024,2024],:["hatchback",2010,2024],"A2":["hatchback",2000,2005],"A3":["hatchback",2003,2024],
   "A4":["sedan",1999,2024],"A5":["sedan",2007,2024],"A6":["large_sedan",1997,2024],
   "A7":["large_sedan",2010,2024],"A8":["large_sedan",1994,2024],
   "Q2":["suv_small",2016,2024],"Q3":["suv_small",2011,2024],"Q4 e-tron":["suv_medium",2021,2024],
@@ -2485,7 +2490,8 @@ const carDB = {
   "RS6":["large_sedan",2002,2024],"S3":["hatchback",2006,2024]
 },
 "BMW":{
-  "Seria 1":["hatchback",2004,2024],"Seria 2":["hatchback",2014,2024],"Seria 3":["sedan",1998,2024],
+  "Seria 1"
+  "iX1":["suv_small",2022,2024],"M4":["large_sedan",2021,2024],:["hatchback",2004,2024],"Seria 2":["hatchback",2014,2024],"Seria 3":["sedan",1998,2024],
   "Seria 4":["sedan",2013,2024],"Seria 5":["large_sedan",1999,2024],"Seria 6":["large_sedan",2003,2022],
   "Seria 7":["large_sedan",1994,2024],"Seria 8":["sedan",2018,2024],
   "X1":["suv_small",2009,2024],"X2":["suv_small",2018,2024],"X3":["suv_medium",2003,2024],
@@ -2500,7 +2506,8 @@ const carDB = {
   "Trailblazer":["suv_medium",2020,2024],"Tahoe":["suv_large",2000,2024]
 },
 "Citroën":{
-  "C1":["hatchback",2005,2022],"C3":["hatchback",2002,2024],"C3 Aircross":["suv_small",2017,2024],
+  "C1"
+  "C2":["hatchback",2003,2010],"C6":["large_sedan",2005,2012],"C8":["van",2002,2014],"Xsara Picasso":["van",2000,2012],"Grand C4 Picasso":["van",2006,2018],:["hatchback",2005,2022],"C3":["hatchback",2002,2024],"C3 Aircross":["suv_small",2017,2024],
   "C4":["hatchback",2004,2024],"C4 Cactus":["hatchback",2014,2020],"C5":["sedan",2000,2017],
   "C5 Aircross":["suv_medium",2017,2024],"C5 X":["suv_medium",2021,2024],
   "SpaceTourer":["van_large",2016,2024],"Jumpy Combi":["van",2016,2024],
@@ -2512,13 +2519,15 @@ const carDB = {
   "Spring":["hatchback",2021,2024],"Jogger":["suv_small",2021,2024],"Dokker":["suv_small",2012,2021]
 },
 "Fiat":{
-  "500":["hatchback",2007,2024],"500e":["hatchback",2020,2024],"500L":["suv_small",2012,2024],
+  "500"
+  "Doblo":["van",2001,2024],"Croma":["large_sedan",2005,2011],"Linea":["sedan",2007,2015],"Sedici":["suv_small",2006,2014],:["hatchback",2007,2024],"500e":["hatchback",2020,2024],"500L":["suv_small",2012,2024],
   "500X":["suv_small",2014,2024],"Bravo":["hatchback",2007,2016],"Grande Punto":["hatchback",2005,2012],
   "Panda":["hatchback",2003,2024],"Tipo":["sedan",2015,2024],
   "Ducato":["blocked",2006,2024],"Talento":["van",2016,2021],"Scudo":["van",2007,2024]
 },
 "Ford":{
-  "EcoSport":["suv_small",2014,2022],"Explorer":["suv_large",2011,2024],"Fiesta":["hatchback",2001,2024],
+  "EcoSport"
+  "Ranger":["suv_large",2012,2024],"Tourneo Courier":["van",2014,2024],:["suv_small",2014,2022],"Explorer":["suv_large",2011,2024],"Fiesta":["hatchback",2001,2024],
   "Focus":["hatchback",1998,2024],"Galaxy":["suv_large",2000,2024],"Kuga":["suv_medium",2008,2024],
   "Mondeo":["sedan",1999,2022],"Mustang":["sedan",2015,2024],"Mustang Mach-E":["suv_medium",2020,2024],
   "Puma":["suv_small",2019,2024],"S-Max":["suv_large",2006,2024],
@@ -2530,11 +2539,13 @@ const carDB = {
   "GV70":["suv_medium",2020,2024],"GV80":["suv_large",2020,2024]
 },
 "Honda":{
-  "Accord":["sedan",1998,2024],"Civic":["hatchback",2000,2024],"CR-V":["suv_medium",2001,2024],
+  "Accord"
+  "CR-Z":["hatchback",2010,2016],"FR-V":["van",2004,2009],"Legend":["large_sedan",2006,2012],"Stream":["van",2006,2014],:["sedan",1998,2024],"Civic":["hatchback",2000,2024],"CR-V":["suv_medium",2001,2024],
   "HR-V":["suv_small",2015,2024],"Jazz":["hatchback",2001,2024],"ZR-V":["suv_medium",2022,2024]
 },
 "Hyundai":{
-  "Bayon":["suv_small",2021,2024],"Elantra":["sedan",2000,2024],"i10":["hatchback",2007,2024],
+  "Bayon"
+  "Accent":["sedan",2005,2020],"Getz":["hatchback",2002,2009],"ix20":["van",2010,2019],"Creta":["suv_small",2015,2024],"Veloster":["hatchback",2012,2019],:["suv_small",2021,2024],"Elantra":["sedan",2000,2024],"i10":["hatchback",2007,2024],
   "i20":["hatchback",2008,2024],"i30":["hatchback",2007,2024],"Ioniq":["hatchback",2016,2021],
   "Ioniq 5":["suv_medium",2021,2024],"Ioniq 6":["sedan",2022,2024],"ix35":["suv_small",2009,2017],
   "Kona":["suv_small",2017,2024],"Santa Fe":["suv_large",2000,2024],"Sonata":["large_sedan",1999,2024],
@@ -2553,7 +2564,8 @@ const carDB = {
   "Grand Cherokee":["suv_large",1999,2024],"Renegade":["suv_small",2014,2024],"Wrangler":["suv_large",2007,2024]
 },
 "Kia":{
-  "Carnival":["suv_large",2021,2024],"Ceed":["hatchback",2006,2024],"EV6":["suv_medium",2021,2024],
+  "Carnival"
+  "Xceed":["suv_small",2019,2024],"Soul":["suv_small",2008,2024],"Carens":["van",2006,2024],"Venga":["van",2010,2019],"Optima":["sedan",2010,2020],:["suv_large",2021,2024],"Ceed":["hatchback",2006,2024],"EV6":["suv_medium",2021,2024],
   "EV9":["suv_large",2023,2024],"Niro":["suv_small",2016,2024],"Picanto":["hatchback",2004,2024],
   "Rio":["hatchback",2001,2024],"Sorento":["suv_large",2002,2024],"Sportage":["suv_medium",2004,2024],
   "Stinger":["large_sedan",2017,2024],"Stonic":["suv_small",2017,2024]
@@ -2574,12 +2586,14 @@ const carDB = {
   "Levante":["suv_large",2016,2024],"Quattroporte":["large_sedan",2004,2024]
 },
 "Mazda":{
-  "Mazda2":["hatchback",2007,2024],"Mazda3":["hatchback",2003,2024],"Mazda6":["sedan",2002,2024],
+  "Mazda2"
+  "CX-30":["suv_small",2019,2024],"CX-7":["suv_medium",2007,2012],"Mazda5":["van",2005,2015],"CX-9":["suv_large",2007,2022],:["hatchback",2007,2024],"Mazda3":["hatchback",2003,2024],"Mazda6":["sedan",2002,2024],
   "CX-3":["suv_small",2015,2022],"CX-5":["suv_medium",2012,2024],"CX-60":["suv_large",2022,2024],
   "MX-5":["hatchback",2015,2024]
 },
 "Mercedes-Benz":{
-  "A-Class":["hatchback",2012,2024],"B-Class":["suv_small",2005,2024],"C-Class":["sedan",1999,2024],
+  "A-Class"
+  "G-Class":["suv_large",2000,2024],"GLK":["suv_medium",2008,2015],"ML-Class":["suv_large",2005,2015],"Citan":["van",2012,2024],"T-Class":["van",2022,2024],:["hatchback",2012,2024],"B-Class":["suv_small",2005,2024],"C-Class":["sedan",1999,2024],
   "CLA":["sedan",2013,2024],"CLS":["large_sedan",2004,2024],"E-Class":["large_sedan",1999,2024],
   "EQA":["suv_small",2021,2024],"EQB":["suv_small",2021,2024],"EQC":["suv_medium",2019,2024],
   "EQE":["large_sedan",2021,2024],"EQS":["large_sedan",2021,2024],
@@ -2589,15 +2603,18 @@ const carDB = {
   "Sprinter":["blocked",2006,2024],"Sprinter Crafter":["blocked",2010,2024]
 },
 "Mitsubishi":{
-  "ASX":["suv_small",2010,2024],"Colt":["hatchback",2004,2012],"Eclipse Cross":["suv_medium",2017,2024],
+  "ASX"
+  "Pajero":["suv_large",2000,2022],"L200":["suv_large",2006,2024],"Grandis":["van",2003,2011],:["suv_small",2010,2024],"Colt":["hatchback",2004,2012],"Eclipse Cross":["suv_medium",2017,2024],
   "Lancer":["sedan",2003,2017],"Outlander":["suv_large",2012,2024],"Space Star":["hatchback",2012,2024]
 },
 "Nissan":{
-  "Ariya":["suv_medium",2021,2024],"Juke":["suv_small",2010,2024],"Leaf":["hatchback",2010,2024],
+  "Ariya"
+  "Note":["hatchback",2006,2022],"Navara":["suv_large",2005,2024],"Murano":["suv_large",2008,2022],"NV200":["van",2009,2024],"Tiida":["sedan",2005,2012],:["suv_medium",2021,2024],"Juke":["suv_small",2010,2024],"Leaf":["hatchback",2010,2024],
   "Micra":["hatchback",2002,2024],"Qashqai":["suv_medium",2006,2024],"X-Trail":["suv_large",2001,2024]
 },
 "Opel":{
-  "Astra":["hatchback",1998,2024],"Combo":["suv_small",2001,2024],"Combo Life":["suv_small",2018,2024],"Corsa":["hatchback",2000,2024],
+  "Astra"
+  "Adam":["hatchback",2012,2019],"Antara":["suv_medium",2006,2015],"Cascada":["large_sedan",2013,2019],"Meriva":["van",2003,2017],"Vectra":["sedan",2002,2009],"Agila":["hatchback",2000,2008],:["hatchback",1998,2024],"Combo":["suv_small",2001,2024],"Combo Life":["suv_small",2018,2024],"Corsa":["hatchback",2000,2024],
   "Crossland X":["suv_small",2017,2024],"Grandland X":["suv_medium",2017,2024],
   "Insignia":["large_sedan",2008,2024],"Mokka":["suv_small",2012,2024],
   "Vivaro Life":["van_large",2019,2024],"Vivaro":["van",2001,2024],
@@ -2605,7 +2622,8 @@ const carDB = {
   "Movano":["blocked",2010,2024]
 },
 "Peugeot":{
-  "108":["hatchback",2014,2021],"208":["hatchback",2012,2024],"308":["hatchback",2007,2024],
+  "108"
+  "107":["hatchback",2005,2014],"e-208":["hatchback",2020,2024],"e-2008":["suv_small",2020,2024],:["hatchback",2014,2021],"208":["hatchback",2012,2024],"308":["hatchback",2007,2024],
   "408":["sedan",2022,2024],"508":["large_sedan",2010,2024],"2008":["suv_small",2013,2024],
   "3008":["suv_medium",2008,2024],"5008":["suv_large",2009,2024],
   "Expert":["van",2016,2024],"Traveller":["van_large",2016,2024],
@@ -2617,7 +2635,8 @@ const carDB = {
   "Macan":["suv_medium",2014,2024],"Panamera":["large_sedan",2009,2024],"Taycan":["large_sedan",2019,2024]
 },
 "Renault":{
-  "Arkana":["suv_medium",2021,2024],"Captur":["suv_small",2013,2024],"Clio":["hatchback",2000,2024],
+  "Arkana"
+  "Express":["van",2021,2024],"Symbol":["sedan",2008,2015],:["suv_medium",2021,2024],"Captur":["suv_small",2013,2024],"Clio":["hatchback",2000,2024],
   "Espace":["suv_large",2003,2024],"Kadjar":["suv_medium",2015,2024],"Koleos":["suv_medium",2007,2024],
   "Master":["blocked",2010,2024],
   "Laguna":["sedan",2000,2015],"Megane":["hatchback",2002,2024],"Scenic":["suv_medium",2003,2024],
@@ -2625,12 +2644,14 @@ const carDB = {
   "Trafic Passenger":["van",2001,2024],"Trafic":["van",2001,2024]
 },
 "Seat":{
-  "Arona":["suv_small",2017,2024],"Ateca":["suv_medium",2016,2024],"Ibiza":["hatchback",2002,2024],
+  "Arona"
+  "Altea":["hatchback",2004,2015],"Alhambra":["van",2010,2022],"Cordoba":["sedan",2002,2009],:["suv_small",2017,2024],"Ateca":["suv_medium",2016,2024],"Ibiza":["hatchback",2002,2024],
   "Leon":["hatchback",2000,2024],"Tarraco":["suv_large",2018,2024],"Toledo":["sedan",2004,2019],
   "Mii":["hatchback",2012,2019]
 },
 "Skoda":{
-  "Citigo":["hatchback",2011,2020],"Enyaq":["suv_medium",2020,2024],"Fabia":["hatchback",1999,2024],
+  "Citigo"
+  "Kamiq":["suv_small",2019,2024],"Yeti":["suv_medium",2009,2017],"Roomster":["van",2006,2015],"Slavia":["sedan",2022,2024],:["hatchback",2011,2020],"Enyaq":["suv_medium",2020,2024],"Fabia":["hatchback",1999,2024],
   "Karoq":["suv_medium",2017,2024],"Kodiaq":["suv_large",2016,2024],"Octavia":["sedan",1996,2024],
   "Rapid":["sedan",2012,2019],"Scala":["hatchback",2019,2024],"Superb":["large_sedan",2001,2024]
 },
@@ -2648,14 +2669,16 @@ const carDB = {
   "Model X":["suv_large",2015,2024],"Model Y":["suv_medium",2020,2024]
 },
 "Toyota":{
-  "Aygo":["hatchback",2005,2022],"Aygo X":["hatchback",2022,2024],"bZ4X":["suv_medium",2022,2024],
+  "Aygo"
+  "Hilux":["suv_large",2005,2024],"Verso":["van",2009,2018],:["hatchback",2005,2022],"Aygo X":["hatchback",2022,2024],"bZ4X":["suv_medium",2022,2024],
   "C-HR":["suv_small",2016,2024],"Camry":["large_sedan",2001,2024],"Corolla":["hatchback",2000,2024],
   "GR Yaris":["hatchback",2020,2024],"Land Cruiser":["suv_large",1998,2024],
   "Prius":["hatchback",2004,2024],"RAV4":["suv_medium",2000,2024],"Yaris":["hatchback",2001,2024],
   "Proace Verso":["van_large",2016,2024],"Proace City Verso":["suv_small",2019,2024]
 },
 "Volkswagen":{
-  "Arteon":["large_sedan",2017,2024],"Caddy":["suv_small",2003,2024],"Golf":["hatchback",2003,2024],
+  "Arteon"
+  "Touran":["van",2003,2024],"Golf Plus":["hatchback",2005,2013],"Golf Variant":["sedan",2007,2020],"Tiguan Allspace":["suv_large",2017,2024],:["large_sedan",2017,2024],"Caddy":["suv_small",2003,2024],"Golf":["hatchback",2003,2024],
   "ID.3":["hatchback",2020,2024],"ID.4":["suv_medium",2020,2024],"ID.5":["suv_medium",2021,2024],
   "Jetta":["sedan",2005,2024],"Passat":["sedan",2000,2024],"Polo":["hatchback",2001,2024],
   "Sharan":["suv_large",2000,2022],"T-Cross":["suv_small",2018,2024],"T-Roc":["suv_small",2017,2024],
@@ -2666,7 +2689,8 @@ const carDB = {
   "up!":["hatchback",2011,2023]
 },
 "Volvo":{
-  "C40":["suv_small",2021,2024],"S60":["sedan",2000,2024],"S90":["large_sedan",2016,2024],
+  "C40"
+  "V70":["sedan",2000,2016],"XC70":["suv_medium",2000,2016],"C30":["hatchback",2006,2013],"S40":["sedan",2004,2012],:["suv_small",2021,2024],"S60":["sedan",2000,2024],"S90":["large_sedan",2016,2024],
   "V40":["hatchback",2012,2019],"V60":["sedan",2010,2024],"V90":["large_sedan",2016,2024],
   "XC40":["suv_small",2017,2024],"XC60":["suv_medium",2008,2024],"XC90":["suv_large",2002,2024]
 },
@@ -2681,7 +2705,7 @@ const carDB = {
   "Formentor":["suv_medium",2020,2024],"Leon":["hatchback",2020,2024],"Tavascan":["suv_medium",2024,2024]
 },
 "DS Automobiles":{
-  "DS 3":["hatchback",2019,2024],"DS 4":["hatchback",2021,2024],"DS 7":["suv_large",2017,2024],"DS 9":["large_sedan",2021,2024]
+  "DS 3":["hatchback",2019,2024],"DS 4":["hatchback",2021,2024],"DS 5":["suv_medium",2015,2024],"DS 7":["suv_large",2017,2024],"DS 9":["large_sedan",2021,2024]
 },
 "Lancia":{"Ypsilon":["hatchback",2011,2024]},
 "MG":{
@@ -3873,12 +3897,7 @@ let _dealerList = []; // se incarca din Sheet la prima autentificare
 
 // ═══ DEALERI - actualizati manual din Sheet (CORS nu permite fetch direct) ═══
 // Adauga dealeri noi in DEALER_LIST_STATIC si fa git push
-const DEALER_LIST_STATIC = [
-  {user:'edotec',    pass:'1234',        name:'Ionut Matei', firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461',  email:'ionut.matei@edotec.ro'},
-  {user:'viperx',    pass:'viperx1234',  name:'Cristian Rus', firm:'VIPER X',  address:'Regele Mihai',   phone:'744559289',  email:'komodil1@gmail.com'},
-  {user:'timea.pop', pass:'1234vbnm',    name:'Timea Pop',    firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461', email:'ionut.matei@edotec.ro'},
-  {user:'demo',      pass:'demo',        name:'Demo',         firm:'DEMO SRL',  address:'Str. Demo 35',   phone:'733445754',  email:'demo@demo.ro'},
-];
+const DEALER_LIST_STATIC = []; // moved to server
 
 async function loadDealerList(){
   if(_dealerList.length) return _dealerList;
@@ -3915,21 +3934,25 @@ function closeDealerLogin(){
   document.getElementById('dl-user').value='';
   document.getElementById('dl-pass').value='';
 }
-async function dealerLogin(){
+async async function dealerLogin(){
   const user=document.getElementById('dl-user').value.trim().toLowerCase();
   const pass=document.getElementById('dl-pass').value.trim();
   if(!user){document.getElementById('dl-err').textContent='Introdu utilizatorul';document.getElementById('dl-err').style.display='block';return;}
-  // Arata loading
   const loginBtn=document.querySelector('#dealer-login-modal .dealer-login-box button:last-child');
   if(loginBtn){loginBtn.textContent='Se verifică...';loginBtn.disabled=true;}
-  // Incarca lista din Sheet
-  const list = await loadDealerList();
-  if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
-  const dealer=list.find(d=>d.user.toLowerCase()===user && String(d.pass)===String(pass));
-  if(!dealer){document.getElementById('dl-err').textContent='User sau parolă incorectă';document.getElementById('dl-err').style.display='block';return;}
-  // Activare dealer mode
-  _currentDealer=dealer;
-  document.body.classList.add('dealer-mode');
+  try {
+    const resp = await fetch('/auth', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({user,pass})});
+    const data = await resp.json();
+    if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
+    if(!resp.ok || !data.ok){
+      document.getElementById('dl-err').textContent=data.error||'User sau parolă incorectă';
+      document.getElementById('dl-err').style.display='block';return;
+    }
+    const dealer=data.dealer;
+    // Activare dealer mode
+    _currentDealer=dealer;
+    document.body.classList.add('dealer-mode');
+    if(dealer.role==='superadmin') document.body.classList.add('superadmin-mode');
   const btn=document.getElementById('dealer-toggle-btn');
   btn.classList.add('logged-in');
   document.getElementById('dealer-btn-text').textContent=dealer.name||dealer.user;
@@ -3942,7 +3965,7 @@ async function dealerLogin(){
   showToast('✅ Bine ai venit, '+dealer.name+'! Mod dealer activat.');
 }
 function dealerLogout(){
-  document.body.classList.remove('dealer-mode');
+  document.body.classList.remove('dealer-mode');document.body.classList.remove('superadmin-mode');
   const btn=document.getElementById('dealer-toggle-btn');
   btn.classList.remove('logged-in');
   document.getElementById('dealer-btn-text').textContent='Dealer';
@@ -5156,7 +5179,7 @@ function renderPopPkgStep2(){
       <div style="font-size:10px;color:${sel?'rgba(255,255,255,.8)':'#777'};margin-bottom:8px;line-height:1.3">${qd.desc.replace(/<[^>]+>/g,'').slice(0,60)}…</div>
       <div style="background:${sel?'rgba(255,255,255,.25)':col};border-radius:8px;padding:6px 10px;text-align:center">
         <span style="font-size:16px;font-weight:900;color:#fff">${ron(r.totalCost)} RON</span>
-        <div class="dealer-only" style="font-size:9px;color:rgba(255,255,255,.8)">~${r.totalArea.toFixed(1)} m² materiale</div>
+        <div class="dealer-only" style="font-size:9px;class="superadmin-only" style="display:none">~${r.totalArea.toFixed(1)} m² materiale</div>
       <div style="font-size:9px;color:rgba(255,255,255,.75);margin-top:5px;background:rgba(0,0,0,.12);border-radius:5px;padding:3px 7px">
         ${ (()=>{
           const wKg=calcWeightFromProductTotals(r.productTotals); if(!wKg) return '';
@@ -5583,7 +5606,7 @@ function renderRoofSunroofStep(){
       <div style="text-align:right;flex-shrink:0">
         <div style="font-size:11px;font-weight:800;color:${sel?'var(--red)':'#666'};background:${sel?'#fff0ee':'var(--gray)'};
           padding:3px 8px;border-radius:20px">${o.badge}</div>
-        <div class="dealer-only" style="font-size:10px;color:var(--muted);margin-top:3px">~${area} m²</div>
+        <div class="superadmin-only" style="font-size:10px;color:var(--muted);margin-top:3px" class="superadmin-only">~${area} m²</div>
       </div>
     </div>`;
   });
@@ -5673,7 +5696,7 @@ function renderStep2(){
       color:#e67e22;background:#fffbf0;border:1px solid #f0c030;border-radius:20px;padding:1px 7px">
       🔲 ${label}</span>`;
   }
-  let h=`<p class="zm-subtitle"><strong>${zoneNames[currentZone]}</strong>${sunroofNote} - ${currentLayers} strat${currentLayers>1?"uri":""}<span class="dealer-only"> · suprafață ~${area.toFixed(1)} m²</span></p>`;
+  let h=`<p class="zm-subtitle"><strong>${zoneNames[currentZone]}</strong>${sunroofNote} - ${currentLayers} strat${currentLayers>1?"uri":""}<span class="superadmin-only"> · suprafață ~${area.toFixed(1)} m²</span></p>`;
 
   // ── Banner upgrade EV Blue - vizibil în step 2 (alegere calitate)
   if(propulsion==='ev'){
@@ -5807,7 +5830,7 @@ function renderMatPreview(){
       <div>
         <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6e6e73;margin-bottom:2px">${t('layerN')} ${idx+1}</div>
         <div class="mat-name">${p.name}</div>
-        <div class="mat-detail">${p.brand}<span class="dealer-only"> · ${sheets} coli · ${p.m2}m²/coală · acoperire ${Math.round(l.c*100)}%</span></div>
+        <div class="mat-detail">${p.brand}<span class="superadmin-only"> · ${sheets} coli · ${p.m2}m²/coală · acoperire ${Math.round(l.c*100)}%</span></div>
       </div>
       <div class="mat-cost">${ron(cost)} RON</div>
     </div>`;
@@ -6263,7 +6286,7 @@ function openCart(){
               <span class="cart-item-del" onclick="removeZone('${it.id}');renderCartModal()">🗑</span>
             </div>
           </div>
-          <div class="cart-item-det">${it.layers!=="-"?it.layers+" "+t('straturiStr')+" · ":""}${it.quality}<span class="dealer-only">${it.area>0?" · ~"+it.area.toFixed(1)+" m²":""}</span></div>
+          <div class="cart-item-det">${it.layers!=="-"?it.layers+" "+t('straturiStr')+" · ":""}${it.quality}<span class="superadmin-only">${it.area>0?" · ~"+it.area.toFixed(1)+" m²":""}</span></div>
           <div class="cart-item-det" style="font-weight:700;color:#6b625c">${getVehicleDisplayName(it)}</div>
           ${it.lines&&it.lines.length?(()=>{
             let stratIdx=0;
@@ -6381,7 +6404,7 @@ function renderProList(){
       h+=`<div style="display:flex;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);gap:8px">
         <div style="flex:1">
           <div style="font-size:12px;font-weight:700">${p.name}</div>
-          <div style="font-size:10px;color:var(--muted)">${p.type}<span class="dealer-only"> · ${p.m2}m²/coală</span> · ${ron(pr)} RON</div>
+          <div style="font-size:10px;color:var(--muted)">${p.type}<span class="superadmin-only"> · ${p.m2}m²/coală</span> · ${ron(pr)} RON</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px">
           <button onclick="chgPro('${id}',-1)" style="width:26px;height:26px;border:1.5px solid var(--border);border-radius:6px;background:#fff;cursor:pointer;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">-</button>
@@ -7690,7 +7713,7 @@ function showFullPackage(targetId){
     <div style="text-align:center;margin-bottom:16px">
       <div style="font-size:22px;font-weight:800;color:#1a1a1a">${t('fpTitle')}</div>
       ${carLabel?`<div style="font-size:13px;color:#888;margin-top:3px">${carLabel}</div>`:''}
-      <div class="dealer-only" style="font-size:12px;color:#d63031;font-weight:700;margin-top:5px">~${totalArea} m² suprafață totală</div>
+      <div class="dealer-only" class="superadmin-only" style="font-size:12px;color:#d63031;font-weight:700;margin-top:5px">~${totalArea} m² suprafață totală</div>
     </div>
     <div style="background:#f0f4ff;border:1px solid #c8d8f8;border-radius:10px;padding:9px 12px;
       margin-bottom:14px;font-size:11px;color:#3a5080;line-height:1.5;text-align:center">
@@ -7796,12 +7819,12 @@ function showFullPackage(targetId){
     html+=`<tr style="border-top:1px solid #f5f5f5">
       <td style="padding:4px 6px;color:#333">${z.label}</td>
       <td style="text-align:center;color:#999">${z.layers}</td>
-      <td style="text-align:right;color:#555;font-weight:600">${area.toFixed(2)} m²</td>
+      ${document.body.classList.contains('superadmin-mode')?`<td style="text-align:right;color:#555;font-weight:600">${area.toFixed(2)} m²</td>`:'<td></td>'}
     </tr>`;
   });
   html+=`<tr style="border-top:2px solid #eee;font-weight:800">
       <td style="padding:5px 6px;color:#d63031">TOTAL</td><td></td>
-      <td style="text-align:right;color:#d63031">~${totalArea} m²</td>
+      ${document.body.classList.contains('superadmin-mode')?`<td style="text-align:right;color:#d63031">~${totalArea} m²</td>`:'<td></td>'}
     </tr></table>
   </details>
   <p style="font-size:10px;color:#ccc;text-align:center">

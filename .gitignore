@@ -1,0 +1,19 @@
+# Backup files
+*.bak.*
+*.bak
+
+# Large media (optional - keep them tracked for deploy)
+# deploy-netlify/landing/*.jpg
+# deploy-netlify/landing/*.webp
+
+# Node modules
+node_modules/
+
+# Secrets (these are on server, not in repo)
+/etc/edotec-config/
+
+# Temp
+*.tmp
+deploy-netlify/auto/.htpasswd
+deploy-netlify/bsd/.htpasswd
+*.htpasswd

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "EdoTec Configurator Demo"
+AuthUserFile /var/www/configurator/deploy-netlify/auto/.htpasswd
+Require valid-user
