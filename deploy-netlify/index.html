@@ -3989,6 +3989,14 @@ async function initDealerMode(){
 document.addEventListener('DOMContentLoaded',function(){
   var dlPass=document.getElementById('dl-pass');
   if(dlPass) dlPass.addEventListener('keydown',function(e){if(e.key==='Enter')dealerLogin();});
+  // TASK 1: Setează hash-ul inițial la #configurator
+  if(!window.location.hash || window.location.hash === '#') {
+    history.replaceState({step:'configurator'}, '', window.location.pathname + window.location.search + '#configurator');
+  }
+  // Restaurează _lastSelectedPachet din URL dacă există
+  var _urlParams = new URLSearchParams(window.location.search);
+  var _pachetFromUrl = _urlParams.get('pachet');
+  if(_pachetFromUrl) window._lastSelectedPachet = _pachetFromUrl;
 });
 
 
@@ -5189,6 +5197,10 @@ function renderPopPkgStep2(){
 }
 
 function selectPopPkgQ(q){
+  // TASK 2: URL unic per pachet selectat
+  var _pachetSlugPop = q === 'ev_elite' ? 'ev-elite' : q;
+  window._lastSelectedPachet = _pachetSlugPop;
+  history.pushState({pachet: _pachetSlugPop}, '', window.location.pathname + '?pachet=' + _pachetSlugPop);
   window._popPkgQ=q;
   addPopPkgToCart();
 }
@@ -5805,6 +5817,10 @@ function renderMatPreview(){
 }
 
 function selectQuality(q){
+  // TASK 2: URL unic per pachet selectat (la selectia materialelor din zona modala)
+  var _pachetSlugZone = q === 'ev_elite' ? 'ev-elite' : q;
+  window._lastSelectedPachet = _pachetSlugZone;
+  history.replaceState({pachet: _pachetSlugZone}, '', window.location.pathname + '?pachet=' + _pachetSlugZone + (window.location.hash || ''));
   currentQuality=q;
   basicSubMode="full";
   if(isPartialApplicable()){
@@ -6219,6 +6235,9 @@ function closeCartDrawer(){
   document.getElementById('drawer-overlay').classList.remove('show');
 }
 function openCart(){
+  // TASK 1: URL tracking — Pas 2: Coș
+  var _pachetParam = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
+  history.pushState({step:'cart'}, '', window.location.pathname + _pachetParam + '#cart');
   track('cart_opened',{items:cartItems.length,value:cartItems.reduce((s,i)=>s+i.total,0)});
   const n=cartItems.length;
   const total=cartItems.reduce((s,i)=>s+i.total,0);
@@ -6329,7 +6348,14 @@ function openCart(){
   document.getElementById("cart-modal-bg").classList.add("show");
 }
 function renderCartModal(){openCart();}
-function closeCart(e){if(!e||e.target===document.getElementById("cart-modal-bg"))document.getElementById("cart-modal-bg").classList.remove("show");}
+function closeCart(e){
+  if(!e||e.target===document.getElementById("cart-modal-bg")){
+    document.getElementById("cart-modal-bg").classList.remove("show");
+    // Revenim la #configurator la inchidere cos
+    var _pachetCartNow = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
+    history.pushState({step:'configurator'}, '', window.location.pathname + _pachetCartNow + '#configurator');
+  }
+}
 
 // ════════════ PRO / EXTRA SHEETS ════════════
 let proQty={};Object.values(prods).forEach(p=>proQty[p.id]=0);
@@ -6553,6 +6579,9 @@ function addZoneToCartTrunk(skipCarCheck, forceReplace){
 
 // ════════════ CHECKOUT ════════════
 function openCheckout(){
+  // TASK 1: URL tracking — Pas 3: Completare date
+  var _pachetParam2 = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
+  history.pushState({step:'checkout'}, '', window.location.pathname + _pachetParam2 + '#checkout');
   track('checkout_started',{car:`${selBrand} ${selModel} ${selYear}`,propulsion,value:cartItems.reduce((s,i)=>s+i.total,0),items:cartItems.length});
   if(!cartItems.length){showToast(t('toastEmptyCart'));return;}
   trackEvent('checkout_open',{items:cartItems.length,car:`${selBrand||''} ${selModel||''}`.trim()});
@@ -6581,9 +6610,18 @@ function submitFinalOrder(){
 
 let _orderFinalized=false;
 function closeCheckout(e){
-  if(_orderFinalized){document.getElementById("checkout-bg").classList.remove("show");_orderFinalized=false;return;}
+  if(_orderFinalized){
+    document.getElementById("checkout-bg").classList.remove("show");
+    _orderFinalized=false;
+    // Revenim la #configurator dupa confirmare
+    history.pushState({step:'configurator'}, '', window.location.pathname + '#configurator');
+    return;
+  }
   if(!e||e.target===document.getElementById("checkout-bg")){
     document.getElementById("checkout-bg").classList.remove("show");
+    // Revenim la #configurator la inchidere checkout
+    var _pachetNow = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
+    history.pushState({step:'configurator'}, '', window.location.pathname + _pachetNow + '#configurator');
     if(window.innerWidth>=900&&configModeChoice!=='manual'){
       configModeChoice='manual';
       updateConfigModeUI();
@@ -7458,6 +7496,27 @@ function finalizeOrder(customer){
     `TOTAL: ${grandTotal} RON\n\n`+
     `Detalii complete în PDF-ul atașat (generat în browser).`
   );
+  // TASK 1: URL tracking — Pas 4: Confirmare comandă
+  var _pachetParamFinal = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
+  history.pushState({step:'order-confirmation'}, '', window.location.pathname + _pachetParamFinal + '#order-confirmation');
+  // Snapshot cart items înainte de golire (pentru tracking)
+  var _trackingCartItems = cartItems.slice();
+  var _trackingGrandTotal = grandTotal || 0;
+  // Meta Pixel Purchase event (dacă fbq e disponibil)
+  try {
+    if(typeof fbq === 'function') {
+      fbq('track', 'Purchase', {value: _trackingGrandTotal, currency: 'RON'});
+    }
+  } catch(e) { /* fbq not loaded */ }
+  // GA4 purchase event
+  try {
+    gtag('event', 'purchase', {
+      transaction_id: Date.now().toString(),
+      value: _trackingGrandTotal,
+      currency: 'RON',
+      items: _trackingCartItems.map(function(it){ return {item_id: it.zone, item_name: it.zoneName, price: it.total}; })
+    });
+  } catch(e) { /* gtag error */ }
   // Blocheaza inchiderea cu click pe backdrop + goleste cosul
   _orderFinalized=true;
   cartItems=[];
@@ -7761,6 +7820,10 @@ function showFullPackage(targetId){
 }
 
 function selectPkgQuality(q){
+  // TASK 2: URL unic per pachet selectat
+  var _pachetSlug = q === 'ev_elite' ? 'ev-elite' : q;
+  window._lastSelectedPachet = _pachetSlug;
+  history.pushState({pachet: _pachetSlug}, '', window.location.pathname + '?pachet=' + _pachetSlug);
   const colors={basic:'#2980b9',pro:'#27ae60',luxury:'#8e44ad',ev_elite:'#00897b'};
   const bgColors={basic:'#eef6ff',pro:'#f0fff4',luxury:'#f8f0ff',ev_elite:'#e0f2f1'};
   const prevQ=window._pkgSelQ;
