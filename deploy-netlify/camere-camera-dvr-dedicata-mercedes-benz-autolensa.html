@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cameră DVR Mercedes-Benz | Alege varianta | EDOTEC.RO</title>
+<title>Cameră DVR Mercedes-Benz | EDOTEC.RO</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
@@ -17,31 +17,37 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 .hero-txt h1{font-size:clamp(22px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:6px}
 .hero-txt h1 span{color:#c0392b}
 .hero-txt p{font-size:13.5px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:480px}
-.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;transition:color .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
 .bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:10px var(--p)}
 .bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .bar-count{font-size:13px;color:#666;font-weight:600}.bar-count strong{color:#c0392b}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 48px}
-.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
-.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
-.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
-.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-img-wrap{display:block;aspect-ratio:4/3;overflow:hidden;background:#f8f9fa}
+.pc-img-wrap img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img-wrap img{transform:scale(1.05)}
 .pc-body{padding:13px;flex:1;display:flex;flex-direction:column}
 .pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.pc-name{font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
+.pc-name{display:block;font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
 .pc-desc{font-size:11px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pc-vtags{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px}
-.pc-vtag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:#f0f2f5;color:#555;border:1px solid #e0e2e5}
+/* VARIANT BUTTONS ON CARD */
+.pc-res-label{font-size:9.5px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.pc-res-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.pc-res-btn{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:6px;border:1.5px solid #e0e2e5;background:#f8f9fa;color:#444;cursor:pointer;transition:all .15s;white-space:nowrap}
+.pc-res-btn:hover{border-color:#c0392b;color:#c0392b;background:#fff}
+.pc-res-btn.sel{border-color:#c0392b;background:#c0392b;color:#fff}
+.pc-res-btn.out{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+/* PRICE + CTA */
 .pc-prices{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;margin-bottom:10px}
-.pc-price{font-size:20px;font-weight:900;color:#1a1a2e}
-.pc-old{font-size:12px;color:#bbb;text-decoration:line-through}
+.pc-price{font-size:21px;font-weight:900;color:#1a1a2e}
 .pc-from{font-size:10px;color:#888;margin-right:2px}
 .pc-btns{display:flex;gap:5px}
-.pc-btn-view{background:#1a1a2e;color:#fff;font-weight:700;font-size:11.5px;padding:9px 10px;border-radius:8px;text-align:center;width:100%;display:block;transition:background .15s}
-.pc-btn-view:hover{background:#2d2d4e}
-.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
-.pc-btn-det:hover{background:#e0e2e5}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:11.5px;padding:9px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-more{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-more:hover{background:#e0e2e5}
 .pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff}
 .ft{background:#1a1a2e;padding:22px var(--p);text-align:center}
 .ft p{color:rgba(255,255,255,.5);font-size:12px}.ft a{color:#c0392b;font-weight:700}
@@ -53,7 +59,7 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
     <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2727/jpeg/category_2727_8ad5ae41.jpg" alt="Mercedes-Benz"></div>
     <div class="hero-txt">
       <h1>Cameră DVR <span>Mercedes-Benz</span></h1>
-      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7 — disponibil în mai multe rezoluții. Dai click pe produs și alegi varianta ta direct.</p>
+      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7. Alege rezoluția direct de pe card sau dă click pentru detalii complete.</p>
       <a href="landing-camere-bord.html" class="hero-back">← Toate mărcile</a>
     </div>
   </div>
@@ -66,603 +72,843 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 </div>
 <div class="w">
   <div class="pg">
-    <div class="pc" onclick="location.href='dvr-produs-65498.html'">
+    <div class="pc" id="card-0">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_132499.jpg" alt="Cameră DVR Mercedes GLE W167/GLS X167 Premium 2019-2025, cameră față-spate 1080p-720p Autolensa, 24/7 Negru MB-31" loading="lazy"></div>
+      <a href="dvr-produs-65498.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_132499.jpg" alt="Cameră DVR Mercedes GLE W167/GLS X167 Premium 2019-2025, cameră față-spate 1080p-720p Autolensa, 24/7 Negru MB-31" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes GLE W167/GLS X167 Premium 2019-2025, cameră față-spate 1080p-720p Autolensa, 24/7 Negru MB-31</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1K</span><span class="pc-vtag">2K față</span><span class="pc-vtag">4K față</span><span class="pc-vtag">1080p+720p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-65498.html" class="pc-name">Cameră DVR Mercedes GLE W167/GLS X167 Premium 2019-2025, cameră față-spate 1080p-720p Autolensa, 24/7 Negru MB-31</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K" onclick="pickRes(0,'1K',this,event)">1K</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(0,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(0,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(0,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(0,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(0,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-0">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-65498.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/65498/camera-dvr-mercedes-gle-w167-gls-x167-premium-2019-2025-camera-fata-spate-1080p-720p-autolensa-24-7-negru-mb-31.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="65498">
+            <input type="hidden" name="ProductVariantID" id="vid-0" value="52704">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-65498.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55903.html'">
+    <div class="pc" id="card-1">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116450.jpg" alt="Cameră DVR Volkswagen Arteon 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></div>
+      <a href="dvr-produs-55903.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116450.jpg" alt="Cameră DVR Volkswagen Arteon 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW14</div>
-        <div class="pc-name">Cameră DVR Volkswagen Arteon 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55903.html" class="pc-name">Cameră DVR Volkswagen Arteon 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(1,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(1,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(1,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(1,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(1,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(1,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-1">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55903.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55903/camera-dvr-volkswagen-arteon-2018-21-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vw14.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55903">
+            <input type="hidden" name="ProductVariantID" id="vid-1" value="50048">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55903.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55961.html'">
+    <div class="pc" id="card-2">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116466.jpg" alt="Cameră DVR Volkswagen Arteon 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></div>
+      <a href="dvr-produs-55961.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116466.jpg" alt="Cameră DVR Volkswagen Arteon 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW08</div>
-        <div class="pc-name">Cameră DVR Volkswagen Arteon 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55961.html" class="pc-name">Cameră DVR Volkswagen Arteon 2018-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(2,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(2,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(2,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(2,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(2,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(2,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-2">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55961.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55961/camera-dvr-volkswagen-arteon-2018-21-camera-fata-1080p-autolensa-model-24-7-negru-vw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55961">
+            <input type="hidden" name="ProductVariantID" id="vid-2" value="50089">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55961.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56141.html'">
+    <div class="pc" id="card-3">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116521.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2024-, cameră față 1080p Autolensa, Model 24/7  Negru MB-54" loading="lazy"></div>
+      <a href="dvr-produs-56141.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116521.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2024-, cameră față 1080p Autolensa, Model 24/7  Negru MB-54" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLA 2024-, cameră față 1080p Autolensa, Model 24/7  Negru MB-54</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56141.html" class="pc-name">Cameră DVR Mercedes-Benz  GLA 2024-, cameră față 1080p Autolensa, Model 24/7  Negru MB-54</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(3,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(3,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(3,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(3,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(3,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(3,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-3">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56141.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56141/camera-dvr-mercedes-benz-gla-2024-camera-fata-1080p-autolensa-model-24-7-negru-mb-54.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56141">
+            <input type="hidden" name="ProductVariantID" id="vid-3" value="50214">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56141.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56144.html'">
+    <div class="pc" id="card-4">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116522.jpg" alt="Cameră DVR Mercedes-Benz  E Klass W214 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-53" loading="lazy"></div>
+      <a href="dvr-produs-56144.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116522.jpg" alt="Cameră DVR Mercedes-Benz  E Klass W214 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-53" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  E Klass W214 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-53</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56144.html" class="pc-name">Cameră DVR Mercedes-Benz  E Klass W214 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-53</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(4,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(4,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(4,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(4,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(4,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(4,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-4">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56144.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56144/camera-dvr-mercedes-benz-e-klass-w214-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-53.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56144">
+            <input type="hidden" name="ProductVariantID" id="vid-4" value="50216">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56144.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56147.html'">
+    <div class="pc" id="card-5">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116523.jpg" alt="Cameră DVR Mercedes-Benz  GLB 2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-52" loading="lazy"></div>
+      <a href="dvr-produs-56147.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116523.jpg" alt="Cameră DVR Mercedes-Benz  GLB 2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-52" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLB 2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-52</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56147.html" class="pc-name">Cameră DVR Mercedes-Benz  GLB 2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-52</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(5,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(5,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(5,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(5,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(5,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(5,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-5">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56147.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56147/camera-dvr-mercedes-benz-glb-2024-camera-fata-1080p-autolensa-model-24-7-negru-mb-52.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56147">
+            <input type="hidden" name="ProductVariantID" id="vid-5" value="50218">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56147.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56150.html'">
+    <div class="pc" id="card-6">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116524.jpg" alt="Cameră DVR Mercedes-Benz  EQE SUV 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-51" loading="lazy"></div>
+      <a href="dvr-produs-56150.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116524.jpg" alt="Cameră DVR Mercedes-Benz  EQE SUV 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-51" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  EQE SUV 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-51</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56150.html" class="pc-name">Cameră DVR Mercedes-Benz  EQE SUV 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-51</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(6,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(6,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(6,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(6,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(6,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(6,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-6">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56150.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56150/camera-dvr-mercedes-benz-eqe-suv-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-51.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56150">
+            <input type="hidden" name="ProductVariantID" id="vid-6" value="50220">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56150.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56153.html'">
+    <div class="pc" id="card-7">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116525.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></div>
+      <a href="dvr-produs-56153.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116525.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56153.html" class="pc-name">Cameră DVR Mercedes-Benz  GLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(7,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(7,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(7,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(7,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(7,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(7,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-7">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56153.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56153/camera-dvr-mercedes-benz-gla-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-50.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56153">
+            <input type="hidden" name="ProductVariantID" id="vid-7" value="50222">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56153.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56156.html'">
+    <div class="pc" id="card-8">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116526.jpg" alt="Cameră DVR Mercedes-Benz  CLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></div>
+      <a href="dvr-produs-56156.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116526.jpg" alt="Cameră DVR Mercedes-Benz  CLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  CLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56156.html" class="pc-name">Cameră DVR Mercedes-Benz  CLA 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(8,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(8,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(8,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(8,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(8,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(8,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-8">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56156.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56156/camera-dvr-mercedes-benz-cla-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-50.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56156">
+            <input type="hidden" name="ProductVariantID" id="vid-8" value="50224">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56156.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56159.html'">
+    <div class="pc" id="card-9">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116527.jpg" alt="Cameră DVR Mercedes-Benz  A Klass 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></div>
+      <a href="dvr-produs-56159.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116527.jpg" alt="Cameră DVR Mercedes-Benz  A Klass 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  A Klass 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56159.html" class="pc-name">Cameră DVR Mercedes-Benz  A Klass 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-50</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(9,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(9,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(9,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(9,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(9,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(9,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-9">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56159.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56159/camera-dvr-mercedes-benz-a-klass-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-50.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56159">
+            <input type="hidden" name="ProductVariantID" id="vid-9" value="50226">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56159.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56162.html'">
+    <div class="pc" id="card-10">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116528.jpg" alt="Cameră DVR Mercedes-Benz  GLC 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-49" loading="lazy"></div>
+      <a href="dvr-produs-56162.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116528.jpg" alt="Cameră DVR Mercedes-Benz  GLC 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-49" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLC 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-49</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56162.html" class="pc-name">Cameră DVR Mercedes-Benz  GLC 2023-, cameră față 1080p Autolensa, Model 24/7  Negru MB-49</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(10,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(10,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(10,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(10,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(10,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(10,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-10">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56162.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56162/camera-dvr-mercedes-benz-glc-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-49.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56162">
+            <input type="hidden" name="ProductVariantID" id="vid-10" value="50228">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56162.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56165.html'">
+    <div class="pc" id="card-11">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116529.jpg" alt="Cameră DVR Mercedes-Benz  EQE low 2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-48" loading="lazy"></div>
+      <a href="dvr-produs-56165.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116529.jpg" alt="Cameră DVR Mercedes-Benz  EQE low 2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-48" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  EQE low 2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-48</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56165.html" class="pc-name">Cameră DVR Mercedes-Benz  EQE low 2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-48</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(11,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(11,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(11,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(11,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(11,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(11,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-11">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56165.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56165/camera-dvr-mercedes-benz-eqe-low-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-48.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56165">
+            <input type="hidden" name="ProductVariantID" id="vid-11" value="50230">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56165.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56168.html'">
+    <div class="pc" id="card-12">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116530.jpg" alt="Cameră DVR SMART Modele 2022, cameră față 1080p Autolensa, Model 24/7  Negru MB-47" loading="lazy"></div>
+      <a href="dvr-produs-56168.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116530.jpg" alt="Cameră DVR SMART Modele 2022, cameră față 1080p Autolensa, Model 24/7  Negru MB-47" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR SMART Modele 2022, cameră față 1080p Autolensa, Model 24/7  Negru MB-47</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56168.html" class="pc-name">Cameră DVR SMART Modele 2022, cameră față 1080p Autolensa, Model 24/7  Negru MB-47</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(12,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(12,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(12,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(12,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(12,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(12,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-12">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56168.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56168/camera-dvr-smart-modele-2022-camera-fata-1080p-autolensa-model-24-7-negru-mb-47.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56168">
+            <input type="hidden" name="ProductVariantID" id="vid-12" value="50232">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56168.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56174.html'">
+    <div class="pc" id="card-13">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116532.jpg" alt="Cameră DVR Mercedes-Benz  EQS 2022- , cameră față 1080p Autolensa, Model 24/7  Negru MB-45" loading="lazy"></div>
+      <a href="dvr-produs-56174.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116532.jpg" alt="Cameră DVR Mercedes-Benz  EQS 2022- , cameră față 1080p Autolensa, Model 24/7  Negru MB-45" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  EQS 2022- , cameră față 1080p Autolensa, Model 24/7  Negru MB-45</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56174.html" class="pc-name">Cameră DVR Mercedes-Benz  EQS 2022- , cameră față 1080p Autolensa, Model 24/7  Negru MB-45</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(13,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(13,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(13,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(13,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(13,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(13,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-13">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56174.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56174/camera-dvr-mercedes-benz-eqs-2022-camera-fata-1080p-autolensa-model-24-7-negru-mb-45.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56174">
+            <input type="hidden" name="ProductVariantID" id="vid-13" value="50236">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56174.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56177.html'">
+    <div class="pc" id="card-14">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116533.jpg" alt="Cameră DVR Mercedes-Benz  S Klass W223 low 2022-, cameră față 1080p Autolensa, Model 24/7  Bej MB-44" loading="lazy"></div>
+      <a href="dvr-produs-56177.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116533.jpg" alt="Cameră DVR Mercedes-Benz  S Klass W223 low 2022-, cameră față 1080p Autolensa, Model 24/7  Bej MB-44" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  S Klass W223 low 2022-, cameră față 1080p Autolensa, Model 24/7  Bej MB-44</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56177.html" class="pc-name">Cameră DVR Mercedes-Benz  S Klass W223 low 2022-, cameră față 1080p Autolensa, Model 24/7  Bej MB-44</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(14,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(14,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(14,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(14,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(14,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(14,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-14">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56177.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56177/camera-dvr-mercedes-benz-s-klass-w223-low-2022-camera-fata-1080p-autolensa-model-24-7-bej-mb-44.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56177">
+            <input type="hidden" name="ProductVariantID" id="vid-14" value="50238">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56177.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56184.html'">
+    <div class="pc" id="card-15">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116534.jpg" alt="Cameră DVR Mercedes-Benz  S W223 Maybach 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-43" loading="lazy"></div>
+      <a href="dvr-produs-56184.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116534.jpg" alt="Cameră DVR Mercedes-Benz  S W223 Maybach 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-43" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  S W223 Maybach 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-43</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56184.html" class="pc-name">Cameră DVR Mercedes-Benz  S W223 Maybach 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-43</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(15,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(15,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(15,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(15,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(15,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(15,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-15">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56184.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56184/camera-dvr-mercedes-benz-s-w223-maybach-2022-camera-fata-1080p-autolensa-model-24-7-negru-mb-43.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56184">
+            <input type="hidden" name="ProductVariantID" id="vid-15" value="50244">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56184.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56187.html'">
+    <div class="pc" id="card-16">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116535.jpg" alt="Cameră DVR Mercedes-Benz  GLB 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42" loading="lazy"></div>
+      <a href="dvr-produs-56187.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116535.jpg" alt="Cameră DVR Mercedes-Benz  GLB 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLB 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56187.html" class="pc-name">Cameră DVR Mercedes-Benz  GLB 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(16,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(16,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(16,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(16,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(16,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(16,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-16">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56187.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56187/camera-dvr-mercedes-benz-glb-2022-camera-fata-1080p-autolensa-model-24-7-negru-mb-42.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56187">
+            <input type="hidden" name="ProductVariantID" id="vid-16" value="50246">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56187.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56190.html'">
+    <div class="pc" id="card-17">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116536.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42" loading="lazy"></div>
+      <a href="dvr-produs-56190.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116536.jpg" alt="Cameră DVR Mercedes-Benz  GLA 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLA 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56190.html" class="pc-name">Cameră DVR Mercedes-Benz  GLA 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-42</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(17,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(17,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(17,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(17,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(17,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(17,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-17">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56190.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56190/camera-dvr-mercedes-benz-gla-2021-camera-fata-1080p-autolensa-model-24-7-negru-mb-42.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56190">
+            <input type="hidden" name="ProductVariantID" id="vid-17" value="50248">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56190.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56193.html'">
+    <div class="pc" id="card-18">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116537.jpg" alt="Cameră DVR Mercedes-Benz  GLA, GLB AMG PREMIUM EQA,EQB, cameră față 1080p Autolensa, Model 24/7  Negru MB-41" loading="lazy"></div>
+      <a href="dvr-produs-56193.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116537.jpg" alt="Cameră DVR Mercedes-Benz  GLA, GLB AMG PREMIUM EQA,EQB, cameră față 1080p Autolensa, Model 24/7  Negru MB-41" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLA, GLB AMG PREMIUM EQA,EQB, cameră față 1080p Autolensa, Model 24/7  Negru MB-41</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56193.html" class="pc-name">Cameră DVR Mercedes-Benz  GLA, GLB AMG PREMIUM EQA,EQB, cameră față 1080p Autolensa, Model 24/7  Negru MB-41</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(18,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(18,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(18,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(18,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(18,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(18,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-18">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56193.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56193/camera-dvr-mercedes-benz-gla-glb-amg-premium-eqa-eqb-camera-fata-1080p-autolensa-model-24-7-negru-mb-41.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56193">
+            <input type="hidden" name="ProductVariantID" id="vid-18" value="50250">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56193.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56196.html'">
+    <div class="pc" id="card-19">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116538.jpg" alt="Cameră DVR Mercedes C KLASS W206 Premium 2022-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-40" loading="lazy"></div>
+      <a href="dvr-produs-56196.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116538.jpg" alt="Cameră DVR Mercedes C KLASS W206 Premium 2022-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-40" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes C KLASS W206 Premium 2022-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-40</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56196.html" class="pc-name">Cameră DVR Mercedes C KLASS W206 Premium 2022-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-40</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(19,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(19,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(19,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(19,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(19,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(19,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-19">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56196.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56196/camera-dvr-mercedes-c-klass-w206-premium-2022-camera-fata-spate-1080p-720p-autolensa-24-7-gri-mb-40.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56196">
+            <input type="hidden" name="ProductVariantID" id="vid-19" value="50253">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56196.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56201.html'">
+    <div class="pc" id="card-20">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116539.jpg" alt="Cameră DVR Mercedes-Benz  S Klass W223 Premium 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-39" loading="lazy"></div>
+      <a href="dvr-produs-56201.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116539.jpg" alt="Cameră DVR Mercedes-Benz  S Klass W223 Premium 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-39" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  S Klass W223 Premium 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-39</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56201.html" class="pc-name">Cameră DVR Mercedes-Benz  S Klass W223 Premium 2022-, cameră față 1080p Autolensa, Model 24/7  Negru MB-39</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(20,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(20,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(20,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(20,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(20,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(20,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-20">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56201.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56201/camera-dvr-mercedes-benz-s-klass-w223-premium-2022-camera-fata-1080p-autolensa-model-24-7-negru-mb-39.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56201">
+            <input type="hidden" name="ProductVariantID" id="vid-20" value="50256">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56201.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56204.html'">
+    <div class="pc" id="card-21">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116540.jpg" alt="Cameră DVR Mercedes-Benz  GLC 2016-22 Premium, EQC 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-38" loading="lazy"></div>
+      <a href="dvr-produs-56204.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116540.jpg" alt="Cameră DVR Mercedes-Benz  GLC 2016-22 Premium, EQC 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-38" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLC 2016-22 Premium, EQC 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-38</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56204.html" class="pc-name">Cameră DVR Mercedes-Benz  GLC 2016-22 Premium, EQC 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-38</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(21,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(21,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(21,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(21,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(21,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(21,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-21">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56204.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56204/camera-dvr-mercedes-benz-glc-2016-22-premium-eqc-2021-camera-fata-1080p-autolensa-model-24-7-negru-mb-38.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56204">
+            <input type="hidden" name="ProductVariantID" id="vid-21" value="50258">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56204.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56207.html'">
+    <div class="pc" id="card-22">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116541.jpg" alt="Cameră DVR Mercedes-Benz  CLS 2020-21 Luxury, cameră față 1080p Autolensa, Model 24/7  Bej MB-37" loading="lazy"></div>
+      <a href="dvr-produs-56207.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116541.jpg" alt="Cameră DVR Mercedes-Benz  CLS 2020-21 Luxury, cameră față 1080p Autolensa, Model 24/7  Bej MB-37" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  CLS 2020-21 Luxury, cameră față 1080p Autolensa, Model 24/7  Bej MB-37</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56207.html" class="pc-name">Cameră DVR Mercedes-Benz  CLS 2020-21 Luxury, cameră față 1080p Autolensa, Model 24/7  Bej MB-37</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(22,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(22,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(22,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(22,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(22,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(22,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-22">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56207.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56207/camera-dvr-mercedes-benz-cls-2020-21-luxury-camera-fata-1080p-autolensa-model-24-7-bej-mb-37.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56207">
+            <input type="hidden" name="ProductVariantID" id="vid-22" value="50260">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56207.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56213.html'">
+    <div class="pc" id="card-23">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116542.jpg" alt="Cameră DVR Mercedes-Benz  E Klass W213 FL 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-36" loading="lazy"></div>
+      <a href="dvr-produs-56213.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116542.jpg" alt="Cameră DVR Mercedes-Benz  E Klass W213 FL 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-36" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  E Klass W213 FL 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-36</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56213.html" class="pc-name">Cameră DVR Mercedes-Benz  E Klass W213 FL 2021-, cameră față 1080p Autolensa, Model 24/7  Negru MB-36</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(23,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(23,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(23,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(23,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(23,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(23,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-23">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56213.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56213/camera-dvr-mercedes-benz-e-klass-w213-fl-2021-camera-fata-1080p-autolensa-model-24-7-negru-mb-36.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56213">
+            <input type="hidden" name="ProductVariantID" id="vid-23" value="50265">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56213.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56216.html'">
+    <div class="pc" id="card-24">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116543.jpg" alt="Cameră DVR Mercedes-Benz  A,CLA GLA W177 C118 H247 35 AMG, cameră față 1080p Autolensa, Model 24/7  Negru MB-35" loading="lazy"></div>
+      <a href="dvr-produs-56216.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116543.jpg" alt="Cameră DVR Mercedes-Benz  A,CLA GLA W177 C118 H247 35 AMG, cameră față 1080p Autolensa, Model 24/7  Negru MB-35" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  A,CLA GLA W177 C118 H247 35 AMG, cameră față 1080p Autolensa, Model 24/7  Negru MB-35</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56216.html" class="pc-name">Cameră DVR Mercedes-Benz  A,CLA GLA W177 C118 H247 35 AMG, cameră față 1080p Autolensa, Model 24/7  Negru MB-35</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(24,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(24,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(24,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(24,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(24,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(24,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-24">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56216.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56216/camera-dvr-mercedes-benz-a-cla-gla-w177-c118-h247-35-amg-camera-fata-1080p-autolensa-model-24-7-negru-mb-35.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56216">
+            <input type="hidden" name="ProductVariantID" id="vid-24" value="50267">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56216.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56219.html'">
+    <div class="pc" id="card-25">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116544.jpg" alt="Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Negru MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56219.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116544.jpg" alt="Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Negru MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Negru MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56219.html" class="pc-name">Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Negru MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(25,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(25,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(25,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(25,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(25,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(25,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-25">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56219.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56219/camera-dvr-mercedes-benz-c-w205-2013-18-low-camera-fata-1080p-autolensa-model-24-7-negru-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56219">
+            <input type="hidden" name="ProductVariantID" id="vid-25" value="50269">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56219.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56222.html'">
+    <div class="pc" id="card-26">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116545.jpg" alt="Cameră DVR Mercedes-Benz  C 2021, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56222.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116545.jpg" alt="Cameră DVR Mercedes-Benz  C 2021, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  C 2021, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56222.html" class="pc-name">Cameră DVR Mercedes-Benz  C 2021, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(26,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(26,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(26,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(26,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(26,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(26,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-26">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56222.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56222/camera-dvr-mercedes-benz-c-2021-camera-fata-1080p-autolensa-model-24-7-bej-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56222">
+            <input type="hidden" name="ProductVariantID" id="vid-26" value="50271">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56222.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56229.html'">
+    <div class="pc" id="card-27">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116546.jpg" alt="Cameră DVR Mercedes-Benz  GLE W166 2015-18, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56229.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116546.jpg" alt="Cameră DVR Mercedes-Benz  GLE W166 2015-18, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLE W166 2015-18, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56229.html" class="pc-name">Cameră DVR Mercedes-Benz  GLE W166 2015-18, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(27,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(27,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(27,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(27,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(27,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(27,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-27">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56229.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56229/camera-dvr-mercedes-benz-gle-w166-2015-18-camera-fata-1080p-autolensa-model-24-7-bej-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56229">
+            <input type="hidden" name="ProductVariantID" id="vid-27" value="50277">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56229.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56236.html'">
+    <div class="pc" id="card-28">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116547.jpg" alt="Cameră DVR Mercedes-Benz  E W213 low 2017-19, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56236.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116547.jpg" alt="Cameră DVR Mercedes-Benz  E W213 low 2017-19, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  E W213 low 2017-19, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56236.html" class="pc-name">Cameră DVR Mercedes-Benz  E W213 low 2017-19, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(28,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(28,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(28,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(28,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(28,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(28,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-28">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56236.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56236/camera-dvr-mercedes-benz-e-w213-low-2017-19-camera-fata-1080p-autolensa-model-24-7-bej-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56236">
+            <input type="hidden" name="ProductVariantID" id="vid-28" value="50283">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56236.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56243.html'">
+    <div class="pc" id="card-29">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116548.jpg" alt="Cameră DVR Mercedes-Benz  GLC low 2015-22, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56243.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116548.jpg" alt="Cameră DVR Mercedes-Benz  GLC low 2015-22, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLC low 2015-22, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56243.html" class="pc-name">Cameră DVR Mercedes-Benz  GLC low 2015-22, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(29,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(29,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(29,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(29,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(29,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(29,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-29">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56243.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56243/camera-dvr-mercedes-benz-glc-low-2015-22-camera-fata-1080p-autolensa-model-24-7-bej-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56243">
+            <input type="hidden" name="ProductVariantID" id="vid-29" value="50289">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56243.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56250.html'">
+    <div class="pc" id="card-30">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116549.jpg" alt="Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></div>
+      <a href="dvr-produs-56250.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116549.jpg" alt="Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Bej MB-34" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56250.html" class="pc-name">Cameră DVR Mercedes-Benz  C W205 2013-18 low, cameră față 1080p Autolensa, Model 24/7  Bej MB-34</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(30,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(30,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(30,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(30,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(30,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(30,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-30">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56250.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56250/camera-dvr-mercedes-benz-c-w205-2013-18-low-camera-fata-1080p-autolensa-model-24-7-bej-mb-34.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56250">
+            <input type="hidden" name="ProductVariantID" id="vid-30" value="50295">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56250.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56257.html'">
+    <div class="pc" id="card-31">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116550.jpg" alt="Cameră DVR Mercedes-Benz  GLA, GLB, EQB 2019-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-33" loading="lazy"></div>
+      <a href="dvr-produs-56257.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116550.jpg" alt="Cameră DVR Mercedes-Benz  GLA, GLB, EQB 2019-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-33" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLA, GLB, EQB 2019-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-33</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">495 Lei</span></div>
+        <a href="dvr-produs-56257.html" class="pc-name">Cameră DVR Mercedes-Benz  GLA, GLB, EQB 2019-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-33</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(31,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(31,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(31,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(31,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4G-2K" onclick="pickRes(31,'4G-2K',this,event)">4G+2K</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(31,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-31">755 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56257.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56257/camera-dvr-mercedes-benz-gla-glb-eqb-2019-2024-camera-fata-1080p-autolensa-model-24-7-negru-mb-33.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56257">
+            <input type="hidden" name="ProductVariantID" id="vid-31" value="50301">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56257.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56260.html'">
+    <div class="pc" id="card-32">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116551.jpg" alt="Cameră DVR Mercedes B, GLB, EQB Low-Mid 2019-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-32" loading="lazy"></div>
+      <a href="dvr-produs-56260.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116551.jpg" alt="Cameră DVR Mercedes B, GLB, EQB Low-Mid 2019-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-32" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes B, GLB, EQB Low-Mid 2019-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-32</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56260.html" class="pc-name">Cameră DVR Mercedes B, GLB, EQB Low-Mid 2019-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri MB-32</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(32,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(32,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(32,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(32,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(32,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(32,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-32">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56260.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56260/camera-dvr-mercedes-b-glb-eqb-low-mid-2019-21-camera-fata-spate-1080p-720p-autolensa-24-7-gri-mb-32.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56260">
+            <input type="hidden" name="ProductVariantID" id="vid-32" value="50304">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56260.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56265.html'">
+    <div class="pc" id="card-33">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116552.jpg" alt="Cameră DVR Mercedes-Benz   GLE W166 Premium 2018, cameră față 1080p Autolensa, Model 24/7  Negru MB-31" loading="lazy"></div>
+      <a href="dvr-produs-56265.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116552.jpg" alt="Cameră DVR Mercedes-Benz   GLE W166 Premium 2018, cameră față 1080p Autolensa, Model 24/7  Negru MB-31" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz   GLE W166 Premium 2018, cameră față 1080p Autolensa, Model 24/7  Negru MB-31</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56265.html" class="pc-name">Cameră DVR Mercedes-Benz   GLE W166 Premium 2018, cameră față 1080p Autolensa, Model 24/7  Negru MB-31</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(33,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(33,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(33,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(33,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(33,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(33,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-33">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56265.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56265/camera-dvr-mercedes-benz-gle-w166-premium-2018-camera-fata-1080p-autolensa-model-24-7-negru-mb-31.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56265">
+            <input type="hidden" name="ProductVariantID" id="vid-33" value="50307">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56265.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56268.html'">
+    <div class="pc" id="card-34">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116553.jpg" alt="Cameră DVR Mercedes-Benz  GLE450 Premium 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru MB-31" loading="lazy"></div>
+      <a href="dvr-produs-56268.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116553.jpg" alt="Cameră DVR Mercedes-Benz  GLE450 Premium 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru MB-31" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">GLE450</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  GLE450 Premium 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru MB-31</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56268.html" class="pc-name">Cameră DVR Mercedes-Benz  GLE450 Premium 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru MB-31</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(34,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(34,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(34,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(34,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(34,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(34,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-34">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56268.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56268/camera-dvr-mercedes-benz-gle450-premium-2019-22-camera-fata-1080p-autolensa-model-24-7-negru-mb-31.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56268">
+            <input type="hidden" name="ProductVariantID" id="vid-34" value="50309">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56268.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56277.html'">
+    <div class="pc" id="card-35">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116556.jpg" alt="Cameră DVR Mercedes-Benz   GLE W167/GLS X167 low-MID 2019-2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-30" loading="lazy"></div>
+      <a href="dvr-produs-56277.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116556.jpg" alt="Cameră DVR Mercedes-Benz   GLE W167/GLS X167 low-MID 2019-2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-30" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz   GLE W167/GLS X167 low-MID 2019-2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-30</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56277.html" class="pc-name">Cameră DVR Mercedes-Benz   GLE W167/GLS X167 low-MID 2019-2023, cameră față 1080p Autolensa, Model 24/7  Negru MB-30</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(35,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(35,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(35,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(35,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(35,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(35,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-35">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56277.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56277/camera-dvr-mercedes-benz-gle-w167-gls-x167-low-mid-2019-2023-camera-fata-1080p-autolensa-model-24-7-negru-mb-30.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56277">
+            <input type="hidden" name="ProductVariantID" id="vid-35" value="50315">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56277.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56280.html'">
+    <div class="pc" id="card-36">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116557.jpg" alt="Cameră DVR Mercedes-Benz  A,B,GLA,CLA W177 C118 H247 X247 low 2019-, cameră față 1080p Autolensa, Model 24/7  Negru MB-29" loading="lazy"></div>
+      <a href="dvr-produs-56280.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116557.jpg" alt="Cameră DVR Mercedes-Benz  A,B,GLA,CLA W177 C118 H247 X247 low 2019-, cameră față 1080p Autolensa, Model 24/7  Negru MB-29" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  A,B,GLA,CLA W177 C118 H247 X247 low 2019-, cameră față 1080p Autolensa, Model 24/7  Negru MB-29</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56280.html" class="pc-name">Cameră DVR Mercedes-Benz  A,B,GLA,CLA W177 C118 H247 X247 low 2019-, cameră față 1080p Autolensa, Model 24/7  Negru MB-29</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(36,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(36,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(36,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(36,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(36,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(36,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-36">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56280.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56280/camera-dvr-mercedes-benz-a-b-gla-cla-w177-c118-h247-x247-low-2019-camera-fata-1080p-autolensa-model-24-7-negru-mb-29.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56280">
+            <input type="hidden" name="ProductVariantID" id="vid-36" value="50317">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56280.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56283.html'">
+    <div class="pc" id="card-37">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116558.jpg" alt="Cameră DVR Mercedes-Benz  A,B,CLA W177 C118 H247 X247 Premium 2019-, cameră față 1080p Autolensa, Model 24/7  Bej MB-28" loading="lazy"></div>
+      <a href="dvr-produs-56283.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116558.jpg" alt="Cameră DVR Mercedes-Benz  A,B,CLA W177 C118 H247 X247 Premium 2019-, cameră față 1080p Autolensa, Model 24/7  Bej MB-28" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  A,B,CLA W177 C118 H247 X247 Premium 2019-, cameră față 1080p Autolensa, Model 24/7  Bej MB-28</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56283.html" class="pc-name">Cameră DVR Mercedes-Benz  A,B,CLA W177 C118 H247 X247 Premium 2019-, cameră față 1080p Autolensa, Model 24/7  Bej MB-28</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(37,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(37,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(37,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(37,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(37,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(37,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-37">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56283.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56283/camera-dvr-mercedes-benz-a-b-cla-w177-c118-h247-x247-premium-2019-camera-fata-1080p-autolensa-model-24-7-bej-mb-28.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56283">
+            <input type="hidden" name="ProductVariantID" id="vid-37" value="50322">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56283.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56290.html'">
+    <div class="pc" id="card-38">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116559.jpg" alt="Cameră DVR Mercedes-Benz  G-Class 2020-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-27" loading="lazy"></div>
+      <a href="dvr-produs-56290.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116559.jpg" alt="Cameră DVR Mercedes-Benz  G-Class 2020-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-27" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  G-Class 2020-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-27</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56290.html" class="pc-name">Cameră DVR Mercedes-Benz  G-Class 2020-2024, cameră față 1080p Autolensa, Model 24/7  Negru MB-27</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(38,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(38,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(38,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(38,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(38,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(38,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-38">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56290.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56290/camera-dvr-mercedes-benz-g-class-2020-2024-camera-fata-1080p-autolensa-model-24-7-negru-mb-27.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56290">
+            <input type="hidden" name="ProductVariantID" id="vid-38" value="50325">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56290.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56293.html'">
+    <div class="pc" id="card-39">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116560.jpg" alt="Cameră DVR Mercedes-Benz  E klass decapotabil, cameră față 1080p Autolensa, Model 24/7  Negru MB-26" loading="lazy"></div>
+      <a href="dvr-produs-56293.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116560.jpg" alt="Cameră DVR Mercedes-Benz  E klass decapotabil, cameră față 1080p Autolensa, Model 24/7  Negru MB-26" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  E klass decapotabil, cameră față 1080p Autolensa, Model 24/7  Negru MB-26</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56293.html" class="pc-name">Cameră DVR Mercedes-Benz  E klass decapotabil, cameră față 1080p Autolensa, Model 24/7  Negru MB-26</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(39,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(39,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(39,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(39,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(39,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(39,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-39">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56293.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56293/camera-dvr-mercedes-benz-e-klass-decapotabil-camera-fata-1080p-autolensa-model-24-7-negru-mb-26.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56293">
+            <input type="hidden" name="ProductVariantID" id="vid-39" value="50327">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56293.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
@@ -671,5 +917,28 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 <footer class="ft">
   <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
 </footer>
+<script>
+const CARDS = [{"idx": 0, "pid": "65498", "variants": [{"vid": "52704", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1K"}, {"vid": "52705", "price": 671, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "52706", "price": 739, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52707", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "52708", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "52709", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52710", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52711", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1K"}, {"vid": "52712", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "52713", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}, {"vid": "52714", "price": 671, "in_stock": true, "color": "Gri", "resolution": "1K-720P"}, {"vid": "52715", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "52716", "price": 826, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52717", "price": 1074, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}]}, {"idx": 1, "pid": "55903", "variants": [{"vid": "50047", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50048", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50049", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50050", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50775", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50776", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50777", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50778", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51496", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51497", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51864", "price": 809, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51865", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51866", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51867", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 2, "pid": "55961", "variants": [{"vid": "50089", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50090", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50817", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50818", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51517", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51906", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51907", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 3, "pid": "56141", "variants": [{"vid": "50214", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50215", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50942", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50943", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51579", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52031", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52032", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 4, "pid": "56144", "variants": [{"vid": "50216", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50217", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50944", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50945", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51580", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52033", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52034", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 5, "pid": "56147", "variants": [{"vid": "50218", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50219", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50946", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50947", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51581", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52035", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52036", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 6, "pid": "56150", "variants": [{"vid": "50220", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50221", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50948", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50949", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51582", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52037", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52038", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 7, "pid": "56153", "variants": [{"vid": "50222", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50223", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50950", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50951", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51583", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52039", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52040", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 8, "pid": "56156", "variants": [{"vid": "50224", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50225", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50952", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50953", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51584", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52041", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52042", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 9, "pid": "56159", "variants": [{"vid": "50226", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50227", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50954", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50955", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51585", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52043", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52044", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 10, "pid": "56162", "variants": [{"vid": "50228", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50229", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50956", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50957", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51586", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52045", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52046", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 11, "pid": "56165", "variants": [{"vid": "50230", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50231", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50958", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50959", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51587", "price": 1156, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52047", "price": 743, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52048", "price": 908, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 12, "pid": "56168", "variants": [{"vid": "50232", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50233", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50960", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50961", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51588", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52049", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52050", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 13, "pid": "56174", "variants": [{"vid": "50236", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50237", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50964", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50965", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51590", "price": 1156, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52053", "price": 743, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52054", "price": 908, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 14, "pid": "56177", "variants": [{"vid": "50238", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50239", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50240", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50241", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50242", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50243", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50966", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "50967", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "50968", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50969", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50970", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50971", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51591", "price": 1156, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51592", "price": 1156, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51593", "price": 1156, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52055", "price": 743, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52056", "price": 908, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52057", "price": 908, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52058", "price": 743, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52059", "price": 908, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52060", "price": 743, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 15, "pid": "56184", "variants": [{"vid": "50244", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50245", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50972", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50973", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51594", "price": 1156, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52061", "price": 743, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52062", "price": 908, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 16, "pid": "56187", "variants": [{"vid": "50246", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50247", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50974", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50975", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51595", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52063", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52064", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 17, "pid": "56190", "variants": [{"vid": "50248", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50249", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50976", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50977", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51596", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52065", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52066", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 18, "pid": "56193", "variants": [{"vid": "50250", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50251", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50978", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50979", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51597", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52067", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52068", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 19, "pid": "56196", "variants": [{"vid": "50252", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50253", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50254", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50255", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50980", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50981", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50982", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50983", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51598", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51599", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52069", "price": 826, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52070", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52071", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52072", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 20, "pid": "56201", "variants": [{"vid": "50256", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50257", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50984", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50985", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51600", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52073", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52074", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 21, "pid": "56204", "variants": [{"vid": "50258", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50259", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50986", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50987", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51601", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52075", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52076", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 22, "pid": "56207", "variants": [{"vid": "50260", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50261", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50262", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50263", "price": 412, "in_stock": false, "color": "Negru", "resolution": "1080P"}, {"vid": "50264", "price": 495, "in_stock": false, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50988", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "50989", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "50990", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50991", "price": 578, "in_stock": false, "color": "Negru", "resolution": "2K"}, {"vid": "50992", "price": 660, "in_stock": false, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51602", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51603", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52077", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52078", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52079", "price": 826, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52080", "price": 619, "in_stock": false, "color": "Negru", "resolution": "4K"}, {"vid": "52081", "price": 826, "in_stock": false, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52595", "price": 587, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52596", "price": 587, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52597", "price": 587, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52598", "price": 587, "in_stock": false, "color": "", "resolution": ""}]}, {"idx": 23, "pid": "56213", "variants": [{"vid": "50265", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50266", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50993", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50994", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51604", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52082", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52083", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 24, "pid": "56216", "variants": [{"vid": "50267", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50268", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50995", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50996", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51605", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52084", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52085", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 25, "pid": "56219", "variants": [{"vid": "50269", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50270", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50997", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50998", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51606", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52086", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52087", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 26, "pid": "56222", "variants": [{"vid": "50271", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50272", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50273", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50274", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "50275", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50276", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50999", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "51000", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "51001", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51002", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51003", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51004", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51607", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51608", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51609", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52088", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52089", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52090", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52091", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}, {"vid": "52092", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52093", "price": 743, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 27, "pid": "56229", "variants": [{"vid": "50277", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50278", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50279", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50280", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50281", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50282", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51005", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "51006", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "51007", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51008", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51009", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51010", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51610", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51611", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51612", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52094", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52095", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52096", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52097", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52098", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52099", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 28, "pid": "56236", "variants": [{"vid": "50283", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50284", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50285", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50286", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50287", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50288", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51011", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "51012", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "51013", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51014", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51015", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51016", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51613", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51614", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51615", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52100", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52101", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52102", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52103", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52104", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52105", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 29, "pid": "56243", "variants": [{"vid": "50289", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50290", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50291", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50292", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50293", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50294", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51017", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "51018", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "51019", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51020", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51021", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51022", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51616", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51617", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51618", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52106", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52107", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52108", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52109", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52110", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52111", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 30, "pid": "56250", "variants": [{"vid": "50295", "price": 412, "in_stock": true, "color": "", "resolution": "1080P"}, {"vid": "50296", "price": 495, "in_stock": true, "color": "", "resolution": "1K+720P"}, {"vid": "50297", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50298", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50299", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50300", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51023", "price": 578, "in_stock": true, "color": "", "resolution": "2K"}, {"vid": "51024", "price": 660, "in_stock": true, "color": "", "resolution": "2K+1080P"}, {"vid": "51025", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51026", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51027", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51028", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51619", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51620", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51621", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52112", "price": 619, "in_stock": true, "color": "", "resolution": "4K"}, {"vid": "52113", "price": 826, "in_stock": true, "color": "", "resolution": "4K+1080P"}, {"vid": "52114", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52115", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52116", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52117", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 31, "pid": "56257", "variants": [{"vid": "50301", "price": 755, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50302", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51029", "price": 839, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51030", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51622", "price": 1344, "in_stock": true, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52118", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52119", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 32, "pid": "56260", "variants": [{"vid": "50304", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50305", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51032", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51033", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51623", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52121", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52122", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 33, "pid": "56265", "variants": [{"vid": "50307", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50308", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51035", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51036", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51625", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52124", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52125", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 34, "pid": "56268", "variants": [{"vid": "50309", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50310", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51037", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51038", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51626", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52126", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52127", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 35, "pid": "56277", "variants": [{"vid": "50315", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50316", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51043", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51044", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51628", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52131", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52132", "price": 412, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 36, "pid": "56280", "variants": [{"vid": "50317", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50318", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51045", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51046", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51629", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52133", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52134", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 37, "pid": "56283", "variants": [{"vid": "50319", "price": 412, "in_stock": false, "color": "", "resolution": "1080P"}, {"vid": "50320", "price": 495, "in_stock": false, "color": "", "resolution": "1K+720P"}, {"vid": "50321", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50322", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50323", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50324", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "51047", "price": 578, "in_stock": false, "color": "", "resolution": "2K"}, {"vid": "51048", "price": 660, "in_stock": false, "color": "", "resolution": "2K+1080P"}, {"vid": "51049", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51050", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51051", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51052", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51630", "price": 991, "in_stock": false, "color": "", "resolution": "4G-2K"}, {"vid": "51631", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51632", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52135", "price": 619, "in_stock": false, "color": "", "resolution": "4K"}, {"vid": "52136", "price": 826, "in_stock": false, "color": "", "resolution": "4K+1080P"}, {"vid": "52137", "price": 826, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52138", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52139", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52140", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 38, "pid": "56290", "variants": [{"vid": "50325", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50326", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51053", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51054", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51633", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52141", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52142", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 39, "pid": "56293", "variants": [{"vid": "50327", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50328", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51055", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51056", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51634", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52143", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52144", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}];
+
+function pickRes(idx, res, el, event) {
+  event.stopPropagation();
+  event.preventDefault();
+  const card = CARDS.find(c => c.idx === idx);
+  if (!card) return;
+  
+  // Toggle selection
+  const container = el.parentElement;
+  container.querySelectorAll('.pc-res-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  
+  // Find best variant for this resolution (prefer in_stock)
+  const v = card.variants.find(v => v.resolution === res && v.in_stock) ||
+            card.variants.find(v => v.resolution === res);
+  if (v) {
+    document.getElementById('price-' + idx).textContent = v.price.toLocaleString('ro-RO') + ' Lei';
+    document.getElementById('vid-' + idx).value = v.vid;
+  }
+}
+</script>
 </body>
 </html>

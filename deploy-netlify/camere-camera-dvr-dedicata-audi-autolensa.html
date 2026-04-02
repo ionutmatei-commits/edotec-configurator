@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cameră DVR Audi | Alege varianta | EDOTEC.RO</title>
+<title>Cameră DVR Audi | EDOTEC.RO</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
@@ -17,31 +17,37 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 .hero-txt h1{font-size:clamp(22px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:6px}
 .hero-txt h1 span{color:#c0392b}
 .hero-txt p{font-size:13.5px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:480px}
-.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;transition:color .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
 .bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:10px var(--p)}
 .bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .bar-count{font-size:13px;color:#666;font-weight:600}.bar-count strong{color:#c0392b}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 48px}
-.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
-.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
-.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
-.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-img-wrap{display:block;aspect-ratio:4/3;overflow:hidden;background:#f8f9fa}
+.pc-img-wrap img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img-wrap img{transform:scale(1.05)}
 .pc-body{padding:13px;flex:1;display:flex;flex-direction:column}
 .pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.pc-name{font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
+.pc-name{display:block;font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
 .pc-desc{font-size:11px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pc-vtags{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px}
-.pc-vtag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:#f0f2f5;color:#555;border:1px solid #e0e2e5}
+/* VARIANT BUTTONS ON CARD */
+.pc-res-label{font-size:9.5px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.pc-res-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.pc-res-btn{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:6px;border:1.5px solid #e0e2e5;background:#f8f9fa;color:#444;cursor:pointer;transition:all .15s;white-space:nowrap}
+.pc-res-btn:hover{border-color:#c0392b;color:#c0392b;background:#fff}
+.pc-res-btn.sel{border-color:#c0392b;background:#c0392b;color:#fff}
+.pc-res-btn.out{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+/* PRICE + CTA */
 .pc-prices{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;margin-bottom:10px}
-.pc-price{font-size:20px;font-weight:900;color:#1a1a2e}
-.pc-old{font-size:12px;color:#bbb;text-decoration:line-through}
+.pc-price{font-size:21px;font-weight:900;color:#1a1a2e}
 .pc-from{font-size:10px;color:#888;margin-right:2px}
 .pc-btns{display:flex;gap:5px}
-.pc-btn-view{background:#1a1a2e;color:#fff;font-weight:700;font-size:11.5px;padding:9px 10px;border-radius:8px;text-align:center;width:100%;display:block;transition:background .15s}
-.pc-btn-view:hover{background:#2d2d4e}
-.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
-.pc-btn-det:hover{background:#e0e2e5}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:11.5px;padding:9px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-more{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-more:hover{background:#e0e2e5}
 .pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff}
 .ft{background:#1a1a2e;padding:22px var(--p);text-align:center}
 .ft p{color:rgba(255,255,255,.5);font-size:12px}.ft a{color:#c0392b;font-weight:700}
@@ -53,7 +59,7 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
     <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2706/jpeg/category_2706_8ad39c79.jpg" alt="Audi"></div>
     <div class="hero-txt">
       <h1>Cameră DVR <span>Audi</span></h1>
-      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7 — disponibil în mai multe rezoluții. Dai click pe produs și alegi varianta ta direct.</p>
+      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7. Alege rezoluția direct de pe card sau dă click pentru detalii complete.</p>
       <a href="landing-camere-bord.html" class="hero-back">← Toate mărcile</a>
     </div>
   </div>
@@ -66,183 +72,255 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 </div>
 <div class="w">
   <div class="pg">
-    <div class="pc" onclick="location.href='dvr-produs-65973.html'">
+    <div class="pc" id="card-0">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_134100.jpg" alt="Cameră DVR Bentley Bentayga, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1" loading="lazy"></div>
+      <a href="dvr-produs-65973.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_134100.jpg" alt="Cameră DVR Bentley Bentayga, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD06-1</div>
-        <div class="pc-name">Cameră DVR Bentley Bentayga, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"></div>
-        <div class="pc-prices"><span class="pc-price">812 Lei</span></div>
+        <a href="dvr-produs-65973.html" class="pc-name">Cameră DVR Bentley Bentayga, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        
+        <div class="pc-prices"><span class="pc-price" id="price-0">671 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-65973.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/65973/camera-dvr-bentley-bentayga-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad06-1.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="65973">
+            <input type="hidden" name="ProductVariantID" id="vid-0" value="52857">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-65973.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55893.html'">
+    <div class="pc" id="card-1">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116448.jpg" alt="Cameră DVR Volkswagen Touareg 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></div>
+      <a href="dvr-produs-55893.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116448.jpg" alt="Cameră DVR Volkswagen Touareg 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW14</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55893.html" class="pc-name">Cameră DVR Volkswagen Touareg 2018-21, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(1,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(1,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(1,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(1,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(1,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(1,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-1">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55893.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55893/camera-dvr-volkswagen-touareg-2018-21-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vw14.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55893">
+            <input type="hidden" name="ProductVariantID" id="vid-1" value="50041">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55893.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56680.html'">
+    <div class="pc" id="card-2">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116671.jpg" alt="Cameră DVR BMW X5,X6,X5M,X6M 2024, cameră față 1080p Autolensa, Model 24/7  Negru BMW32" loading="lazy"></div>
+      <a href="dvr-produs-56680.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116671.jpg" alt="Cameră DVR BMW X5,X6,X5M,X6M 2024, cameră față 1080p Autolensa, Model 24/7  Negru BMW32" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">BMW32</div>
-        <div class="pc-name">Cameră DVR BMW X5,X6,X5M,X6M 2024, cameră față 1080p Autolensa, Model 24/7  Negru BMW32</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56680.html" class="pc-name">Cameră DVR BMW X5,X6,X5M,X6M 2024, cameră față 1080p Autolensa, Model 24/7  Negru BMW32</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(2,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(2,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(2,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(2,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(2,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(2,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-2">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56680.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56680/camera-dvr-bmw-x5-x6-x5m-x6m-2024-camera-fata-1080p-autolensa-model-24-7-negru-bmw32.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56680">
+            <input type="hidden" name="ProductVariantID" id="vid-2" value="50603">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56680.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56861.html'">
+    <div class="pc" id="card-3">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116730.jpg" alt="Cameră DVR Audi A4 low 2017-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></div>
+      <a href="dvr-produs-56861.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116730.jpg" alt="Cameră DVR Audi A4 low 2017-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD07</div>
-        <div class="pc-name">Cameră DVR Audi A4 low 2017-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56861.html" class="pc-name">Cameră DVR Audi A4 low 2017-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(3,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(3,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(3,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(3,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(3,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(3,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-3">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56861.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56861/camera-dvr-audi-a4-low-2017-20-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56861">
+            <input type="hidden" name="ProductVariantID" id="vid-3" value="50725">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56861.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56866.html'">
+    <div class="pc" id="card-4">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116731.jpg" alt="Cameră DVR Audi A6 A8 Q3 Q5 Q7 Q2 S3 2018-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></div>
+      <a href="dvr-produs-56866.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116731.jpg" alt="Cameră DVR Audi A6 A8 Q3 Q5 Q7 Q2 S3 2018-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD07</div>
-        <div class="pc-name">Cameră DVR Audi A6 A8 Q3 Q5 Q7 Q2 S3 2018-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56866.html" class="pc-name">Cameră DVR Audi A6 A8 Q3 Q5 Q7 Q2 S3 2018-20 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(4,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(4,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(4,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(4,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(4,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(4,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-4">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56866.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56866/camera-dvr-audi-a6-a8-q3-q5-q7-q2-s3-2018-20-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56866">
+            <input type="hidden" name="ProductVariantID" id="vid-4" value="50729">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56866.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56871.html'">
+    <div class="pc" id="card-5">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116732.jpg" alt="Cameră DVR Audi A3 A4 A5 2015-2016, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></div>
+      <a href="dvr-produs-56871.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116732.jpg" alt="Cameră DVR Audi A3 A4 A5 2015-2016, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD07</div>
-        <div class="pc-name">Cameră DVR Audi A3 A4 A5 2015-2016, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56871.html" class="pc-name">Cameră DVR Audi A3 A4 A5 2015-2016, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(5,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(5,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(5,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(5,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(5,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(5,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-5">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56871.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56871/camera-dvr-audi-a3-a4-a5-2015-2016-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56871">
+            <input type="hidden" name="ProductVariantID" id="vid-5" value="50733">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56871.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56876.html'">
+    <div class="pc" id="card-6">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116733.jpg" alt="Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06" loading="lazy"></div>
+      <a href="dvr-produs-56876.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116733.jpg" alt="Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD06</div>
-        <div class="pc-name">Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56876.html" class="pc-name">Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(6,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(6,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(6,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(6,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(6,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(6,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-6">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56876.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56876/camera-dvr-porsche-paramera-2017-19-cayenne-2018-19-718-boxster-2020-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad06.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56876">
+            <input type="hidden" name="ProductVariantID" id="vid-6" value="50737">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56876.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56881.html'">
+    <div class="pc" id="card-7">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116734.jpg" alt="Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1" loading="lazy"></div>
+      <a href="dvr-produs-56881.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116734.jpg" alt="Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD06-1</div>
-        <div class="pc-name">Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56881.html" class="pc-name">Cameră DVR Porsche Paramera 2017-19, Cayenne 2018-19, 718 Boxster 2020 , cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD06-1</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(7,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(7,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(7,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(7,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(7,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(7,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-7">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56881.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56881/camera-dvr-porsche-paramera-2017-19-cayenne-2018-19-718-boxster-2020-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad06-1.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56881">
+            <input type="hidden" name="ProductVariantID" id="vid-7" value="50741">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56881.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56886.html'">
+    <div class="pc" id="card-8">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116735.jpg" alt="Cameră DVR Audi A4/A5 B9 cu senzor lumina, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD04" loading="lazy"></div>
+      <a href="dvr-produs-56886.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116735.jpg" alt="Cameră DVR Audi A4/A5 B9 cu senzor lumina, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD04" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD04</div>
-        <div class="pc-name">Cameră DVR Audi A4/A5 B9 cu senzor lumina, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD04</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56886.html" class="pc-name">Cameră DVR Audi A4/A5 B9 cu senzor lumina, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD04</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(8,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(8,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(8,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(8,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(8,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(8,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-8">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56886.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56886/camera-dvr-audi-a4-a5-b9-cu-senzor-lumina-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad04.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56886">
+            <input type="hidden" name="ProductVariantID" id="vid-8" value="50745">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56886.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56891.html'">
+    <div class="pc" id="card-9">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116736.jpg" alt="Cameră DVR Audi A3,A4 B9,A7 C8,Q2,Q7 Premium, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD03" loading="lazy"></div>
+      <a href="dvr-produs-56891.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116736.jpg" alt="Cameră DVR Audi A3,A4 B9,A7 C8,Q2,Q7 Premium, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD03" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD03</div>
-        <div class="pc-name">Cameră DVR Audi A3,A4 B9,A7 C8,Q2,Q7 Premium, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56891.html" class="pc-name">Cameră DVR Audi A3,A4 B9,A7 C8,Q2,Q7 Premium, cameră față-spate 1080p-720p Autolensa, 24/7 Gri AD03</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(9,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(9,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(9,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(9,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(9,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(9,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-9">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56891.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56891/camera-dvr-audi-a3-a4-b9-a7-c8-q2-q7-premium-camera-fata-spate-1080p-720p-autolensa-24-7-gri-ad03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56891">
+            <input type="hidden" name="ProductVariantID" id="vid-9" value="50749">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56891.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56896.html'">
+    <div class="pc" id="card-10">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_119884.jpg" alt="Cameră DVR Audi AD02 2008-12 A3,A4,A6,A8,Q5,Q7,R8,TT , cameră față 1080p Autolensa, 24/7 Gri AD02" loading="lazy"></div>
+      <a href="dvr-produs-56896.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_119884.jpg" alt="Cameră DVR Audi AD02 2008-12 A3,A4,A6,A8,Q5,Q7,R8,TT , cameră față 1080p Autolensa, 24/7 Gri AD02" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD02</div>
-        <div class="pc-name">Cameră DVR Audi AD02 2008-12 A3,A4,A6,A8,Q5,Q7,R8,TT , cameră față 1080p Autolensa, 24/7 Gri AD02</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56896.html" class="pc-name">Cameră DVR Audi AD02 2008-12 A3,A4,A6,A8,Q5,Q7,R8,TT , cameră față 1080p Autolensa, 24/7 Gri AD02</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(10,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(10,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(10,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(10,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(10,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(10,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-10">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56896.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56896/camera-dvr-audi-ad02-2008-12-a3-a4-a6-a8-q5-q7-r8-tt-camera-fata-1080p-autolensa-24-7-gri-ad02.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56896">
+            <input type="hidden" name="ProductVariantID" id="vid-10" value="50753">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56896.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56901.html'">
+    <div class="pc" id="card-11">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_119883.jpg" alt="Cameră DVR Audi Modele AD01 2013 - 18 A2,A3,A4,A5,A5,A6,A7,A8,Q3,Q5,Q7,R8 , cameră față 1080p Autolensa, Model 24/7  Gri AD01" loading="lazy"></div>
+      <a href="dvr-produs-56901.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_119883.jpg" alt="Cameră DVR Audi Modele AD01 2013 - 18 A2,A3,A4,A5,A5,A6,A7,A8,Q3,Q5,Q7,R8 , cameră față 1080p Autolensa, Model 24/7  Gri AD01" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AD01</div>
-        <div class="pc-name">Cameră DVR Audi Modele AD01 2013 - 18 A2,A3,A4,A5,A5,A6,A7,A8,Q3,Q5,Q7,R8 , cameră față 1080p Autolensa, Model 24/7  Gri AD01</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56901.html" class="pc-name">Cameră DVR Audi Modele AD01 2013 - 18 A2,A3,A4,A5,A5,A6,A7,A8,Q3,Q5,Q7,R8 , cameră față 1080p Autolensa, Model 24/7  Gri AD01</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(11,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(11,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(11,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(11,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(11,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(11,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-11">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56901.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56901/camera-dvr-audi-modele-ad01-2013-18-a2-a3-a4-a5-a5-a6-a7-a8-q3-q5-q7-r8-camera-fata-1080p-autolensa-model-24-7-gri-ad01.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56901">
+            <input type="hidden" name="ProductVariantID" id="vid-11" value="50757">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56901.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
@@ -251,5 +329,28 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 <footer class="ft">
   <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
 </footer>
+<script>
+const CARDS = [{"idx": 0, "pid": "65973", "variants": [{"vid": "52857", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52858", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52859", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52860", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52861", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52862", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52863", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52864", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52865", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52866", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52867", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52868", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52869", "price": 671, "in_stock": false, "color": "", "resolution": ""}, {"vid": "52870", "price": 671, "in_stock": false, "color": "", "resolution": ""}]}, {"idx": 1, "pid": "55893", "variants": [{"vid": "50039", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50040", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50041", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50042", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50767", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50768", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "50769", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50770", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51492", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51493", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51856", "price": 809, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51857", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}, {"vid": "51858", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51859", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}]}, {"idx": 2, "pid": "56680", "variants": [{"vid": "50603", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50604", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51331", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51332", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51771", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52419", "price": 660, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52420", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 3, "pid": "56861", "variants": [{"vid": "50725", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50726", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50727", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50728", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51453", "price": 743, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51454", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51455", "price": 743, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51456", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51832", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51833", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52541", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52542", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52543", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52544", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 4, "pid": "56866", "variants": [{"vid": "50729", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50730", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50731", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50732", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51457", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51458", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51459", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51460", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51834", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51835", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52545", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52546", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52547", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52548", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 5, "pid": "56871", "variants": [{"vid": "50733", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50734", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50735", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50736", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51461", "price": 743, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51462", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51463", "price": 743, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51464", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51836", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51837", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52549", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52550", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52551", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52552", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 6, "pid": "56876", "variants": [{"vid": "50737", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50738", "price": 412, "in_stock": false, "color": "Negru", "resolution": "1080P"}, {"vid": "50739", "price": 495, "in_stock": false, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50740", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51465", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51466", "price": 578, "in_stock": false, "color": "Negru", "resolution": "2K"}, {"vid": "51467", "price": 660, "in_stock": false, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51468", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51838", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51839", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52553", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52554", "price": 619, "in_stock": false, "color": "Negru", "resolution": "4K"}, {"vid": "52555", "price": 826, "in_stock": false, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52556", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 7, "pid": "56881", "variants": [{"vid": "50741", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50742", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50743", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50744", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51469", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51470", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51471", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51472", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51840", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51841", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52557", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52558", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52559", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52560", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 8, "pid": "56886", "variants": [{"vid": "50745", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50746", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50747", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50748", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51473", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51474", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51475", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51476", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51842", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51843", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52561", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52562", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52563", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52564", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 9, "pid": "56891", "variants": [{"vid": "50749", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50750", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50751", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50752", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "51477", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51478", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51479", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51480", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51844", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51845", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "52565", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52566", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52567", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "52568", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 10, "pid": "56896", "variants": [{"vid": "50753", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "50754", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50755", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50756", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51481", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51482", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51483", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51484", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51846", "price": 1074, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51847", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52569", "price": 577, "in_stock": true, "color": "Gri", "resolution": "4K"}, {"vid": "52570", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52571", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52572", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 11, "pid": "56901", "variants": [{"vid": "50757", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "50758", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50759", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50760", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51485", "price": 495, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51486", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "51487", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51488", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51848", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51849", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52573", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}, {"vid": "52574", "price": 826, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "52575", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52576", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}];
+
+function pickRes(idx, res, el, event) {
+  event.stopPropagation();
+  event.preventDefault();
+  const card = CARDS.find(c => c.idx === idx);
+  if (!card) return;
+  
+  // Toggle selection
+  const container = el.parentElement;
+  container.querySelectorAll('.pc-res-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  
+  // Find best variant for this resolution (prefer in_stock)
+  const v = card.variants.find(v => v.resolution === res && v.in_stock) ||
+            card.variants.find(v => v.resolution === res);
+  if (v) {
+    document.getElementById('price-' + idx).textContent = v.price.toLocaleString('ro-RO') + ' Lei';
+    document.getElementById('vid-' + idx).value = v.vid;
+  }
+}
+</script>
 </body>
 </html>

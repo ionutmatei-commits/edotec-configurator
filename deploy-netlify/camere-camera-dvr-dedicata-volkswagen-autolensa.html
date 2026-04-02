@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cameră DVR Volkswagen | Alege varianta | EDOTEC.RO</title>
+<title>Cameră DVR Volkswagen | EDOTEC.RO</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
@@ -17,31 +17,37 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 .hero-txt h1{font-size:clamp(22px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:6px}
 .hero-txt h1 span{color:#c0392b}
 .hero-txt p{font-size:13.5px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:480px}
-.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;transition:color .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
 .bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:10px var(--p)}
 .bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .bar-count{font-size:13px;color:#666;font-weight:600}.bar-count strong{color:#c0392b}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 48px}
-.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
-.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
-.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
-.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-img-wrap{display:block;aspect-ratio:4/3;overflow:hidden;background:#f8f9fa}
+.pc-img-wrap img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img-wrap img{transform:scale(1.05)}
 .pc-body{padding:13px;flex:1;display:flex;flex-direction:column}
 .pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.pc-name{font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
+.pc-name{display:block;font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
 .pc-desc{font-size:11px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pc-vtags{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px}
-.pc-vtag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:#f0f2f5;color:#555;border:1px solid #e0e2e5}
+/* VARIANT BUTTONS ON CARD */
+.pc-res-label{font-size:9.5px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.pc-res-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.pc-res-btn{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:6px;border:1.5px solid #e0e2e5;background:#f8f9fa;color:#444;cursor:pointer;transition:all .15s;white-space:nowrap}
+.pc-res-btn:hover{border-color:#c0392b;color:#c0392b;background:#fff}
+.pc-res-btn.sel{border-color:#c0392b;background:#c0392b;color:#fff}
+.pc-res-btn.out{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+/* PRICE + CTA */
 .pc-prices{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;margin-bottom:10px}
-.pc-price{font-size:20px;font-weight:900;color:#1a1a2e}
-.pc-old{font-size:12px;color:#bbb;text-decoration:line-through}
+.pc-price{font-size:21px;font-weight:900;color:#1a1a2e}
 .pc-from{font-size:10px;color:#888;margin-right:2px}
 .pc-btns{display:flex;gap:5px}
-.pc-btn-view{background:#1a1a2e;color:#fff;font-weight:700;font-size:11.5px;padding:9px 10px;border-radius:8px;text-align:center;width:100%;display:block;transition:background .15s}
-.pc-btn-view:hover{background:#2d2d4e}
-.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
-.pc-btn-det:hover{background:#e0e2e5}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:11.5px;padding:9px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-more{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-more:hover{background:#e0e2e5}
 .pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff}
 .ft{background:#1a1a2e;padding:22px var(--p);text-align:center}
 .ft p{color:rgba(255,255,255,.5);font-size:12px}.ft a{color:#c0392b;font-weight:700}
@@ -53,7 +59,7 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
     <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2736/jpeg/category_2736_8ad68174.jpg" alt="Volkswagen"></div>
     <div class="hero-txt">
       <h1>Cameră DVR <span>Volkswagen</span></h1>
-      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7 — disponibil în mai multe rezoluții. Dai click pe produs și alegi varianta ta direct.</p>
+      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7. Alege rezoluția direct de pe card sau dă click pentru detalii complete.</p>
       <a href="landing-camere-bord.html" class="hero-back">← Toate mărcile</a>
     </div>
   </div>
@@ -66,333 +72,465 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 </div>
 <div class="w">
   <div class="pg">
-    <div class="pc" onclick="location.href='dvr-produs-55887.html'">
+    <div class="pc" id="card-0">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116446.jpg" alt="Cameră DVR Volkswagen ID.3 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW23" loading="lazy"></div>
+      <a href="dvr-produs-55887.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116446.jpg" alt="Cameră DVR Volkswagen ID.3 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW23" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW23</div>
-        <div class="pc-name">Cameră DVR Volkswagen ID.3 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW23</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55887.html" class="pc-name">Cameră DVR Volkswagen ID.3 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW23</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(0,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(0,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(0,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(0,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(0,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(0,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-0">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55887.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55887/camera-dvr-volkswagen-id-3-2021-23-camera-fata-1080p-autolensa-model-24-7-negru-vw23.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55887">
+            <input type="hidden" name="ProductVariantID" id="vid-0" value="50035">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55887.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55890.html'">
+    <div class="pc" id="card-1">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116447.jpg" alt="Cameră DVR Volkswagen Touareg X 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW19" loading="lazy"></div>
+      <a href="dvr-produs-55890.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116447.jpg" alt="Cameră DVR Volkswagen Touareg X 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW19" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW19</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg X 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW19</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55890.html" class="pc-name">Cameră DVR Volkswagen Touareg X 2021-23, cameră față 1080p Autolensa, Model 24/7  Negru VW19</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(1,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(1,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(1,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(1,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(1,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(1,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-1">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55890.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55890/camera-dvr-volkswagen-touareg-x-2021-23-camera-fata-1080p-autolensa-model-24-7-negru-vw19.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55890">
+            <input type="hidden" name="ProductVariantID" id="vid-1" value="50037">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55890.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55898.html'">
+    <div class="pc" id="card-2">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116449.jpg" alt="Cameră DVR Mercedes Sprinter 2016-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></div>
+      <a href="dvr-produs-55898.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116449.jpg" alt="Cameră DVR Mercedes Sprinter 2016-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW14</div>
-        <div class="pc-name">Cameră DVR Mercedes Sprinter 2016-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55898.html" class="pc-name">Cameră DVR Mercedes Sprinter 2016-, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(2,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(2,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(2,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(2,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(2,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(2,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-2">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55898.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55898/camera-dvr-mercedes-sprinter-2016-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vw14.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55898">
+            <input type="hidden" name="ProductVariantID" id="vid-2" value="50044">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55898.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55908.html'">
+    <div class="pc" id="card-3">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116451.jpg" alt="Cameră DVR Skoda Kodiaq 2016-20, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></div>
+      <a href="dvr-produs-55908.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116451.jpg" alt="Cameră DVR Skoda Kodiaq 2016-20, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW14</div>
-        <div class="pc-name">Cameră DVR Skoda Kodiaq 2016-20, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55908.html" class="pc-name">Cameră DVR Skoda Kodiaq 2016-20, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW14</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(3,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(3,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(3,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(3,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(3,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(3,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-3">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55908.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55908/camera-dvr-skoda-kodiaq-2016-20-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vw14.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55908">
+            <input type="hidden" name="ProductVariantID" id="vid-3" value="50052">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55908.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55923.html'">
+    <div class="pc" id="card-4">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116454.jpg" alt="Cameră DVR Volkswagen Touareg 2019-21 3.0 TSI, cameră față 1080p Autolensa, Model 24/7  Negru VW12" loading="lazy"></div>
+      <a href="dvr-produs-55923.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116454.jpg" alt="Cameră DVR Volkswagen Touareg 2019-21 3.0 TSI, cameră față 1080p Autolensa, Model 24/7  Negru VW12" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW12</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg 2019-21 3.0 TSI, cameră față 1080p Autolensa, Model 24/7  Negru VW12</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55923.html" class="pc-name">Cameră DVR Volkswagen Touareg 2019-21 3.0 TSI, cameră față 1080p Autolensa, Model 24/7  Negru VW12</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(4,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(4,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(4,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(4,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(4,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(4,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-4">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55923.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55923/camera-dvr-volkswagen-touareg-2019-21-3-0-tsi-camera-fata-1080p-autolensa-model-24-7-negru-vw12.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55923">
+            <input type="hidden" name="ProductVariantID" id="vid-4" value="50063">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55923.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55926.html'">
+    <div class="pc" id="card-5">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116455.jpg" alt="Cameră DVR Volkswagen Passat Premium 2019, cameră față 1080p Autolensa, Model 24/7  Negru VW11" loading="lazy"></div>
+      <a href="dvr-produs-55926.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116455.jpg" alt="Cameră DVR Volkswagen Passat Premium 2019, cameră față 1080p Autolensa, Model 24/7  Negru VW11" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW11</div>
-        <div class="pc-name">Cameră DVR Volkswagen Passat Premium 2019, cameră față 1080p Autolensa, Model 24/7  Negru VW11</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55926.html" class="pc-name">Cameră DVR Volkswagen Passat Premium 2019, cameră față 1080p Autolensa, Model 24/7  Negru VW11</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(5,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(5,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(5,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(5,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(5,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(5,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-5">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55926.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55926/camera-dvr-volkswagen-passat-premium-2019-camera-fata-1080p-autolensa-model-24-7-negru-vw11.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55926">
+            <input type="hidden" name="ProductVariantID" id="vid-5" value="50065">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55926.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55929.html'">
+    <div class="pc" id="card-6">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116456.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2019, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW10" loading="lazy"></div>
+      <a href="dvr-produs-55929.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116456.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2019, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW10" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW10</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg Premium 2019, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW10</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">2K+1080p</span><span class="pc-vtag">2K față</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55929.html" class="pc-name">Cameră DVR Volkswagen Touareg Premium 2019, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VW10</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1K+720P" onclick="pickRes(6,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="1080P" onclick="pickRes(6,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(6,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(6,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(6,'4K+1080P',this,event)">4K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(6,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-6">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55929.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55929/camera-dvr-volkswagen-touareg-premium-2019-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vw10.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55929">
+            <input type="hidden" name="ProductVariantID" id="vid-6" value="50067">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55929.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55934.html'">
+    <div class="pc" id="card-7">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116457.jpg" alt="Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></div>
+      <a href="dvr-produs-55934.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116457.jpg" alt="Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Gri VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55934.html" class="pc-name">Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Gri VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(7,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(7,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(7,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(7,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(7,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(7,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-7">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55934.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55934/camera-dvr-volkswagen-golf-8-electric-camera-fata-1080p-autolensa-model-24-7-gri-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55934">
+            <input type="hidden" name="ProductVariantID" id="vid-7" value="50071">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55934.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55937.html'">
+    <div class="pc" id="card-8">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116458.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></div>
+      <a href="dvr-produs-55937.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116458.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Gri VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55937.html" class="pc-name">Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Gri VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(8,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(8,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(8,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(8,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(8,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(8,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-8">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55937.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55937/camera-dvr-volkswagen-touareg-premium-2017-camera-fata-1080p-autolensa-model-24-7-gri-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55937">
+            <input type="hidden" name="ProductVariantID" id="vid-8" value="50073">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55937.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55940.html'">
+    <div class="pc" id="card-9">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116459.jpg" alt="Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></div>
+      <a href="dvr-produs-55940.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116459.jpg" alt="Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Gri VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Gri VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55940.html" class="pc-name">Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Gri VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(9,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(9,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(9,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(9,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(9,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(9,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-9">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55940.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55940/camera-dvr-volkswagen-golf-8-2021-camera-fata-1080p-autolensa-model-24-7-gri-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55940">
+            <input type="hidden" name="ProductVariantID" id="vid-9" value="50075">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55940.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55943.html'">
+    <div class="pc" id="card-10">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116460.jpg" alt="Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></div>
+      <a href="dvr-produs-55943.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116460.jpg" alt="Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Negru VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55943.html" class="pc-name">Cameră DVR Volkswagen Golf 8 Electric , cameră față 1080p Autolensa, Model 24/7  Negru VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(10,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(10,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(10,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(10,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(10,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(10,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-10">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55943.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55943/camera-dvr-volkswagen-golf-8-electric-camera-fata-1080p-autolensa-model-24-7-negru-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55943">
+            <input type="hidden" name="ProductVariantID" id="vid-10" value="50077">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55943.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55946.html'">
+    <div class="pc" id="card-11">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116461.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></div>
+      <a href="dvr-produs-55946.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116461.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Negru VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55946.html" class="pc-name">Cameră DVR Volkswagen Touareg Premium 2017, cameră față 1080p Autolensa, Model 24/7  Negru VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(11,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(11,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(11,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(11,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(11,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(11,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-11">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55946.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55946/camera-dvr-volkswagen-touareg-premium-2017-camera-fata-1080p-autolensa-model-24-7-negru-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55946">
+            <input type="hidden" name="ProductVariantID" id="vid-11" value="50079">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55946.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55949.html'">
+    <div class="pc" id="card-12">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116462.jpg" alt="Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></div>
+      <a href="dvr-produs-55949.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116462.jpg" alt="Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Negru VW09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW09</div>
-        <div class="pc-name">Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Negru VW09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55949.html" class="pc-name">Cameră DVR Volkswagen Golf 8 2021-, cameră față 1080p Autolensa, Model 24/7  Negru VW09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(12,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(12,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(12,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(12,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(12,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(12,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-12">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55949.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55949/camera-dvr-volkswagen-golf-8-2021-camera-fata-1080p-autolensa-model-24-7-negru-vw09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55949">
+            <input type="hidden" name="ProductVariantID" id="vid-12" value="50081">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55949.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55952.html'">
+    <div class="pc" id="card-13">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116463.jpg" alt="Cameră DVR Volkswagen Touareg 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></div>
+      <a href="dvr-produs-55952.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116463.jpg" alt="Cameră DVR Volkswagen Touareg 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW08</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55952.html" class="pc-name">Cameră DVR Volkswagen Touareg 2019-21, cameră față 1080p Autolensa, Model 24/7  Negru VW08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(13,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(13,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(13,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(13,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(13,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(13,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-13">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55952.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55952/camera-dvr-volkswagen-touareg-2019-21-camera-fata-1080p-autolensa-model-24-7-negru-vw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55952">
+            <input type="hidden" name="ProductVariantID" id="vid-13" value="50083">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55952.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55955.html'">
+    <div class="pc" id="card-14">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116464.jpg" alt="Cameră DVR Volkswagen Passat 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></div>
+      <a href="dvr-produs-55955.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116464.jpg" alt="Cameră DVR Volkswagen Passat 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW08</div>
-        <div class="pc-name">Cameră DVR Volkswagen Passat 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55955.html" class="pc-name">Cameră DVR Volkswagen Passat 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(14,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(14,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(14,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(14,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(14,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(14,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-14">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55955.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55955/camera-dvr-volkswagen-passat-2015-2016-camera-fata-1080p-autolensa-model-24-7-negru-vw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55955">
+            <input type="hidden" name="ProductVariantID" id="vid-14" value="50085">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55955.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55958.html'">
+    <div class="pc" id="card-15">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116465.jpg" alt="Cameră DVR Mercedes-Benz  Sprinter 2016-, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></div>
+      <a href="dvr-produs-55958.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116465.jpg" alt="Cameră DVR Mercedes-Benz  Sprinter 2016-, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW08</div>
-        <div class="pc-name">Cameră DVR Mercedes-Benz  Sprinter 2016-, cameră față 1080p Autolensa, Model 24/7  Negru VW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55958.html" class="pc-name">Cameră DVR Mercedes-Benz  Sprinter 2016-, cameră față 1080p Autolensa, Model 24/7  Negru VW08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(15,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(15,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(15,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(15,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(15,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(15,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-15">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55958.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55958/camera-dvr-mercedes-benz-sprinter-2016-camera-fata-1080p-autolensa-model-24-7-negru-vw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55958">
+            <input type="hidden" name="ProductVariantID" id="vid-15" value="50087">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55958.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55964.html'">
+    <div class="pc" id="card-16">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116467.jpg" alt="Cameră DVR Skoda  Kodiaq 2016-20, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></div>
+      <a href="dvr-produs-55964.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116467.jpg" alt="Cameră DVR Skoda  Kodiaq 2016-20, cameră față 1080p Autolensa, Model 24/7  Negru VW08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW08</div>
-        <div class="pc-name">Cameră DVR Skoda  Kodiaq 2016-20, cameră față 1080p Autolensa, Model 24/7  Negru VW08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55964.html" class="pc-name">Cameră DVR Skoda  Kodiaq 2016-20, cameră față 1080p Autolensa, Model 24/7  Negru VW08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(16,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(16,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(16,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(16,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(16,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(16,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-16">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55964.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55964/camera-dvr-skoda-kodiaq-2016-20-camera-fata-1080p-autolensa-model-24-7-negru-vw08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55964">
+            <input type="hidden" name="ProductVariantID" id="vid-16" value="50091">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55964.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55970.html'">
+    <div class="pc" id="card-17">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116469.jpg" alt="Cameră DVR Volkswagen Touareg 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW07" loading="lazy"></div>
+      <a href="dvr-produs-55970.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116469.jpg" alt="Cameră DVR Volkswagen Touareg 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW07</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55970.html" class="pc-name">Cameră DVR Volkswagen Touareg 2015-2016, cameră față 1080p Autolensa, Model 24/7  Negru VW07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(17,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(17,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(17,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(17,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(17,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(17,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-17">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55970.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55970/camera-dvr-volkswagen-touareg-2015-2016-camera-fata-1080p-autolensa-model-24-7-negru-vw07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55970">
+            <input type="hidden" name="ProductVariantID" id="vid-17" value="50095">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55970.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55973.html'">
+    <div class="pc" id="card-18">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116470.jpg" alt="Cameră DVR Volkswagen CC Premium 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru VW05" loading="lazy"></div>
+      <a href="dvr-produs-55973.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116470.jpg" alt="Cameră DVR Volkswagen CC Premium 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru VW05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW05</div>
-        <div class="pc-name">Cameră DVR Volkswagen CC Premium 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru VW05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"></div>
-        <div class="pc-prices"><span class="pc-price">499 Lei</span></div>
+        <a href="dvr-produs-55973.html" class="pc-name">Cameră DVR Volkswagen CC Premium 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru VW05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel out" data-res="1080P" onclick="pickRes(18,'1080P',this,event)">FHD</span><span class="pc-res-btn out" data-res="1K+720P" onclick="pickRes(18,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn out" data-res="2K" onclick="pickRes(18,'2K',this,event)">2K</span><span class="pc-res-btn out" data-res="2K+1080P" onclick="pickRes(18,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn out" data-res="4G-2K" onclick="pickRes(18,'4G-2K',this,event)">4G+2K</span><span class="pc-res-btn out" data-res="4K" onclick="pickRes(18,'4K',this,event)">4K</span></div>
+        <div class="pc-prices"><span class="pc-price" id="price-18">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55973.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55973/camera-dvr-volkswagen-cc-premium-2015-16-camera-fata-1080p-autolensa-model-24-7-negru-vw05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55973">
+            <input type="hidden" name="ProductVariantID" id="vid-18" value="50097">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55973.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55976.html'">
+    <div class="pc" id="card-19">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116471.jpg" alt="Cameră DVR Volkswagen Golf 7 2013-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW04" loading="lazy"></div>
+      <a href="dvr-produs-55976.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116471.jpg" alt="Cameră DVR Volkswagen Golf 7 2013-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW04" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW04</div>
-        <div class="pc-name">Cameră DVR Volkswagen Golf 7 2013-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW04</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55976.html" class="pc-name">Cameră DVR Volkswagen Golf 7 2013-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW04</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(19,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(19,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(19,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(19,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(19,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(19,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-19">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55976.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55976/camera-dvr-volkswagen-golf-7-2013-2018-camera-fata-1080p-autolensa-model-24-7-negru-vw04.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55976">
+            <input type="hidden" name="ProductVariantID" id="vid-19" value="50099">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55976.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55979.html'">
+    <div class="pc" id="card-20">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116472.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2015-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW02" loading="lazy"></div>
+      <a href="dvr-produs-55979.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116472.jpg" alt="Cameră DVR Volkswagen Touareg Premium 2015-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW02" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW02</div>
-        <div class="pc-name">Cameră DVR Volkswagen Touareg Premium 2015-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW02</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55979.html" class="pc-name">Cameră DVR Volkswagen Touareg Premium 2015-2018, cameră față 1080p Autolensa, Model 24/7  Negru VW02</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(20,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(20,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(20,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(20,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(20,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(20,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-20">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55979.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55979/camera-dvr-volkswagen-touareg-premium-2015-2018-camera-fata-1080p-autolensa-model-24-7-negru-vw02.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55979">
+            <input type="hidden" name="ProductVariantID" id="vid-20" value="50101">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55979.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-55982.html'">
+    <div class="pc" id="card-21">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116473.jpg" alt="Cameră DVR Volkswagen 2013-16 Modele high cu senzor ploaie si oglinda heliomataPolo/Passat/Touran/Jetta/Golf/Eos/Beetle/CC , cameră față 1080p Autolensa, Model 24/7  Negru VW01" loading="lazy"></div>
+      <a href="dvr-produs-55982.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116473.jpg" alt="Cameră DVR Volkswagen 2013-16 Modele high cu senzor ploaie si oglinda heliomataPolo/Passat/Touran/Jetta/Golf/Eos/Beetle/CC , cameră față 1080p Autolensa, Model 24/7  Negru VW01" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VW01</div>
-        <div class="pc-name">Cameră DVR Volkswagen 2013-16 Modele high cu senzor ploaie si oglinda heliomataPolo/Passat/Touran/Jetta/Golf/Eos/Beetle/CC , cameră față 1080p Autolensa, Model 24/7  Negru VW01</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-55982.html" class="pc-name">Cameră DVR Volkswagen 2013-16 Modele high cu senzor ploaie si oglinda heliomataPolo/Passat/Touran/Jetta/Golf/Eos/Beetle/CC , cameră față 1080p Autolensa, Model 24/7  Negru VW01</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(21,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(21,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(21,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(21,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(21,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(21,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-21">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-55982.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/55982/camera-dvr-volkswagen-2013-16-modele-high-cu-senzor-ploaie-si-oglinda-heliomatapolo-passat-touran-jetta-golf-eos-beetle-cc-camera-fata-1080p-autolensa-model-24-7-negru-vw01.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="55982">
+            <input type="hidden" name="ProductVariantID" id="vid-21" value="50103">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-55982.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
@@ -401,5 +539,28 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 <footer class="ft">
   <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
 </footer>
+<script>
+const CARDS = [{"idx": 0, "pid": "55887", "variants": [{"vid": "50035", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50036", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50763", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50764", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51490", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51852", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51853", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 1, "pid": "55890", "variants": [{"vid": "50037", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50038", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50765", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50766", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51491", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51854", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51855", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 2, "pid": "55898", "variants": [{"vid": "50043", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50044", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50045", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50046", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50771", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50772", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50773", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50774", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51494", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51495", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51860", "price": 809, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51861", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51862", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51863", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 3, "pid": "55908", "variants": [{"vid": "50051", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50052", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50053", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50054", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50779", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50780", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50781", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50782", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51498", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51499", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51868", "price": 809, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51869", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51870", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51871", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 4, "pid": "55923", "variants": [{"vid": "50063", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50064", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50791", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50792", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51504", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51880", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51881", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 5, "pid": "55926", "variants": [{"vid": "50065", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50066", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50793", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50794", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51505", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51882", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51883", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 6, "pid": "55929", "variants": [{"vid": "50067", "price": 495, "in_stock": true, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50068", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50069", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50070", "price": 412, "in_stock": true, "color": "Gri", "resolution": "1080P"}, {"vid": "50795", "price": 660, "in_stock": true, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50796", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50797", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50798", "price": 578, "in_stock": true, "color": "Gri", "resolution": "2K"}, {"vid": "51506", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51507", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51884", "price": 809, "in_stock": true, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51885", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51886", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51887", "price": 619, "in_stock": true, "color": "Gri", "resolution": "4K"}]}, {"idx": 7, "pid": "55934", "variants": [{"vid": "50071", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50072", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50799", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50800", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51508", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51888", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51889", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 8, "pid": "55937", "variants": [{"vid": "50073", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50074", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50801", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50802", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51509", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51890", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51891", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 9, "pid": "55940", "variants": [{"vid": "50075", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50076", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50803", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50804", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51510", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51892", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51893", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 10, "pid": "55943", "variants": [{"vid": "50077", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50078", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50805", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50806", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51511", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51894", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51895", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 11, "pid": "55946", "variants": [{"vid": "50079", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50080", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50807", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50808", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51512", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51896", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51897", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 12, "pid": "55949", "variants": [{"vid": "50081", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50082", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50809", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50810", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51513", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51898", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51899", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 13, "pid": "55952", "variants": [{"vid": "50083", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50084", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50811", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50812", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51514", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51900", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51901", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 14, "pid": "55955", "variants": [{"vid": "50085", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50086", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50813", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50814", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51515", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51902", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51903", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 15, "pid": "55958", "variants": [{"vid": "50087", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50088", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50815", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50816", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51516", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51904", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51905", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 16, "pid": "55964", "variants": [{"vid": "50091", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50092", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50819", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50820", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51518", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51908", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51909", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 17, "pid": "55970", "variants": [{"vid": "50095", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50096", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50823", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50824", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51520", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51912", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51913", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 18, "pid": "55973", "variants": [{"vid": "50097", "price": 412, "in_stock": false, "color": "Negru", "resolution": "1080P"}, {"vid": "50098", "price": 495, "in_stock": false, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50825", "price": 578, "in_stock": false, "color": "Negru", "resolution": "2K"}, {"vid": "50826", "price": 660, "in_stock": false, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51521", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51914", "price": 619, "in_stock": false, "color": "Negru", "resolution": "4K"}, {"vid": "51915", "price": 826, "in_stock": false, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 19, "pid": "55976", "variants": [{"vid": "50099", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50100", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50827", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50828", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51522", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51916", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51917", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 20, "pid": "55979", "variants": [{"vid": "50101", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50102", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50829", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50830", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51523", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51918", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51919", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 21, "pid": "55982", "variants": [{"vid": "50103", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50104", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50831", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "50832", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51524", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51920", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "51921", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}];
+
+function pickRes(idx, res, el, event) {
+  event.stopPropagation();
+  event.preventDefault();
+  const card = CARDS.find(c => c.idx === idx);
+  if (!card) return;
+  
+  // Toggle selection
+  const container = el.parentElement;
+  container.querySelectorAll('.pc-res-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  
+  // Find best variant for this resolution (prefer in_stock)
+  const v = card.variants.find(v => v.resolution === res && v.in_stock) ||
+            card.variants.find(v => v.resolution === res);
+  if (v) {
+    document.getElementById('price-' + idx).textContent = v.price.toLocaleString('ro-RO') + ' Lei';
+    document.getElementById('vid-' + idx).value = v.vid;
+  }
+}
+</script>
 </body>
 </html>

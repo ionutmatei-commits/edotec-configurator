@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cameră DVR Land Rover | Alege varianta | EDOTEC.RO</title>
+<title>Cameră DVR Land Rover | EDOTEC.RO</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.5}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
@@ -17,31 +17,37 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 .hero-txt h1{font-size:clamp(22px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:6px}
 .hero-txt h1 span{color:#c0392b}
 .hero-txt p{font-size:13.5px;color:rgba(255,255,255,.7);margin-bottom:14px;max-width:480px}
-.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px}
+.hero-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;transition:color .15s}
+.hero-back:hover{background:rgba(255,255,255,.18)}
 .bar{background:#fff;border-bottom:2px solid #f0f2f5;padding:10px var(--p)}
 .bar-inner{max-width:var(--mx);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .bar-count{font-size:13px;color:#666;font-weight:600}.bar-count strong{color:#c0392b}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 48px}
-.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;display:flex;flex-direction:column;position:relative}
 .pc:hover{transform:translateY(-4px);box-shadow:var(--shh)}
-.pc-img{aspect-ratio:4/3;overflow:hidden;background:#f8f9fa;display:flex;align-items:center;justify-content:center}
-.pc-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
-.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-img-wrap{display:block;aspect-ratio:4/3;overflow:hidden;background:#f8f9fa}
+.pc-img-wrap img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.pc:hover .pc-img-wrap img{transform:scale(1.05)}
 .pc-body{padding:13px;flex:1;display:flex;flex-direction:column}
 .pc-code{font-size:10px;font-weight:800;color:#c0392b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.pc-name{font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
+.pc-name{display:block;font-size:12.5px;font-weight:700;color:#1a1a2e;line-height:1.4;margin-bottom:8px}
 .pc-desc{font-size:11px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pc-vtags{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px}
-.pc-vtag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:#f0f2f5;color:#555;border:1px solid #e0e2e5}
+/* VARIANT BUTTONS ON CARD */
+.pc-res-label{font-size:9.5px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.pc-res-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.pc-res-btn{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:6px;border:1.5px solid #e0e2e5;background:#f8f9fa;color:#444;cursor:pointer;transition:all .15s;white-space:nowrap}
+.pc-res-btn:hover{border-color:#c0392b;color:#c0392b;background:#fff}
+.pc-res-btn.sel{border-color:#c0392b;background:#c0392b;color:#fff}
+.pc-res-btn.out{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+/* PRICE + CTA */
 .pc-prices{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;margin-bottom:10px}
-.pc-price{font-size:20px;font-weight:900;color:#1a1a2e}
-.pc-old{font-size:12px;color:#bbb;text-decoration:line-through}
+.pc-price{font-size:21px;font-weight:900;color:#1a1a2e}
 .pc-from{font-size:10px;color:#888;margin-right:2px}
 .pc-btns{display:flex;gap:5px}
-.pc-btn-view{background:#1a1a2e;color:#fff;font-weight:700;font-size:11.5px;padding:9px 10px;border-radius:8px;text-align:center;width:100%;display:block;transition:background .15s}
-.pc-btn-view:hover{background:#2d2d4e}
-.pc-btn-det{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
-.pc-btn-det:hover{background:#e0e2e5}
+.pc-btn-cart{background:#c0392b;color:#fff;font-weight:700;font-size:11.5px;padding:9px 8px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .15s}
+.pc-btn-cart:hover{background:#a93226}
+.pc-btn-more{background:#f0f2f5;color:#333;font-weight:600;font-size:11px;padding:9px 10px;border-radius:8px;white-space:nowrap;display:flex;align-items:center;transition:background .15s}
+.pc-btn-more:hover{background:#e0e2e5}
 .pc-badge{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;background:#c0392b;color:#fff}
 .ft{background:#1a1a2e;padding:22px var(--p);text-align:center}
 .ft p{color:rgba(255,255,255,.5);font-size:12px}.ft a{color:#c0392b;font-weight:700}
@@ -53,7 +59,7 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
     <div class="hero-img"><img src="https://www.edotec.ro/userfiles/categoryimages/2730/jpeg/category_2730_8ad472a6.jpg" alt="Land Rover"></div>
     <div class="hero-txt">
       <h1>Cameră DVR <span>Land Rover</span></h1>
-      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7 — disponibil în mai multe rezoluții. Dai click pe produs și alegi varianta ta direct.</p>
+      <p>Aspect OEM, zero fire vizibile, mod parcare 24/7. Alege rezoluția direct de pe card sau dă click pentru detalii complete.</p>
       <a href="landing-camere-bord.html" class="hero-back">← Toate mărcile</a>
     </div>
   </div>
@@ -66,318 +72,444 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 </div>
 <div class="w">
   <div class="pg">
-    <div class="pc" onclick="location.href='dvr-produs-56045.html'">
+    <div class="pc" id="card-0">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116494.jpg" alt="Cameră DVR Porsche Paramera 2018, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VBSJ02" loading="lazy"></div>
+      <a href="dvr-produs-56045.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116494.jpg" alt="Cameră DVR Porsche Paramera 2018, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VBSJ02" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">VBSJ02</div>
-        <div class="pc-name">Cameră DVR Porsche Paramera 2018, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VBSJ02</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"></div>
-        <div class="pc-prices"><span class="pc-price">599 Lei</span></div>
+        <a href="dvr-produs-56045.html" class="pc-name">Cameră DVR Porsche Paramera 2018, cameră față-spate 1080p-720p Autolensa, 24/7 Gri VBSJ02</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel out" data-res="1K+720P" onclick="pickRes(0,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn out" data-res="1080P" onclick="pickRes(0,'1080P',this,event)">FHD</span><span class="pc-res-btn out" data-res="2K+1080P" onclick="pickRes(0,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn out" data-res="2K" onclick="pickRes(0,'2K',this,event)">2K</span><span class="pc-res-btn out" data-res="4G-2K" onclick="pickRes(0,'4G-2K',this,event)">4G+2K</span><span class="pc-res-btn out" data-res="4K+1080P" onclick="pickRes(0,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-price" id="price-0">495 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56045.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56045/camera-dvr-porsche-paramera-2018-camera-fata-spate-1080p-720p-autolensa-24-7-gri-vbsj02.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56045">
+            <input type="hidden" name="ProductVariantID" id="vid-0" value="50145">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56045.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56530.html'">
+    <div class="pc" id="card-1">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116621.jpg" alt="Cameră DVR Toyota RAV4 low-mid 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru FTQC07" loading="lazy"></div>
+      <a href="dvr-produs-56530.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116621.jpg" alt="Cameră DVR Toyota RAV4 low-mid 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru FTQC07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">FTQC07</div>
-        <div class="pc-name">Cameră DVR Toyota RAV4 low-mid 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru FTQC07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56530.html" class="pc-name">Cameră DVR Toyota RAV4 low-mid 2019-22, cameră față 1080p Autolensa, Model 24/7  Negru FTQC07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(1,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(1,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(1,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(1,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(1,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(1,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-1">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56530.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56530/camera-dvr-toyota-rav4-low-mid-2019-22-camera-fata-1080p-autolensa-model-24-7-negru-ftqc07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56530">
+            <input type="hidden" name="ProductVariantID" id="vid-1" value="50503">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56530.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56578.html'">
+    <div class="pc" id="card-2">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116637.jpg" alt="Cameră DVR Land Rover Range Rover Evoque 2019-20 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12" loading="lazy"></div>
+      <a href="dvr-produs-56578.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116637.jpg" alt="Cameră DVR Land Rover Range Rover Evoque 2019-20 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH12</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Evoque 2019-20 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56578.html" class="pc-name">Cameră DVR Land Rover Range Rover Evoque 2019-20 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(2,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(2,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(2,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(2,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(2,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(2,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-2">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56578.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56578/camera-dvr-land-rover-range-rover-evoque-2019-20-camera-fata-1080p-autolensa-model-24-7-negru-elh12.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56578">
+            <input type="hidden" name="ProductVariantID" id="vid-2" value="50535">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56578.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56581.html'">
+    <div class="pc" id="card-3">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116638.jpg" alt="Cameră DVR Jaguar XE, F-Pace, XF 2021 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12" loading="lazy"></div>
+      <a href="dvr-produs-56581.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116638.jpg" alt="Cameră DVR Jaguar XE, F-Pace, XF 2021 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH12</div>
-        <div class="pc-name">Cameră DVR Jaguar XE, F-Pace, XF 2021 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56581.html" class="pc-name">Cameră DVR Jaguar XE, F-Pace, XF 2021 , cameră față 1080p Autolensa, Model 24/7  Negru ELH12</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(3,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(3,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(3,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(3,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(3,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(3,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-3">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56581.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56581/camera-dvr-jaguar-xe-f-pace-xf-2021-camera-fata-1080p-autolensa-model-24-7-negru-elh12.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56581">
+            <input type="hidden" name="ProductVariantID" id="vid-3" value="50537">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56581.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56587.html'">
+    <div class="pc" id="card-4">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116640.jpg" alt="Cameră DVR Land Rover Discovery Sport 2020-23, cameră față 1080p Autolensa, Model 24/7  Negru ELH10" loading="lazy"></div>
+      <a href="dvr-produs-56587.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116640.jpg" alt="Cameră DVR Land Rover Discovery Sport 2020-23, cameră față 1080p Autolensa, Model 24/7  Negru ELH10" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH10</div>
-        <div class="pc-name">Cameră DVR Land Rover Discovery Sport 2020-23, cameră față 1080p Autolensa, Model 24/7  Negru ELH10</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56587.html" class="pc-name">Cameră DVR Land Rover Discovery Sport 2020-23, cameră față 1080p Autolensa, Model 24/7  Negru ELH10</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(4,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(4,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(4,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(4,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(4,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(4,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-4">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56587.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56587/camera-dvr-land-rover-discovery-sport-2020-23-camera-fata-1080p-autolensa-model-24-7-negru-elh10.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56587">
+            <input type="hidden" name="ProductVariantID" id="vid-4" value="50541">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56587.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56590.html'">
+    <div class="pc" id="card-5">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116641.jpg" alt="Cameră DVR Jaguar F-PACE 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH09" loading="lazy"></div>
+      <a href="dvr-produs-56590.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116641.jpg" alt="Cameră DVR Jaguar F-PACE 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH09" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH09</div>
-        <div class="pc-name">Cameră DVR Jaguar F-PACE 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH09</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56590.html" class="pc-name">Cameră DVR Jaguar F-PACE 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH09</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(5,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(5,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(5,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(5,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(5,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(5,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-5">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56590.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56590/camera-dvr-jaguar-f-pace-2021-camera-fata-1080p-autolensa-model-24-7-negru-elh09.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56590">
+            <input type="hidden" name="ProductVariantID" id="vid-5" value="50543">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56590.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56596.html'">
+    <div class="pc" id="card-6">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116643.jpg" alt="Cameră DVR Jaguar F-PACE,XE,XF 2016-17 , cameră față 1080p Autolensa, Model 24/7  Negru ELH08" loading="lazy"></div>
+      <a href="dvr-produs-56596.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116643.jpg" alt="Cameră DVR Jaguar F-PACE,XE,XF 2016-17 , cameră față 1080p Autolensa, Model 24/7  Negru ELH08" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH08</div>
-        <div class="pc-name">Cameră DVR Jaguar F-PACE,XE,XF 2016-17 , cameră față 1080p Autolensa, Model 24/7  Negru ELH08</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56596.html" class="pc-name">Cameră DVR Jaguar F-PACE,XE,XF 2016-17 , cameră față 1080p Autolensa, Model 24/7  Negru ELH08</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(6,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(6,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(6,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(6,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(6,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(6,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-6">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56596.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56596/camera-dvr-jaguar-f-pace-xe-xf-2016-17-camera-fata-1080p-autolensa-model-24-7-negru-elh08.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56596">
+            <input type="hidden" name="ProductVariantID" id="vid-6" value="50547">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56596.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56602.html'">
+    <div class="pc" id="card-7">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116645.jpg" alt="Cameră DVR Jaguar Jaguar E-Pace, cameră față 1080p Autolensa, Model 24/7  Negru ELH07" loading="lazy"></div>
+      <a href="dvr-produs-56602.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116645.jpg" alt="Cameră DVR Jaguar Jaguar E-Pace, cameră față 1080p Autolensa, Model 24/7  Negru ELH07" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH07</div>
-        <div class="pc-name">Cameră DVR Jaguar Jaguar E-Pace, cameră față 1080p Autolensa, Model 24/7  Negru ELH07</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56602.html" class="pc-name">Cameră DVR Jaguar Jaguar E-Pace, cameră față 1080p Autolensa, Model 24/7  Negru ELH07</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(7,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(7,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(7,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(7,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(7,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(7,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-7">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56602.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56602/camera-dvr-jaguar-jaguar-e-pace-camera-fata-1080p-autolensa-model-24-7-negru-elh07.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56602">
+            <input type="hidden" name="ProductVariantID" id="vid-7" value="50551">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56602.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56608.html'">
+    <div class="pc" id="card-8">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116647.jpg" alt="Cameră DVR Land Rover Rangerover Defender 2017-22 , cameră față 1080p Autolensa, Model 24/7  Negru ELH06" loading="lazy"></div>
+      <a href="dvr-produs-56608.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116647.jpg" alt="Cameră DVR Land Rover Rangerover Defender 2017-22 , cameră față 1080p Autolensa, Model 24/7  Negru ELH06" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH06</div>
-        <div class="pc-name">Cameră DVR Land Rover Rangerover Defender 2017-22 , cameră față 1080p Autolensa, Model 24/7  Negru ELH06</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56608.html" class="pc-name">Cameră DVR Land Rover Rangerover Defender 2017-22 , cameră față 1080p Autolensa, Model 24/7  Negru ELH06</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(8,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(8,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(8,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(8,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(8,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(8,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-8">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56608.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56608/camera-dvr-land-rover-rangerover-defender-2017-22-camera-fata-1080p-autolensa-model-24-7-negru-elh06.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56608">
+            <input type="hidden" name="ProductVariantID" id="vid-8" value="50555">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56608.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56611.html'">
+    <div class="pc" id="card-9">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116648.jpg" alt="Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></div>
+      <a href="dvr-produs-56611.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116648.jpg" alt="Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH05</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56611.html" class="pc-name">Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(9,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(9,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(9,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(9,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(9,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(9,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-9">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56611.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56611/camera-dvr-land-rover-range-rover-hybrid-2019-camera-fata-1080p-autolensa-model-24-7-negru-elh05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56611">
+            <input type="hidden" name="ProductVariantID" id="vid-9" value="50557">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56611.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56614.html'">
+    <div class="pc" id="card-10">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116649.jpg" alt="Cameră DVR Land Rover Discovery 5 2016-19 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></div>
+      <a href="dvr-produs-56614.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116649.jpg" alt="Cameră DVR Land Rover Discovery 5 2016-19 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH05</div>
-        <div class="pc-name">Cameră DVR Land Rover Discovery 5 2016-19 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56614.html" class="pc-name">Cameră DVR Land Rover Discovery 5 2016-19 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(10,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(10,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(10,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(10,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(10,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(10,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-10">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56614.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56614/camera-dvr-land-rover-discovery-5-2016-19-camera-fata-1080p-autolensa-model-24-7-negru-elh05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56614">
+            <input type="hidden" name="ProductVariantID" id="vid-10" value="50559">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56614.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56617.html'">
+    <div class="pc" id="card-11">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116650.jpg" alt="Cameră DVR Land Rover Evoque 2016-21 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></div>
+      <a href="dvr-produs-56617.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116650.jpg" alt="Cameră DVR Land Rover Evoque 2016-21 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH05</div>
-        <div class="pc-name">Cameră DVR Land Rover Evoque 2016-21 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56617.html" class="pc-name">Cameră DVR Land Rover Evoque 2016-21 , cameră față 1080p Autolensa, Model 24/7  Negru ELH05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(11,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(11,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(11,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(11,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(11,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(11,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-11">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56617.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56617/camera-dvr-land-rover-evoque-2016-21-camera-fata-1080p-autolensa-model-24-7-negru-elh05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56617">
+            <input type="hidden" name="ProductVariantID" id="vid-11" value="50561">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56617.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56620.html'">
+    <div class="pc" id="card-12">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116651.jpg" alt="Cameră DVR Land Rover Range Rover Sport P400E 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></div>
+      <a href="dvr-produs-56620.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116651.jpg" alt="Cameră DVR Land Rover Range Rover Sport P400E 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH05</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Sport P400E 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56620.html" class="pc-name">Cameră DVR Land Rover Range Rover Sport P400E 2021, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(12,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(12,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(12,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(12,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(12,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(12,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-12">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56620.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56620/camera-dvr-land-rover-range-rover-sport-p400e-2021-camera-fata-1080p-autolensa-model-24-7-negru-elh05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56620">
+            <input type="hidden" name="ProductVariantID" id="vid-12" value="50563">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56620.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56623.html'">
+    <div class="pc" id="card-13">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116652.jpg" alt="Cameră DVR Land Rover Range Rover Sport 2016-19, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></div>
+      <a href="dvr-produs-56623.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116652.jpg" alt="Cameră DVR Land Rover Range Rover Sport 2016-19, cameră față 1080p Autolensa, Model 24/7  Negru ELH05" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH05</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Sport 2016-19, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56623.html" class="pc-name">Cameră DVR Land Rover Range Rover Sport 2016-19, cameră față 1080p Autolensa, Model 24/7  Negru ELH05</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(13,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(13,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(13,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(13,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(13,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(13,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-13">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56623.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56623/camera-dvr-land-rover-range-rover-sport-2016-19-camera-fata-1080p-autolensa-model-24-7-negru-elh05.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56623">
+            <input type="hidden" name="ProductVariantID" id="vid-13" value="50565">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56623.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56626.html'">
+    <div class="pc" id="card-14">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116653.jpg" alt="Cameră DVR Land Rover Range Rover Evoque 2014-16, cameră față 1080p Autolensa, Model 24/7  Negru" loading="lazy"></div>
+      <a href="dvr-produs-56626.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116653.jpg" alt="Cameră DVR Land Rover Range Rover Evoque 2014-16, cameră față 1080p Autolensa, Model 24/7  Negru" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">AUTOLENSA</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Evoque 2014-16, cameră față 1080p Autolensa, Model 24/7  Negru</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56626.html" class="pc-name">Cameră DVR Land Rover Range Rover Evoque 2014-16, cameră față 1080p Autolensa, Model 24/7  Negru</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(14,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(14,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(14,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(14,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(14,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(14,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-14">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56626.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56626/camera-dvr-land-rover-range-rover-evoque-2014-16-camera-fata-1080p-autolensa-model-24-7-negru.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56626">
+            <input type="hidden" name="ProductVariantID" id="vid-14" value="50567">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56626.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56629.html'">
+    <div class="pc" id="card-15">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116654.jpg" alt="Cameră DVR Jaguar F-TYPE, XE, XJ 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru ELH04" loading="lazy"></div>
+      <a href="dvr-produs-56629.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116654.jpg" alt="Cameră DVR Jaguar F-TYPE, XE, XJ 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru ELH04" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH04</div>
-        <div class="pc-name">Cameră DVR Jaguar F-TYPE, XE, XJ 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru ELH04</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56629.html" class="pc-name">Cameră DVR Jaguar F-TYPE, XE, XJ 2015-16, cameră față 1080p Autolensa, Model 24/7  Negru ELH04</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(15,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(15,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(15,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(15,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(15,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(15,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-15">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56629.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56629/camera-dvr-jaguar-f-type-xe-xj-2015-16-camera-fata-1080p-autolensa-model-24-7-negru-elh04.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56629">
+            <input type="hidden" name="ProductVariantID" id="vid-15" value="50569">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56629.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56635.html'">
+    <div class="pc" id="card-16">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116656.jpg" alt="Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></div>
+      <a href="dvr-produs-56635.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116656.jpg" alt="Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH03</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56635.html" class="pc-name">Cameră DVR Land Rover Range Rover Hybrid 2019, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(16,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(16,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(16,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(16,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(16,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(16,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-16">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56635.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56635/camera-dvr-land-rover-range-rover-hybrid-2019-camera-fata-1080p-autolensa-model-24-7-negru-elh03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56635">
+            <input type="hidden" name="ProductVariantID" id="vid-16" value="50573">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56635.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56638.html'">
+    <div class="pc" id="card-17">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116657.jpg" alt="Cameră DVR Land Rover Range Rover Discovery 5/6, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></div>
+      <a href="dvr-produs-56638.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116657.jpg" alt="Cameră DVR Land Rover Range Rover Discovery 5/6, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH03</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Discovery 5/6, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56638.html" class="pc-name">Cameră DVR Land Rover Range Rover Discovery 5/6, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(17,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(17,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(17,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(17,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(17,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(17,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-17">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56638.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56638/camera-dvr-land-rover-range-rover-discovery-5-6-camera-fata-1080p-autolensa-model-24-7-negru-elh03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56638">
+            <input type="hidden" name="ProductVariantID" id="vid-17" value="50575">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56638.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56641.html'">
+    <div class="pc" id="card-18">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116658.jpg" alt="Cameră DVR Land Rover Range Rover Sport, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></div>
+      <a href="dvr-produs-56641.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116658.jpg" alt="Cameră DVR Land Rover Range Rover Sport, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH03</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Sport, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56641.html" class="pc-name">Cameră DVR Land Rover Range Rover Sport, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(18,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(18,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(18,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(18,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(18,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(18,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-18">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56641.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56641/camera-dvr-land-rover-range-rover-sport-camera-fata-1080p-autolensa-model-24-7-negru-elh03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56641">
+            <input type="hidden" name="ProductVariantID" id="vid-18" value="50577">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56641.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56644.html'">
+    <div class="pc" id="card-19">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116659.jpg" alt="Cameră DVR Land Rover Range Rover Evoque Decapotabil 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></div>
+      <a href="dvr-produs-56644.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116659.jpg" alt="Cameră DVR Land Rover Range Rover Evoque Decapotabil 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru ELH03" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH03</div>
-        <div class="pc-name">Cameră DVR Land Rover Range Rover Evoque Decapotabil 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56644.html" class="pc-name">Cameră DVR Land Rover Range Rover Evoque Decapotabil 2017-18, cameră față 1080p Autolensa, Model 24/7  Negru ELH03</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(19,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(19,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(19,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(19,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(19,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(19,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-19">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56644.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56644/camera-dvr-land-rover-range-rover-evoque-decapotabil-2017-18-camera-fata-1080p-autolensa-model-24-7-negru-elh03.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56644">
+            <input type="hidden" name="ProductVariantID" id="vid-19" value="50579">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56644.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
-    <div class="pc" onclick="location.href='dvr-produs-56647.html'">
+    <div class="pc" id="card-20">
       
-      <div class="pc-img"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116660.jpg" alt="Cameră DVR Jaguar XJ/XJL/Jaguar 201-15, XF, cameră față 1080p Autolensa, Model 24/7  Negru ELH01" loading="lazy"></div>
+      <a href="dvr-produs-56647.html" class="pc-img-wrap"><img src="https://www.edotec.ro/userfiles/productthumbs/thumb_116660.jpg" alt="Cameră DVR Jaguar XJ/XJL/Jaguar 201-15, XF, cameră față 1080p Autolensa, Model 24/7  Negru ELH01" loading="lazy"></a>
       <div class="pc-body">
         <div class="pc-code">ELH01</div>
-        <div class="pc-name">Cameră DVR Jaguar XJ/XJL/Jaguar 201-15, XF, cameră față 1080p Autolensa, Model 24/7  Negru ELH01</div>
-        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregistrare în </div>
-        <div class="pc-vtags"><span class="pc-vtag">1080p Full HD</span><span class="pc-vtag">1080p+720p</span><span class="pc-vtag">2K față</span><span class="pc-vtag">2K+1080p</span></div>
-        <div class="pc-prices"><span class="pc-from">de la</span><span class="pc-price">412 Lei</span></div>
+        <a href="dvr-produs-56647.html" class="pc-name">Cameră DVR Jaguar XJ/XJL/Jaguar 201-15, XF, cameră față 1080p Autolensa, Model 24/7  Negru ELH01</a>
+        <div class="pc-desc">Camerele DVR OEM FIT AUTOLENSA sunt camere monitorizare trafic cu prindere sub oglinda, tip OEM care oferă WiFi încorporat, înregi</div>
+        <div class="pc-res-label">Rezoluție</div><div class="pc-res-btns"><span class="pc-res-btn sel" data-res="1080P" onclick="pickRes(20,'1080P',this,event)">FHD</span><span class="pc-res-btn" data-res="1K+720P" onclick="pickRes(20,'1K+720P',this,event)">1080p+720p</span><span class="pc-res-btn" data-res="2K" onclick="pickRes(20,'2K',this,event)">2K</span><span class="pc-res-btn" data-res="2K+1080P" onclick="pickRes(20,'2K+1080P',this,event)">2K+1080p</span><span class="pc-res-btn" data-res="4K" onclick="pickRes(20,'4K',this,event)">4K</span><span class="pc-res-btn" data-res="4K+1080P" onclick="pickRes(20,'4K+1080P',this,event)">4K+1080p</span></div>
+        <div class="pc-prices"><span class="pc-from">de la</span> <span class="pc-price" id="price-20">412 Lei</span></div>
         <div class="pc-btns">
-          <a href="dvr-produs-56647.html" class="pc-btn-view">Selectează varianta →</a>
-          <a href="https://www.edotec.ro/product/56647/camera-dvr-jaguar-xj-xjl-jaguar-201-15-xf-camera-fata-1080p-autolensa-model-24-7-negru-elh01.html" class="pc-btn-det" onclick="event.stopPropagation()">edotec.ro</a>
+          <form action="https://www.edotec.ro/cart.html" method="post" target="_top" style="flex:1">
+            <input type="hidden" name="action" value="dmAddToCart">
+            <input type="hidden" name="ProductID" value="56647">
+            <input type="hidden" name="ProductVariantID" id="vid-20" value="50581">
+            <input type="hidden" name="Quantity" value="1">
+            <button type="submit" class="pc-btn-cart">Adaugă în coș</button>
+          </form>
+          <a href="dvr-produs-56647.html" class="pc-btn-more">Detalii</a>
         </div>
       </div>
     </div>
@@ -386,5 +518,28 @@ a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
 <footer class="ft">
   <p>© EDOTEC.RO — <a href="tel:0364565758">0364 565 758</a> — <a href="landing-camere-bord.html">← Toate mărcile</a></p>
 </footer>
+<script>
+const CARDS = [{"idx": 0, "pid": "56045", "variants": [{"vid": "50145", "price": 495, "in_stock": false, "color": "Gri", "resolution": "1K+720P"}, {"vid": "50146", "price": 412, "in_stock": false, "color": "Negru", "resolution": "1080P"}, {"vid": "50147", "price": 495, "in_stock": false, "color": "Negru", "resolution": "1K+720P"}, {"vid": "50148", "price": 412, "in_stock": false, "color": "Gri", "resolution": "1080P"}, {"vid": "50873", "price": 660, "in_stock": false, "color": "Gri", "resolution": "2K+1080P"}, {"vid": "50874", "price": 578, "in_stock": false, "color": "Negru", "resolution": "2K"}, {"vid": "50875", "price": 660, "in_stock": false, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "50876", "price": 578, "in_stock": false, "color": "Gri", "resolution": "2K"}, {"vid": "51545", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "51546", "price": 991, "in_stock": false, "color": "Gri", "resolution": "4G-2K"}, {"vid": "51962", "price": 826, "in_stock": false, "color": "Gri", "resolution": "4K+1080P"}, {"vid": "51963", "price": 619, "in_stock": false, "color": "Negru", "resolution": "4K"}, {"vid": "51964", "price": 826, "in_stock": false, "color": "Negru", "resolution": "4K+1080P"}, {"vid": "51965", "price": 619, "in_stock": false, "color": "Gri", "resolution": "4K"}]}, {"idx": 1, "pid": "56530", "variants": [{"vid": "50503", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50504", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51231", "price": 495, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51232", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51721", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52319", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52320", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 2, "pid": "56578", "variants": [{"vid": "50535", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50536", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51263", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51264", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51737", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52351", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52352", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 3, "pid": "56581", "variants": [{"vid": "50537", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50538", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51265", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51266", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51738", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52353", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52354", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 4, "pid": "56587", "variants": [{"vid": "50541", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50542", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51269", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51270", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51740", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52357", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52358", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 5, "pid": "56590", "variants": [{"vid": "50543", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50544", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51271", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51272", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51741", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52359", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52360", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 6, "pid": "56596", "variants": [{"vid": "50547", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50548", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51275", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51276", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51743", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52363", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52364", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 7, "pid": "56602", "variants": [{"vid": "50551", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50552", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51279", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51280", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51745", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52367", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52368", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 8, "pid": "56608", "variants": [{"vid": "50555", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50556", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51283", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51284", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51747", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52371", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52372", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 9, "pid": "56611", "variants": [{"vid": "50557", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50558", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51285", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51286", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51748", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52373", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52374", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 10, "pid": "56614", "variants": [{"vid": "50559", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50560", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51287", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51288", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51749", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52375", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52376", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 11, "pid": "56617", "variants": [{"vid": "50561", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50562", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51289", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51290", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51750", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52377", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52378", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 12, "pid": "56620", "variants": [{"vid": "50563", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50564", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51291", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51292", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51751", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52379", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52380", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 13, "pid": "56623", "variants": [{"vid": "50565", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50566", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51293", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51294", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51752", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52381", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52382", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 14, "pid": "56626", "variants": [{"vid": "50567", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50568", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51295", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51296", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51753", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52383", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52384", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 15, "pid": "56629", "variants": [{"vid": "50569", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50570", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51297", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51298", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51754", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52385", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52386", "price": 809, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 16, "pid": "56635", "variants": [{"vid": "50573", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50574", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51301", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51302", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51756", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52389", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52390", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 17, "pid": "56638", "variants": [{"vid": "50575", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50576", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51303", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51304", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51757", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52391", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52392", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 18, "pid": "56641", "variants": [{"vid": "50577", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50578", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51305", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51306", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51758", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52393", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52394", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 19, "pid": "56644", "variants": [{"vid": "50579", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50580", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51307", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51308", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51759", "price": 1074, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52395", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52396", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}, {"idx": 20, "pid": "56647", "variants": [{"vid": "50581", "price": 412, "in_stock": true, "color": "Negru", "resolution": "1080P"}, {"vid": "50582", "price": 495, "in_stock": true, "color": "Negru", "resolution": "1K+720P"}, {"vid": "51309", "price": 578, "in_stock": true, "color": "Negru", "resolution": "2K"}, {"vid": "51310", "price": 660, "in_stock": true, "color": "Negru", "resolution": "2K+1080P"}, {"vid": "51760", "price": 991, "in_stock": false, "color": "Negru", "resolution": "4G-2K"}, {"vid": "52397", "price": 619, "in_stock": true, "color": "Negru", "resolution": "4K"}, {"vid": "52398", "price": 826, "in_stock": true, "color": "Negru", "resolution": "4K+1080P"}]}];
+
+function pickRes(idx, res, el, event) {
+  event.stopPropagation();
+  event.preventDefault();
+  const card = CARDS.find(c => c.idx === idx);
+  if (!card) return;
+  
+  // Toggle selection
+  const container = el.parentElement;
+  container.querySelectorAll('.pc-res-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  
+  // Find best variant for this resolution (prefer in_stock)
+  const v = card.variants.find(v => v.resolution === res && v.in_stock) ||
+            card.variants.find(v => v.resolution === res);
+  if (v) {
+    document.getElementById('price-' + idx).textContent = v.price.toLocaleString('ro-RO') + ' Lei';
+    document.getElementById('vid-' + idx).value = v.vid;
+  }
+}
+</script>
 </body>
 </html>
