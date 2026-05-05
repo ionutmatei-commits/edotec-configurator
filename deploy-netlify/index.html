@@ -1089,10 +1089,6 @@ body:not(.dealer-mode) .dealer-detail{display:none!important}
 .dealer-btn.logged-in{border-color:#27ae60;color:#27ae60;background:#f0faf4}
 .dealer-only{display:none!important}
 body.dealer-mode .dealer-only{display:initial!important}
-/* superadmin-only: doar conturile superadmin vad m² */
-.superadmin-only{display:none!important}
-body.superadmin-mode .superadmin-only{display:initial!important}
-body.superadmin-mode .superadmin-only-inline{display:inline!important}
 body.dealer-mode .dealer-only-flex{display:flex!important}
 body.dealer-mode .dealer-only-block{display:block!important}
 /* Cart buttons: in dealer mode ascunde Finalizeaza, arata Oferta Client */
@@ -1792,7 +1788,7 @@ thankYouTitle:"Mulțumim, {name}! 🎉",successMsg:"Comanda ta a fost înregistr
 discBarTitle:"🎯 Reduceri automate materiale",
 mcTitle:"Cum vrei să configurezi insonorizarea mașinii?",mcCopy:"Poți merge pe configurare detaliată, poți alege un pachet deja gândit sau poți calcula direct insonorizarea completă. Alege varianta care ți se potrivește și o poți schimba ulterior.",mcManualTitle:"Configurator pe zone",mcManualCopy:"Apeși direct pe mașină și alegi separat straturile și materialele pentru fiecare suprafață.",mcManualSpan:"Control maxim",mcPkgTitle:"Configurare rapidă",mcPkgCopy:"Primești combinații deja pregătite, utile dacă vrei să alegi rapid una dintre variantele cele mai cerute.",mcPkgSpan:"Rapid și simplu",mcFullTitle:"Insonorizare completă",mcFullCopy:"Calculezi dintr-un click varianta completă pentru mașina aleasă, fără configurare manuală pe fiecare zonă.",mcFullSpan:"Toată mașina",
 toastSelectCar:"Selectează mai întâi mașina!",toastSelectEngine:"Selectează mai întâi marca, modelul și tipul motorului!",toastEmptyCart:"Coșul este gol!",toastAddSheet:"Adaugă cel puțin o coală!",toastSheetsAdded:"✓ Coli adăugate în coș!",toastSessionRestored:"✅ Sesiunea ta a fost restaurată!",toastPrevCleaned:"Selecția anterioară a fost ștearsă. Poți continua cu pachetul ales.",toastAdded:"adăugat în coș!",toastAlreadyInCart:"Zona este deja în coș cu aceeași configurație.",
-fpTitle:"🚗 Pachet Complet",fpChooseQ:"Alege calitatea materialelor",fpSelectFirst:"🛒 Selectează o calitate mai întâi",fpAddCart:"🛒 Adaugă în coș",fpLaborTitle:"Estimare manoperă montaj",fpLaborDesc:"Poți alege la pasul următor dacă vrei instalare profesională",fpZonesDetail:"▾ Zone incluse ({n} zone<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Estimare. Prețul final depinde de starea mașinii și instalatorul ales.",
+fpTitle:"🚗 Pachet Complet",fpChooseQ:"Alege calitatea materialelor",fpSelectFirst:"🛒 Selectează o calitate mai întâi",fpAddCart:"🛒 Adaugă în coș",fpLaborTitle:"Estimare manoperă montaj",fpLaborDesc:"Poți alege la pasul următor dacă vrei instalare profesională",fpZonesDetail:"▾ Zone incluse ({n} zone, ~{a} m²)",fpEstNote:"* Estimare. Prețul final depinde de starea mașinii și instalatorul ales.",
 ppTitle:"🎯 Pachete Populare",ppChoosePkg:"Alege combinația potrivită pentru tine",ppNote:"* Click pe material pentru a-l adăuga direct în coș · manopera la pasul următor",ppBack:"← Înapoi",
 stratLabel:"Strat",noCarLabel:"Mașină nespecificată",laborBadge:"🔧 Montaj estimat:",laborBadgePost:"· poate fi adăugat la finalizare",stratStr:"strat",straturiStr:"straturi",
 doorsPartialSuffix:" (doar difuzor)",roofNormalSuffix:" (trapă)",roofPanoramicSuffix:" (trapă panoramică)",portbagajPrefix:"Portbagaj - ",maxLayersN:"{n} straturi",maxLayers1:"1 strat",listenWithSound:"Ascultă cu sunet",
@@ -1862,7 +1858,7 @@ thankYouTitle:"Thank you, {name}! 🎉",successMsg:"Your order has been successf
 discBarTitle:"🎯 Automatic material discounts",
 mcTitle:"How do you want to configure your insulation?",mcCopy:"You can go for detailed configuration, choose a pre-designed package, or calculate directly for the whole car. Choose the option that suits you.",mcManualTitle:"Configure by zones",mcManualCopy:"Click directly on the car and choose layers and materials separately for each surface.",mcManualSpan:"Maximum control",mcPkgTitle:"Popular packages",mcPkgCopy:"Get pre-made combinations, useful if you want to quickly choose one of the most requested options.",mcPkgSpan:"Fast and simple",mcFullTitle:"Full insulation",mcFullCopy:"Calculate the complete option for the chosen car in one click, without manual configuration for each zone.",mcFullSpan:"Whole car",
 toastSelectCar:"Please select your car first!",toastSelectEngine:"Please select brand, model and engine type first!",toastEmptyCart:"Cart is empty!",toastAddSheet:"Add at least one sheet!",toastSheetsAdded:"✓ Sheets added to cart!",toastSessionRestored:"✅ Your session has been restored!",toastPrevCleaned:"Previous selection was cleared. You can continue with the chosen package.",toastAdded:"added to cart!",toastAlreadyInCart:"Zone is already in cart with the same configuration.",
-fpTitle:"🚗 Complete Package",fpChooseQ:"Choose material quality",fpSelectFirst:"🛒 Select a quality first",fpAddCart:"🛒 Add to cart",fpLaborTitle:"Installation labor estimate",fpLaborDesc:"You can choose at the next step if you want professional installation",fpZonesDetail:"▾ Included zones ({n} zones<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Estimate. Final price depends on car condition and chosen installer.",
+fpTitle:"🚗 Complete Package",fpChooseQ:"Choose material quality",fpSelectFirst:"🛒 Select a quality first",fpAddCart:"🛒 Add to cart",fpLaborTitle:"Installation labor estimate",fpLaborDesc:"You can choose at the next step if you want professional installation",fpZonesDetail:"▾ Included zones ({n} zones, ~{a} m²)",fpEstNote:"* Estimate. Final price depends on car condition and chosen installer.",
 ppTitle:"🎯 Popular Packages",ppChoosePkg:"Choose the right combination for you",ppNote:"* Click on material to add directly to cart · labor at next step",ppBack:"← Back",
 stratLabel:"Layer",noCarLabel:"Unspecified vehicle",laborBadge:"🔧 Estimated installation:",laborBadgePost:"· can be added at checkout",stratStr:"layer",straturiStr:"layers",
 doorsPartialSuffix:" (speaker area only)",roofNormalSuffix:" (sunroof)",roofPanoramicSuffix:" (panoramic sunroof)",portbagajPrefix:"Trunk - ",maxLayersN:"{n} layers",maxLayers1:"1 layer",listenWithSound:"Listen with sound",
@@ -1932,7 +1928,7 @@ thankYouTitle:"Köszönjük, {name}! 🎉",successMsg:"Rendelése sikeresen regi
 discBarTitle:"🎯 Automatikus anyagkedvezmények",
 mcTitle:"Hogyan szeretné konfigurálni a hangszigetelést?",mcCopy:"Választhat részletes konfigurálást, előre megtervezett csomagot, vagy az egész autóra számíthat.",mcManualTitle:"Konfigurálás zónánként",mcManualCopy:"Kattintson közvetlenül az autóra és válassza ki külön az egyes felületek rétegeit és anyagait.",mcManualSpan:"Maximális kontroll",mcPkgTitle:"Népszerű csomagok",mcPkgCopy:"Előre elkészített kombinációkat kap a legkeresettebb lehetőségekből.",mcPkgSpan:"Gyors és egyszerű",mcFullTitle:"Teljes szigetelés",mcFullCopy:"Számítsa ki a teljes lehetőséget egy kattintással.",mcFullSpan:"Egész autó",
 toastSelectCar:"Kérjük, először válassza ki autóját!",toastSelectEngine:"Kérjük, először válassza ki a márkát, modellt és motor típusát!",toastEmptyCart:"A kosár üres!",toastAddSheet:"Adjon hozzá legalább egy lapot!",toastSheetsAdded:"✓ Lapok hozzáadva a kosárhoz!",toastSessionRestored:"✅ Munkamenete visszaállítva!",toastPrevCleaned:"Az előző kiválasztás törlésre került.",toastAdded:"kosárba helyezve!",toastAlreadyInCart:"A zóna már a kosárban van ugyanazzal a konfigurációval.",
-fpTitle:"🚗 Teljes csomag",fpChooseQ:"Válassza ki az anyagminőséget",fpSelectFirst:"🛒 Először válasszon minőséget",fpAddCart:"🛒 Kosárba",fpLaborTitle:"Szerelési munkadíj becslése",fpLaborDesc:"A következő lépésnél választhat profi szerelést",fpZonesDetail:"▾ Belefoglalt zónák ({n} zóna<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Becslés. A végső ár az autó állapotától függ.",
+fpTitle:"🚗 Teljes csomag",fpChooseQ:"Válassza ki az anyagminőséget",fpSelectFirst:"🛒 Először válasszon minőséget",fpAddCart:"🛒 Kosárba",fpLaborTitle:"Szerelési munkadíj becslése",fpLaborDesc:"A következő lépésnél választhat profi szerelést",fpZonesDetail:"▾ Belefoglalt zónák ({n} zóna, ~{a} m²)",fpEstNote:"* Becslés. A végső ár az autó állapotától függ.",
 ppTitle:"🎯 Népszerű Csomagok",ppChoosePkg:"Válassza ki az Önnek megfelelő kombinációt",ppNote:"* Kattintson az anyagra a kosárba adáshoz · 10% felesleget tartalmaz · munkadíj következő lépésnél",ppBack:"← Vissza",
 stratLabel:"Réteg",noCarLabel:"Nem meghatározott jármű",laborBadge:"🔧 Becsült szerelés:",laborBadgePost:"· a fizetésnél adható hozzá",stratStr:"réteg",straturiStr:"réteg",
 doorsPartialSuffix:" (csak hangszóró terület)",roofNormalSuffix:" (tetőablak)",roofPanoramicSuffix:" (panoráma tetőablak)",portbagajPrefix:"Csomagtartó - ",maxLayersN:"{n} réteg",maxLayers1:"1 réteg",listenWithSound:"Hallgasson hanggal",
@@ -2002,7 +1998,7 @@ thankYouTitle:"Благодарим, {name}! 🎉",successMsg:"Вашата по
 discBarTitle:"🎯 Автоматични отстъпки за материали",
 mcTitle:"Как искате да конфигурирате звукоизолацията?",mcCopy:"Можете да изберете детайлна конфигурация, предварително проектиран пакет или за цялата кола.",mcManualTitle:"Конфигуриране по зони",mcManualCopy:"Натиснете директно върху колата и изберете отделно слоевете и материалите.",mcManualSpan:"Максимален контрол",mcPkgTitle:"Популярни пакети",mcPkgCopy:"Получавате предварително подготвени комбинации.",mcPkgSpan:"Бързо и просто",mcFullTitle:"Пълна изолация",mcFullCopy:"Изчислете пълния вариант с едно кликване.",mcFullSpan:"Цяла кола",
 toastSelectCar:"Моля, първо изберете вашата кола!",toastSelectEngine:"Моля, първо изберете марка, модел и тип двигател!",toastEmptyCart:"Количката е празна!",toastAddSheet:"Добавете поне един лист!",toastSheetsAdded:"✓ Листовете са добавени в количката!",toastSessionRestored:"✅ Вашата сесия е възстановена!",toastPrevCleaned:"Предишният избор беше изчистен.",toastAdded:"добавено в количката!",toastAlreadyInCart:"Зоната вече е в количката със същата конфигурация.",
-fpTitle:"🚗 Пълен Пакет",fpChooseQ:"Изберете качество на материалите",fpSelectFirst:"🛒 Първо изберете качество",fpAddCart:"🛒 Добави в количката",fpLaborTitle:"Прогнозен труд за монтаж",fpLaborDesc:"Можете да изберете на следващата стъпка",fpZonesDetail:"▾ Включени зони ({n} зони<span class='superadmin-only'>, ~{a} m²</span>)",fpEstNote:"* Прогноза. Крайната цена зависи от автомобила.",
+fpTitle:"🚗 Пълен Пакет",fpChooseQ:"Изберете качество на материалите",fpSelectFirst:"🛒 Първо изберете качество",fpAddCart:"🛒 Добави в количката",fpLaborTitle:"Прогнозен труд за монтаж",fpLaborDesc:"Можете да изберете на следващата стъпка",fpZonesDetail:"▾ Включени зони ({n} зони, ~{a} m²)",fpEstNote:"* Прогноза. Крайната цена зависи от автомобила.",
 ppTitle:"🎯 Популярни Пакети",ppChoosePkg:"Изберете правилната комбинация за вас",ppNote:"* Кликнете върху материала за добавяне · включва 10% излишък · трудът на следващата стъпка",ppBack:"← Назад",
 stratLabel:"Слой",noCarLabel:"Неуточнено превозно средство",laborBadge:"🔧 Прогнозен монтаж:",laborBadgePost:"· може да се добави при плащане",stratStr:"слой",straturiStr:"слоя",
 doorsPartialSuffix:" (само зона за говорител)",roofNormalSuffix:" (люк)",roofPanoramicSuffix:" (панорамен люк)",portbagajPrefix:"Багажник - ",maxLayersN:"{n} слоя",maxLayers1:"1 слой",listenWithSound:"Слушайте със звук",
@@ -2470,8 +2466,235 @@ function getSelectableEndYear(entry){
   return endYear;
 }
 
-// CAR DATABASE — loaded from api.edotec.ro
-let carDB = {};
+// ════════════════════════════════════════
+// CAR DATABASE [bodyClass, startYear, endYear]
+// ════════════════════════════════════════
+const carDB = {
+"Alfa Romeo":{
+  "147":["hatchback",2000,2010],"156":["sedan",1997,2007],"159":["sedan",2005,2012],
+  "Giulia":["sedan",2016,2024],"Giulietta":["hatchback",2010,2020],"MiTo":["hatchback",2008,2018],
+  "Stelvio":["suv_medium",2016,2024],"Tonale":["suv_small",2022,2024]
+},
+"Audi":{
+  "A1":["hatchback",2010,2024],"A2":["hatchback",2000,2005],"A3":["hatchback",2003,2024],
+  "A4":["sedan",1999,2024],"A5":["sedan",2007,2024],"A6":["large_sedan",1997,2024],
+  "A7":["large_sedan",2010,2024],"A8":["large_sedan",1994,2024],
+  "Q2":["suv_small",2016,2024],"Q3":["suv_small",2011,2024],"Q4 e-tron":["suv_medium",2021,2024],
+  "Q5":["suv_medium",2008,2024],"Q7":["suv_large",2005,2024],"Q8":["suv_large",2018,2024],
+  "TT":["hatchback",2006,2023],"e-tron":["suv_large",2018,2024],"RS3":["hatchback",2011,2024],
+  "RS6":["large_sedan",2002,2024],"S3":["hatchback",2006,2024]
+},
+"BMW":{
+  "Seria 1":["hatchback",2004,2024],"Seria 2":["hatchback",2014,2024],"Seria 3":["sedan",1998,2024],
+  "Seria 4":["sedan",2013,2024],"Seria 5":["large_sedan",1999,2024],"Seria 6":["large_sedan",2003,2022],
+  "Seria 7":["large_sedan",1994,2024],"Seria 8":["sedan",2018,2024],
+  "X1":["suv_small",2009,2024],"X2":["suv_small",2018,2024],"X3":["suv_medium",2003,2024],
+  "X4":["suv_medium",2014,2024],"X5":["suv_large",1999,2024],"X6":["suv_large",2008,2024],
+  "X7":["suv_large",2018,2024],"i3":["hatchback",2013,2022],"i4":["sedan",2021,2024],
+  "iX":["suv_large",2021,2024],"iX3":["suv_medium",2020,2024],"M3":["sedan",2000,2024],
+  "M5":["large_sedan",2005,2024]
+},
+"Chevrolet":{
+  "Aveo":["hatchback",2002,2015],"Cruze":["sedan",2009,2019],"Malibu":["sedan",2012,2016],
+  "Spark":["hatchback",2010,2022],"Captiva":["suv_medium",2006,2019],"Equinox":["suv_medium",2017,2024],
+  "Trailblazer":["suv_medium",2020,2024],"Tahoe":["suv_large",2000,2024]
+},
+"Citroën":{
+  "C1":["hatchback",2005,2022],"C3":["hatchback",2002,2024],"C3 Aircross":["suv_small",2017,2024],
+  "C4":["hatchback",2004,2024],"C4 Cactus":["hatchback",2014,2020],"C5":["sedan",2000,2017],
+  "C5 Aircross":["suv_medium",2017,2024],"C5 X":["suv_medium",2021,2024],
+  "SpaceTourer":["van_large",2016,2024],"Jumpy Combi":["van",2016,2024],
+  "Berlingo":["suv_small",2002,2024],"Jumper":["blocked",2006,2024]
+},
+"Dacia":{
+  "Logan":["sedan",2004,2024],"Logan MCV":["sedan",2007,2022],"Sandero":["hatchback",2008,2024],
+  "Sandero Stepway":["suv_small",2009,2024],"Duster":["suv_medium",2010,2024],
+  "Spring":["hatchback",2021,2024],"Jogger":["suv_small",2021,2024],"Dokker":["suv_small",2012,2021]
+},
+"Fiat":{
+  "500":["hatchback",2007,2024],"500e":["hatchback",2020,2024],"500L":["suv_small",2012,2024],
+  "500X":["suv_small",2014,2024],"Bravo":["hatchback",2007,2016],"Grande Punto":["hatchback",2005,2012],
+  "Panda":["hatchback",2003,2024],"Tipo":["sedan",2015,2024],
+  "Ducato":["blocked",2006,2024],"Talento":["van",2016,2021],"Scudo":["van",2007,2024]
+},
+"Ford":{
+  "EcoSport":["suv_small",2014,2022],"Explorer":["suv_large",2011,2024],"Fiesta":["hatchback",2001,2024],
+  "Focus":["hatchback",1998,2024],"Galaxy":["suv_large",2000,2024],"Kuga":["suv_medium",2008,2024],
+  "Mondeo":["sedan",1999,2022],"Mustang":["sedan",2015,2024],"Mustang Mach-E":["suv_medium",2020,2024],
+  "Puma":["suv_small",2019,2024],"S-Max":["suv_large",2006,2024],
+  "Tourneo Custom":["van_large",2014,2024],"Tourneo Connect":["suv_small",2014,2024],
+  "Transit":["blocked",2013,2024],"Transit Custom":["blocked",2012,2024]
+},
+"Genesis":{
+  "G70":["sedan",2017,2024],"G80":["large_sedan",2016,2024],"G90":["large_sedan",2015,2024],
+  "GV70":["suv_medium",2020,2024],"GV80":["suv_large",2020,2024]
+},
+"Honda":{
+  "Accord":["sedan",1998,2024],"Civic":["hatchback",2000,2024],"CR-V":["suv_medium",2001,2024],
+  "HR-V":["suv_small",2015,2024],"Jazz":["hatchback",2001,2024],"ZR-V":["suv_medium",2022,2024]
+},
+"Hyundai":{
+  "Bayon":["suv_small",2021,2024],"Elantra":["sedan",2000,2024],"i10":["hatchback",2007,2024],
+  "i20":["hatchback",2008,2024],"i30":["hatchback",2007,2024],"i40":["sedan",2011,2015],"Ioniq":["hatchback",2016,2021],
+  "Ioniq 5":["suv_medium",2021,2024],"Ioniq 6":["sedan",2022,2024],"ix35":["suv_small",2009,2017],
+  "Kona":["suv_small",2017,2024],"Santa Fe":["suv_large",2000,2024],"Sonata":["large_sedan",1999,2024],
+  "Tucson":["suv_medium",2004,2024]
+},
+"Infiniti":{
+  "Q30":["hatchback",2015,2019],"Q50":["sedan",2013,2024],"Q60":["sedan",2016,2024],
+  "QX30":["suv_small",2015,2019],"QX50":["suv_medium",2014,2024],"QX60":["suv_large",2012,2024]
+},
+"Jaguar":{
+  "E-Pace":["suv_small",2017,2024],"F-Pace":["suv_medium",2016,2024],"I-Pace":["suv_medium",2018,2024],
+  "XE":["sedan",2015,2024],"XF":["large_sedan",2008,2024]
+},
+"Jeep":{
+  "Avenger":["suv_small",2022,2024],"Cherokee":["suv_medium",2013,2024],"Compass":["suv_small",2017,2024],
+  "Grand Cherokee":["suv_large",1999,2024],"Renegade":["suv_small",2014,2024],"Wrangler":["suv_large",2007,2024]
+},
+"Kia":{
+  "Carnival":["suv_large",2021,2024],"Ceed":["hatchback",2006,2024],"EV6":["suv_medium",2021,2024],
+  "EV9":["suv_large",2023,2024],"Niro":["suv_small",2016,2024],"Picanto":["hatchback",2004,2024],
+  "Rio":["hatchback",2001,2024],"Sorento":["suv_large",2002,2024],"Sportage":["suv_medium",2004,2024],
+  "Stinger":["large_sedan",2017,2024],"Stonic":["suv_small",2017,2024]
+},
+"Land Rover":{
+  "Defender":["suv_large",2020,2024],"Discovery":["suv_large",1998,2024],
+  "Discovery Sport":["suv_medium",2014,2024],"Range Rover":["suv_large",1994,2024],
+  "Range Rover Evoque":["suv_small",2011,2024],"Range Rover Sport":["suv_large",2005,2024],
+  "Range Rover Velar":["suv_medium",2017,2024]
+},
+"Lexus":{
+  "ES":["large_sedan",2018,2024],"IS":["sedan",2005,2024],"LS":["large_sedan",1994,2024],
+  "NX":["suv_small",2014,2024],"RX":["suv_medium",2003,2024],"UX":["suv_small",2018,2024],
+  "GX":["suv_large",2002,2024]
+},
+"Maserati":{
+  "Ghibli":["large_sedan",2013,2024],"Grecale":["suv_medium",2022,2024],
+  "Levante":["suv_large",2016,2024],"Quattroporte":["large_sedan",2004,2024]
+},
+"Mazda":{
+  "Mazda2":["hatchback",2007,2024],"Mazda3":["hatchback",2003,2024],"Mazda6":["sedan",2002,2024],
+  "CX-3":["suv_small",2015,2022],"CX-5":["suv_medium",2012,2024],"CX-60":["suv_large",2022,2024],
+  "MX-5":["hatchback",2015,2024]
+},
+"Mercedes-Benz":{
+  "A-Class":["hatchback",2012,2024],"B-Class":["suv_small",2005,2024],"C-Class":["sedan",1999,2024],
+  "CLA":["sedan",2013,2024],"CLS":["large_sedan",2004,2024],"E-Class":["large_sedan",1999,2024],
+  "EQA":["suv_small",2021,2024],"EQB":["suv_small",2021,2024],"EQC":["suv_medium",2019,2024],
+  "EQE":["large_sedan",2021,2024],"EQS":["large_sedan",2021,2024],
+  "GLA":["suv_small",2013,2024],"GLB":["suv_small",2019,2024],"GLC":["suv_medium",2015,2024],
+  "GLE":["suv_large",2015,2024],"GLS":["suv_large",2012,2024],"S-Class":["large_sedan",1997,2024],
+  "V-Class":["van_large",2014,2024],"Vito Tourer":["van_large",2014,2024],
+  "Sprinter":["blocked",2006,2024],"Sprinter Crafter":["blocked",2010,2024]
+},
+"Mitsubishi":{
+  "ASX":["suv_small",2010,2024],"Colt":["hatchback",2004,2012],"Eclipse Cross":["suv_medium",2017,2024],
+  "Lancer":["sedan",2003,2017],"Outlander":["suv_large",2012,2024],"Space Star":["hatchback",2012,2024]
+},
+"Nissan":{
+  "Ariya":["suv_medium",2021,2024],"Juke":["suv_small",2010,2024],"Leaf":["hatchback",2010,2024],
+  "Micra":["hatchback",2002,2024],"Qashqai":["suv_medium",2006,2024],"X-Trail":["suv_large",2001,2024]
+},
+"Opel":{
+  "Astra":["hatchback",1998,2024],"Combo":["suv_small",2001,2024],"Combo Life":["suv_small",2018,2024],"Corsa":["hatchback",2000,2024],
+  "Crossland X":["suv_small",2017,2024],"Grandland X":["suv_medium",2017,2024],
+  "Insignia":["large_sedan",2008,2024],"Mokka":["suv_small",2012,2024],
+  "Vivaro Life":["van_large",2019,2024],"Vivaro":["van",2001,2024],
+  "Zafira Life":["van_large",2019,2024],"Zafira":["suv_large",1999,2022],
+  "Movano":["blocked",2010,2024]
+},
+"Peugeot":{
+  "108":["hatchback",2014,2021],"208":["hatchback",2012,2024],"308":["hatchback",2007,2024],
+  "408":["sedan",2022,2024],"508":["large_sedan",2010,2024],"2008":["suv_small",2013,2024],
+  "3008":["suv_medium",2008,2024],"5008":["suv_large",2009,2024],
+  "Expert":["van",2016,2024],"Traveller":["van_large",2016,2024],
+  "Partner":["suv_small",2008,2024],"Rifter":["suv_small",2018,2024],
+  "Boxer":["blocked",2006,2024]
+},
+"Porsche":{
+  "911":["hatchback",1997,2024],"Cayenne":["suv_large",2002,2024],"Cayenne Coupé":["suv_large",2019,2024],
+  "Macan":["suv_medium",2014,2024],"Panamera":["large_sedan",2009,2024],"Taycan":["large_sedan",2019,2024]
+},
+"Renault":{
+  "Arkana":["suv_medium",2021,2024],"Captur":["suv_small",2013,2024],"Clio":["hatchback",2000,2024],
+  "Espace":["suv_large",2003,2024],"Kadjar":["suv_medium",2015,2024],"Koleos":["suv_medium",2007,2024],
+  "Master":["blocked",2010,2024],
+  "Laguna":["sedan",2000,2015],"Megane":["hatchback",2002,2024],"Scenic":["suv_medium",2003,2024],
+  "Talisman":["large_sedan",2015,2022],"Twingo":["hatchback",2007,2022],"Zoe":["hatchback",2012,2024],
+  "Trafic Passenger":["van",2001,2024],"Trafic":["van",2001,2024]
+},
+"Seat":{
+  "Arona":["suv_small",2017,2024],"Ateca":["suv_medium",2016,2024],"Ibiza":["hatchback",2002,2024],
+  "Leon":["hatchback",2000,2024],"Tarraco":["suv_large",2018,2024],"Toledo":["sedan",2004,2019],
+  "Mii":["hatchback",2012,2019]
+},
+"Skoda":{
+  "Citigo":["hatchback",2011,2020],"Enyaq":["suv_medium",2020,2024],"Fabia":["hatchback",1999,2024],
+  "Karoq":["suv_medium",2017,2024],"Kodiaq":["suv_large",2016,2024],"Octavia":["sedan",1996,2024],
+  "Rapid":["sedan",2012,2019],"Scala":["hatchback",2019,2024],"Superb":["large_sedan",2001,2024]
+},
+"Subaru":{
+  "BRZ":["hatchback",2012,2024],"Crosstrek":["suv_small",2012,2024],"Forester":["suv_medium",2008,2024],
+  "Impreza":["hatchback",2007,2024],"Legacy":["sedan",2003,2024],"Outback":["suv_medium",2009,2024],
+  "WRX":["sedan",2014,2024]
+},
+"Suzuki":{
+  "Across":["suv_medium",2020,2024],"Jimny":["suv_small",2018,2024],"SX4 S-Cross":["suv_small",2013,2024],
+  "Swift":["hatchback",2005,2024],"Vitara":["suv_small",2015,2024]
+},
+"Tesla":{
+  "Model 3":["sedan",2017,2024],"Model S":["large_sedan",2012,2024],
+  "Model X":["suv_large",2015,2024],"Model Y":["suv_medium",2020,2024]
+},
+"Toyota":{
+  "Aygo":["hatchback",2005,2022],"Aygo X":["hatchback",2022,2024],"bZ4X":["suv_medium",2022,2024],
+  "C-HR":["suv_small",2016,2024],"Camry":["large_sedan",2001,2024],"Corolla":["hatchback",2000,2024],
+  "GR Yaris":["hatchback",2020,2024],"Land Cruiser":["suv_large",1998,2024],
+  "Prius":["hatchback",2004,2024],"RAV4":["suv_medium",2000,2024],"Yaris":["hatchback",2001,2024],
+  "Proace Verso":["van_large",2016,2024],"Proace City Verso":["suv_small",2019,2024]
+},
+"Volkswagen":{
+  "Arteon":["large_sedan",2017,2024],"Caddy":["suv_small",2003,2024],"Golf":["hatchback",2003,2024],
+  "ID.3":["hatchback",2020,2024],"ID.4":["suv_medium",2020,2024],"ID.5":["suv_medium",2021,2024],
+  "Jetta":["sedan",2005,2024],"Passat":["sedan",2000,2024],"Polo":["hatchback",2001,2024],
+  "Sharan":["suv_large",2000,2022],"T-Cross":["suv_small",2018,2024],"T-Roc":["suv_small",2017,2024],
+  "Tiguan":["suv_medium",2007,2024],"Touareg":["suv_large",2002,2024],
+  "Multivan":["van_large",2003,2024],"California":["van_large",2003,2024],
+  "Transporter Kombi":["van",2003,2024],"Transporter":["van",2003,2024],
+  "Crafter":["blocked",2006,2024],
+  "up!":["hatchback",2011,2023]
+},
+"Volvo":{
+  "C40":["suv_small",2021,2024],"S60":["sedan",2000,2024],"S90":["large_sedan",2016,2024],
+  "V40":["hatchback",2012,2019],"V60":["sedan",2010,2024],"V90":["large_sedan",2016,2024],
+  "XC40":["suv_small",2017,2024],"XC60":["suv_medium",2008,2024],"XC90":["suv_large",2002,2024]
+},
+"Abarth":{"595":["hatchback",2008,2024],"695":["hatchback",2012,2024],"500e":["hatchback",2022,2024]},
+"Alpine":{"A110":["hatchback",2017,2024],"A290":["hatchback",2024,2024]},
+"BYD":{
+  "Atto 3":["suv_medium",2021,2024],"Dolphin":["hatchback",2021,2024],"Han":["large_sedan",2020,2024],
+  "Seal":["sedan",2022,2024],"Seal U":["suv_medium",2023,2024],"Tang":["suv_large",2018,2024]
+},
+"CUPRA":{
+  "Ateca":["suv_medium",2016,2024],"Born":["hatchback",2021,2024],
+  "Formentor":["suv_medium",2020,2024],"Leon":["hatchback",2020,2024],"Tavascan":["suv_medium",2024,2024]
+},
+"DS Automobiles":{
+  "DS 3":["hatchback",2019,2024],"DS 4":["hatchback",2021,2024],"DS 7":["suv_large",2017,2024],"DS 9":["large_sedan",2021,2024]
+},
+"Lancia":{"Ypsilon":["hatchback",2011,2024]},
+"MG":{
+  "3":["hatchback",2013,2024],"4":["hatchback",2021,2024],"5":["sedan",2019,2024],
+  "EHS":["suv_medium",2020,2024],"HS":["suv_medium",2018,2024],"ZS":["suv_small",2017,2024]
+},
+"NIO":{"EL6":["suv_medium",2022,2024],"EL7":["suv_large",2021,2024],"ET5":["sedan",2022,2024],"ET7":["large_sedan",2021,2024]},
+"XPENG":{"G6":["suv_medium",2023,2024],"G9":["suv_large",2022,2024],"P5":["sedan",2021,2024],"P7":["large_sedan",2020,2024]}
+};
+
+// Research pass martie 2026:
+// - mărci premium / EV premium: prag >20.000 EUR depășit pe modelele de intrare
+// - excepțiile de mai jos sunt modelele low-cost confirmate sub sau în jurul pragului
 const ALWAYS_OVER_20K_BRANDS=new Set([
   "Audi","BMW","Mercedes-Benz","Porsche","Jaguar","Land Rover","Lexus","Maserati",
   "Genesis","Infiniti","Tesla","NIO","XPENG","BYD","Volvo","Alfa Romeo","Abarth",
@@ -2543,9 +2766,22 @@ const bodyInfo={
   blocked:{icon:"🚫",name:"Vehicul comercial"}
 };
 
-// Surfaces — loaded from api.edotec.ro
-let bcOrder = [];
-let surfaces = {};
+// Surface areas m² [hatchback, sedan, large_sedan, suv_small, suv_medium, suv_large, van, van_large]
+const bcOrder=["hatchback","sedan","large_sedan","suv_small","suv_medium","suv_large","van","van_large","van_xlarge","van_xl"];
+// Suprafete actualizate pe baza datelor STP (martie 2026)
+// Ordine: [hatchback, sedan, large_sedan, suv_small, suv_medium, suv_large, van, van_large]
+// van_large = V-Class / Expert / SpaceTourer / Multivan - estimat, necesita verificare fizica
+const surfaces={
+  capota:     [0.80, 1.00, 1.20, 0.90, 1.10, 1.30, 1.20, 1.30, 1.30, 1.30],
+  firewall:   [0.80, 0.85, 0.90, 0.82, 0.88, 0.95, 1.00, 1.05, 1.10, 1.10],
+  doors_front:[1.11, 1.23, 1.23, 1.23, 1.23, 1.41, 1.41, 1.50, 1.50, 1.50],
+  doors_rear: [0.91, 1.01, 1.01, 1.01, 1.01, 1.15, 1.15, 1.60, 1.60, 1.60],
+  floor:      [3.47, 3.85, 4.49, 3.85, 3.85, 4.49, 4.49, 5.80, 7.30, 7.78],
+  roof:       [1.15, 1.28, 1.60, 1.44, 1.60, 1.92, 1.92, 3.20, 3.80, 4.28],
+  arch_front: [0.64, 0.68, 0.76, 0.70, 0.80, 0.90, 1.00, 1.10, 1.10, 1.10],
+  arch_rear:  [1.15, 1.28, 1.92, 1.60, 1.92, 1.92, 1.92, 2.20, 2.50, 2.60]
+};
+
 function getZoneNames(){return{
   capota:t('z_capota'),firewall:t('z_firewall'),doors_front:t('z_doors_front'),
   doors_rear:t('z_doors_rear'),floor:t('z_floor'),trunk:t('z_trunk'),
@@ -2708,8 +2944,29 @@ function renderDesktopSplitStep(leftHtml,rightHtml){
   });
 }
 
-// Products — loaded from api.edotec.ro
-let prods = {};
+// Products
+const prods={
+  // ── Dr. Artex ICE ──
+  vibromax:   {id:"vibromax",  name:"Dr. Artex OEM VibroMax 2mm",    brand:"Dr. Artex",       type:"Antivibrații butyl 2mm",              m2:0.375,  price:{ice:5.90, ev:5.90},  url:"https://www.edotec.ro/product/72540/insonorizant-vibro-dr-artex-oem-vibromax-2-0-mm-grosime-o-coala-750-x-500-mm.html"},
+  earthiridium:{id:"earthiridium",name:"Dr. Artex Earth Iridium 2mm",brand:"Dr. Artex",       type:"Antivibrații butyl 2mm medium",       m2:0.375,  price:{ice:8.82, ev:8.82},  url:"https://www.edotec.ro/product/72544/insonorizant-vibro-dr-artex-earth-iridium-medium-2-0-mm-grosime-o-coala-750-x-500-mm.html"},
+  earthgold:  {id:"earthgold", name:"Dr. Artex Earth Gold HD 2.6mm", brand:"Dr. Artex",       type:"Antivibrații butyl 2.6mm HD",         m2:0.375,  price:{ice:11.56,ev:11.56}, url:"https://www.edotec.ro/product/72543/insonorizant-vibro-dr-artex-earth-gold-hd-2-6-mm-grosime-o-coala-750-x-500-mm.html"},
+  baffle_zima:{id:"baffle_zima",name:"Dr. Artex Baffle Zima 24",     brand:"Dr. Artex",       type:"Fono-termo izolant 24mm",             m2:0.1625, price:{ice:9.41, ev:9.41},  url:"https://www.edotec.ro/product/73393/insonorizant-fono-si-termo-izolant-dr-artex-baffle-zima-24-coala.html"},
+  baffle_plus:{id:"baffle_plus",name:"Dr. Artex Baffle Plus 5mm",    brand:"Dr. Artex",       type:"Fono-termo izolant 5mm",              m2:0.1875, price:{ice:4.50, ev:4.50},  url:"https://www.edotec.ro/product/73403/insonorizant-fono-si-termo-izolant-dr-artex-baffle-plus-05mm-o-coala-50x37-5.html"},
+  lace15:     {id:"lace15",    name:"Dr. Artex Lace 15mm",           brand:"Dr. Artex",       type:"Fono absorbant 15mm",                 m2:0.175,  price:{ice:9.41, ev:9.41},  url:"https://www.edotec.ro/product/73394/insonorizant-fono-absorbant-dr-artex-lace-15-mm-coala.html"},
+  // ── Audio System Germany ICE ──
+  alu2000:    {id:"alu2000",   name:"ALUBUTYL 2000 EVO 2mm",         brand:"Audio System GER",type:"Antivibrații alu+butyl 2mm",          m2:0.30,   price:{ice:6.66, ev:6.66},  url:"https://www.edotec.ro/product/3887/insonorizant-vibro-absorbant-alubuty-2000-evo-2-mm-grosime-o-coala-500-x-600-mm.html"},
+  alu3000:    {id:"alu3000",   name:"ALUBUTYL 3000 EVO 3mm",         brand:"Audio System GER",type:"Antivibrații alu+butyl 3mm heavy",    m2:0.30,   price:{ice:8.23, ev:8.23},  url:"https://www.edotec.ro/product/3892/insonorizant-vibro-absorbant-alubutyl-3000-evo-3-mm-grosime-o-coala-500-x-600-mm.html"},
+  neoprene6:  {id:"neoprene6", name:"Neoprene Foam 6mm",             brand:"Audio System GER",type:"Fono-termo izolant neopren 6mm",      m2:0.40,   price:{ice:10.58,ev:10.58}, url:"https://www.edotec.ro/product/3896/insonorizant-fono-termo-izolant-neoprene-foam-6mm-grosime-o-coala-800-x-500-mm.html"},
+  swell_foam5:{id:"swell_foam5",name:"Swell Foam 5mm",              brand:"Audio System GER",type:"Fono absorbant 5mm",                  m2:0.50,   price:{ice:8.63, ev:8.63},  url:"https://www.edotec.ro/product/3898/insonorizant-fono-absorbant-swell-foam-5-mm-grosime-o-cola-de-1000-x-500-mm.html"},
+  swell15:    {id:"swell15",   name:"Swell Wave 15mm",               brand:"Audio System GER",type:"Fono absorbant premium 15mm",         m2:0.50,   price:{ice:21.56,ev:21.56}, url:"https://www.edotec.ro/product/3899/insonorizant-fono-absorbant-sweel-wave-15-mm-grosime-o-coala-1000-x-500-mm.html"},
+  swell_wave35:{id:"swell_wave35",name:"Swell Wave 35mm",           brand:"Audio System GER",type:"Fono absorbant premium 35mm",         m2:0.50,   price:{ice:41.76,ev:41.76}, url:"https://www.edotec.ro/product/11403/insonorizant-fono-absorbant-swell-wave-35-mm-grosime-o-coala-1000-x-500-mm.html"},
+  // ── Dr. Artex EV ──
+  ev_silver:  {id:"ev_silver", name:"Dr. Artex EV Silver 2.5",       brand:"Dr. Artex",       type:"Antivibrații EV multilayer 2.5mm",   m2:0.15,   price:{ice:7.66, ev:7.66},  url:"https://www.edotec.ro/product/73410/insonorizant-vibro-dr-artex-electra-ev-silver-2-5-coala-50x30cm-multilayer-2-straturi.html"},
+  ev_blue:    {id:"ev_blue",   name:"Dr. Artex EV Blue 5.0",         brand:"Dr. Artex",       type:"Antivibrații EV multilayer 5mm",     m2:0.15,   price:{ice:11.47,ev:11.47}, url:"https://www.edotec.ro/product/73411/insonorizant-vibro-fono-dr-artex-electra-ev-blue-5-0-coala-30x50-cm-multilayer-2-straturi.html"},
+  ev_integra: {id:"ev_integra",name:"Dr. Artex BAffle Integra EV",   brand:"Dr. Artex",       type:"Fono izolant+absorbant EV 6mm",      m2:0.1875, price:{ice:9.25, ev:9.25},  url:"https://www.edotec.ro/product/73412/insonorizant-fono-izolant-si-fono-absorbant-dr-artex-baffle-integra-ev-6-0-coala-50x37-5-multilayer.html"},
+  ev_vbb:     {id:"ev_vbb",   name:"Dr. Artex EV VibroBarrier 7+",   brand:"Dr. Artex",       type:"Fono barieră EV 7mm",                m2:0.1375, price:{ice:11.23,ev:11.23}, url:"https://www.edotec.ro/product/73413/insonorizant-fono-izolant-dr-artex-ev-vibrobarrier-7-coala-50x27-5-cm.html"},
+  lace_expert:{id:"lace_expert",name:"Dr. Artex Lace Expert 18mm",   brand:"Dr. Artex",       type:"Fono absorbant premium 18mm",        m2:0.175,  price:{ice:10.39,ev:10.39}, url:"https://www.edotec.ro/product/73395/insonorizant-fono-absorbant-dr-artex-lace-expert-18-mm-coala-50x35-cm.html"}
+};
 
 // ── Material weight data (kg/m² per produs) ──
 const prodWeightKgM2={
@@ -3616,7 +3873,12 @@ let _dealerList = []; // se incarca din Sheet la prima autentificare
 
 // ═══ DEALERI - actualizati manual din Sheet (CORS nu permite fetch direct) ═══
 // Adauga dealeri noi in DEALER_LIST_STATIC si fa git push
-const DEALER_LIST_STATIC = []; // moved to server
+const DEALER_LIST_STATIC = [
+  {user:'edotec',    pass:'1234',        name:'Ionut Matei', firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461',  email:'ionut.matei@edotec.ro'},
+  {user:'viperx',    pass:'viperx1234',  name:'Cristian Rus', firm:'VIPER X',  address:'Regele Mihai',   phone:'744559289',  email:'komodil1@gmail.com'},
+  {user:'timea.pop', pass:'1234vbnm',    name:'Timea Pop',    firm:'EDOTEC.RO', address:'Agriculturii 27', phone:'744333461', email:'ionut.matei@edotec.ro'},
+  {user:'demo',      pass:'demo',        name:'Demo',         firm:'DEMO SRL',  address:'Str. Demo 35',   phone:'733445754',  email:'demo@demo.ro'},
+];
 
 async function loadDealerList(){
   if(_dealerList.length) return _dealerList;
@@ -3657,36 +3919,30 @@ async function dealerLogin(){
   const user=document.getElementById('dl-user').value.trim().toLowerCase();
   const pass=document.getElementById('dl-pass').value.trim();
   if(!user){document.getElementById('dl-err').textContent='Introdu utilizatorul';document.getElementById('dl-err').style.display='block';return;}
+  // Arata loading
   const loginBtn=document.querySelector('#dealer-login-modal .dealer-login-box button:last-child');
   if(loginBtn){loginBtn.textContent='Se verifică...';loginBtn.disabled=true;}
-  try {
-    const resp = await fetch('/auth', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({user,pass})});
-    const data = await resp.json();
-    if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
-    if(!resp.ok || !data.ok){
-      document.getElementById('dl-err').textContent=data.error||'User sau parolă incorectă';
-      document.getElementById('dl-err').style.display='block';return;
-    }
-    const dealer=data.dealer;
-    _currentDealer=dealer;
-    document.body.classList.add('dealer-mode');
-    if(dealer.role==='superadmin') document.body.classList.add('superadmin-mode');
-    const btn=document.getElementById('dealer-toggle-btn');
-    btn.classList.add('logged-in');
-    document.getElementById('dealer-btn-text').textContent=dealer.name||dealer.user;
-    const dealerData={user:dealer.user,ts:Date.now(),ua:navigator.userAgent};
-    try{localStorage.setItem(DEALER_STORAGE_KEY,JSON.stringify(dealerData));}catch(e){}
-    dealerTrackLogin(dealer.user);
-    closeDealerLogin();
-    showToast('✅ Bine ai venit, '+dealer.name+'! Mod dealer activat.');
-  } catch(e) {
-    if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
-    document.getElementById('dl-err').textContent='Eroare conexiune. Încearcă din nou.';
-    document.getElementById('dl-err').style.display='block';
-  }
+  // Incarca lista din Sheet
+  const list = await loadDealerList();
+  if(loginBtn){loginBtn.textContent='Autentificare';loginBtn.disabled=false;}
+  const dealer=list.find(d=>d.user.toLowerCase()===user && String(d.pass)===String(pass));
+  if(!dealer){document.getElementById('dl-err').textContent='User sau parolă incorectă';document.getElementById('dl-err').style.display='block';return;}
+  // Activare dealer mode
+  _currentDealer=dealer;
+  document.body.classList.add('dealer-mode');
+  const btn=document.getElementById('dealer-toggle-btn');
+  btn.classList.add('logged-in');
+  document.getElementById('dealer-btn-text').textContent=dealer.name||dealer.user;
+  // Salvare sesiune dealer
+  const dealerData={user:dealer.user,ts:Date.now(),ua:navigator.userAgent};
+  try{localStorage.setItem(DEALER_STORAGE_KEY,JSON.stringify(dealerData));}catch(e){}
+  // Track login
+  dealerTrackLogin(dealer.user);
+  closeDealerLogin();
+  showToast('✅ Bine ai venit, '+dealer.name+'! Mod dealer activat.');
 }
 function dealerLogout(){
-  document.body.classList.remove('dealer-mode');document.body.classList.remove('superadmin-mode');
+  document.body.classList.remove('dealer-mode');
   const btn=document.getElementById('dealer-toggle-btn');
   btn.classList.remove('logged-in');
   document.getElementById('dealer-btn-text').textContent='Dealer';
@@ -3733,14 +3989,6 @@ async function initDealerMode(){
 document.addEventListener('DOMContentLoaded',function(){
   var dlPass=document.getElementById('dl-pass');
   if(dlPass) dlPass.addEventListener('keydown',function(e){if(e.key==='Enter')dealerLogin();});
-  // TASK 1: Setează hash-ul inițial la #configurator
-  if(!window.location.hash || window.location.hash === '#') {
-    history.replaceState({step:'configurator'}, '', window.location.pathname + window.location.search + '#configurator');
-  }
-  // Restaurează _lastSelectedPachet din URL dacă există
-  var _urlParams = new URLSearchParams(window.location.search);
-  var _pachetFromUrl = _urlParams.get('pachet');
-  if(_pachetFromUrl) window._lastSelectedPachet = _pachetFromUrl;
 });
 
 
@@ -4058,51 +4306,12 @@ function handleCarContainerClick(e){
 }
 
 // ════════════ INIT ════════════
-const API_BASE = 'https://api.edotec.ro';
-let _apiToken = null;
-
-async function getApiToken() {
-  if (_apiToken) return _apiToken;
-  try {
-    const r = await fetch(API_BASE + '/token');
-    const d = await r.json();
-    _apiToken = d.token;
-    return _apiToken;
-  } catch(e) { return null; }
-}
-
-async function loadConfiguratorData() {
-  const token = await getApiToken();
-  if (!token) { console.error('API token unavailable'); return false; }
-  const headers = { 'Authorization': 'Bearer ' + token };
-  try {
-    const [carsRes, prodsRes, surfRes] = await Promise.all([
-      fetch(API_BASE + '/cars', { headers }),
-      fetch(API_BASE + '/products', { headers }),
-      fetch(API_BASE + '/surfaces', { headers })
-    ]);
-    const carsData = await carsRes.json();
-    const prodsData = await prodsRes.json();
-    const surfData = await surfRes.json();
-    // Inject into global vars
-    Object.assign(carDB, carsData);
-    Object.assign(prods, prodsData);
-    Object.assign(surfaces, surfData.surfaces || surfData);
-    if (surfData.bcOrder) bcOrder.push(...surfData.bcOrder);
-    return true;
-  } catch(e) { console.error('API load error:', e); return false; }
-}
-
-(async function(){
-  // Load data from API first
-  const sb=document.getElementById("sel-brand");
-  sb.innerHTML='<option value="">Se încarcă...</option>';
-  await loadConfiguratorData();
+(function(){
   fetchBNR();
   initDealerMode();
   // Dezactiveaza pinii la start (propulsion nesetat)
   setTimeout(applyPinDisabledState, 50);
-  sb.innerHTML='<option value="">- marcă -</option>';
+  const sb=document.getElementById("sel-brand");
   Object.keys(carDB).sort((a,b)=>a.localeCompare(b,'ro',{sensitivity:'base'})).forEach(b=>{const o=document.createElement("option");o.value=b;o.textContent=b;sb.appendChild(o);});
   // right-col e acum drawer - controlat manual
   // Initializare sesiune persistenta
@@ -4939,7 +5148,7 @@ function renderPopPkgStep2(){
       <div style="font-size:10px;color:${sel?'rgba(255,255,255,.8)':'#777'};margin-bottom:8px;line-height:1.3">${qd.desc.replace(/<[^>]+>/g,'').slice(0,60)}…</div>
       <div style="background:${sel?'rgba(255,255,255,.25)':col};border-radius:8px;padding:6px 10px;text-align:center">
         <span style="font-size:16px;font-weight:900;color:#fff">${ron(r.totalCost)} RON</span>
-        <div class="dealer-only" style="font-size:9px;class="superadmin-only" style="display:none">~${r.totalArea.toFixed(1)} m² materiale</div>
+        <div class="dealer-only" style="font-size:9px;color:rgba(255,255,255,.8)">~${r.totalArea.toFixed(1)} m² materiale</div>
       <div style="font-size:9px;color:rgba(255,255,255,.75);margin-top:5px;background:rgba(0,0,0,.12);border-radius:5px;padding:3px 7px">
         ${ (()=>{
           const wKg=calcWeightFromProductTotals(r.productTotals); if(!wKg) return '';
@@ -4980,10 +5189,6 @@ function renderPopPkgStep2(){
 }
 
 function selectPopPkgQ(q){
-  // TASK 2: URL unic per pachet selectat
-  var _pachetSlugPop = q === 'ev_elite' ? 'ev-elite' : q;
-  window._lastSelectedPachet = _pachetSlugPop;
-  history.pushState({pachet: _pachetSlugPop}, '', window.location.pathname + '?pachet=' + _pachetSlugPop);
   window._popPkgQ=q;
   addPopPkgToCart();
 }
@@ -5366,7 +5571,7 @@ function renderRoofSunroofStep(){
       <div style="text-align:right;flex-shrink:0">
         <div style="font-size:11px;font-weight:800;color:${sel?'var(--red)':'#666'};background:${sel?'#fff0ee':'var(--gray)'};
           padding:3px 8px;border-radius:20px">${o.badge}</div>
-        <div class="superadmin-only" style="font-size:10px;color:var(--muted);margin-top:3px" class="superadmin-only">~${area} m²</div>
+        <div class="dealer-only" style="font-size:10px;color:var(--muted);margin-top:3px">~${area} m²</div>
       </div>
     </div>`;
   });
@@ -5456,7 +5661,7 @@ function renderStep2(){
       color:#e67e22;background:#fffbf0;border:1px solid #f0c030;border-radius:20px;padding:1px 7px">
       🔲 ${label}</span>`;
   }
-  let h=`<p class="zm-subtitle"><strong>${zoneNames[currentZone]}</strong>${sunroofNote} - ${currentLayers} strat${currentLayers>1?"uri":""}<span class="superadmin-only"> · suprafață ~${area.toFixed(1)} m²</span></p>`;
+  let h=`<p class="zm-subtitle"><strong>${zoneNames[currentZone]}</strong>${sunroofNote} - ${currentLayers} strat${currentLayers>1?"uri":""}<span class="dealer-only"> · suprafață ~${area.toFixed(1)} m²</span></p>`;
 
   // ── Banner upgrade EV Blue - vizibil în step 2 (alegere calitate)
   if(propulsion==='ev'){
@@ -5590,7 +5795,7 @@ function renderMatPreview(){
       <div>
         <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6e6e73;margin-bottom:2px">${t('layerN')} ${idx+1}</div>
         <div class="mat-name">${p.name}</div>
-        <div class="mat-detail">${p.brand}<span class="superadmin-only"> · ${sheets} coli · ${p.m2}m²/coală · acoperire ${Math.round(l.c*100)}%</span></div>
+        <div class="mat-detail">${p.brand}<span class="dealer-only"> · ${sheets} coli · ${p.m2}m²/coală · acoperire ${Math.round(l.c*100)}%</span></div>
       </div>
       <div class="mat-cost">${ron(cost)} RON</div>
     </div>`;
@@ -5600,10 +5805,6 @@ function renderMatPreview(){
 }
 
 function selectQuality(q){
-  // TASK 2: URL unic per pachet selectat (la selectia materialelor din zona modala)
-  var _pachetSlugZone = q === 'ev_elite' ? 'ev-elite' : q;
-  window._lastSelectedPachet = _pachetSlugZone;
-  history.replaceState({pachet: _pachetSlugZone}, '', window.location.pathname + '?pachet=' + _pachetSlugZone + (window.location.hash || ''));
   currentQuality=q;
   basicSubMode="full";
   if(isPartialApplicable()){
@@ -6018,9 +6219,6 @@ function closeCartDrawer(){
   document.getElementById('drawer-overlay').classList.remove('show');
 }
 function openCart(){
-  // TASK 1: URL tracking — Pas 2: Coș
-  var _pachetParam = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
-  history.pushState({step:'cart'}, '', window.location.pathname + _pachetParam + '#cart');
   track('cart_opened',{items:cartItems.length,value:cartItems.reduce((s,i)=>s+i.total,0)});
   const n=cartItems.length;
   const total=cartItems.reduce((s,i)=>s+i.total,0);
@@ -6046,7 +6244,7 @@ function openCart(){
               <span class="cart-item-del" onclick="removeZone('${it.id}');renderCartModal()">🗑</span>
             </div>
           </div>
-          <div class="cart-item-det">${it.layers!=="-"?it.layers+" "+t('straturiStr')+" · ":""}${it.quality}<span class="superadmin-only">${it.area>0?" · ~"+it.area.toFixed(1)+" m²":""}</span></div>
+          <div class="cart-item-det">${it.layers!=="-"?it.layers+" "+t('straturiStr')+" · ":""}${it.quality}<span class="dealer-only">${it.area>0?" · ~"+it.area.toFixed(1)+" m²":""}</span></div>
           <div class="cart-item-det" style="font-weight:700;color:#6b625c">${getVehicleDisplayName(it)}</div>
           ${it.lines&&it.lines.length?(()=>{
             let stratIdx=0;
@@ -6131,14 +6329,7 @@ function openCart(){
   document.getElementById("cart-modal-bg").classList.add("show");
 }
 function renderCartModal(){openCart();}
-function closeCart(e){
-  if(!e||e.target===document.getElementById("cart-modal-bg")){
-    document.getElementById("cart-modal-bg").classList.remove("show");
-    // Revenim la #configurator la inchidere cos
-    var _pachetCartNow = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
-    history.pushState({step:'configurator'}, '', window.location.pathname + _pachetCartNow + '#configurator');
-  }
-}
+function closeCart(e){if(!e||e.target===document.getElementById("cart-modal-bg"))document.getElementById("cart-modal-bg").classList.remove("show");}
 
 // ════════════ PRO / EXTRA SHEETS ════════════
 let proQty={};Object.values(prods).forEach(p=>proQty[p.id]=0);
@@ -6164,7 +6355,7 @@ function renderProList(){
       h+=`<div style="display:flex;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);gap:8px">
         <div style="flex:1">
           <div style="font-size:12px;font-weight:700">${p.name}</div>
-          <div style="font-size:10px;color:var(--muted)">${p.type}<span class="superadmin-only"> · ${p.m2}m²/coală</span> · ${ron(pr)} RON</div>
+          <div style="font-size:10px;color:var(--muted)">${p.type}<span class="dealer-only"> · ${p.m2}m²/coală</span> · ${ron(pr)} RON</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px">
           <button onclick="chgPro('${id}',-1)" style="width:26px;height:26px;border:1.5px solid var(--border);border-radius:6px;background:#fff;cursor:pointer;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">-</button>
@@ -6362,9 +6553,6 @@ function addZoneToCartTrunk(skipCarCheck, forceReplace){
 
 // ════════════ CHECKOUT ════════════
 function openCheckout(){
-  // TASK 1: URL tracking — Pas 3: Completare date
-  var _pachetParam2 = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
-  history.pushState({step:'checkout'}, '', window.location.pathname + _pachetParam2 + '#checkout');
   track('checkout_started',{car:`${selBrand} ${selModel} ${selYear}`,propulsion,value:cartItems.reduce((s,i)=>s+i.total,0),items:cartItems.length});
   if(!cartItems.length){showToast(t('toastEmptyCart'));return;}
   trackEvent('checkout_open',{items:cartItems.length,car:`${selBrand||''} ${selModel||''}`.trim()});
@@ -6393,18 +6581,9 @@ function submitFinalOrder(){
 
 let _orderFinalized=false;
 function closeCheckout(e){
-  if(_orderFinalized){
-    document.getElementById("checkout-bg").classList.remove("show");
-    _orderFinalized=false;
-    // Revenim la #configurator dupa confirmare
-    history.pushState({step:'configurator'}, '', window.location.pathname + '#configurator');
-    return;
-  }
+  if(_orderFinalized){document.getElementById("checkout-bg").classList.remove("show");_orderFinalized=false;return;}
   if(!e||e.target===document.getElementById("checkout-bg")){
     document.getElementById("checkout-bg").classList.remove("show");
-    // Revenim la #configurator la inchidere checkout
-    var _pachetNow = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
-    history.pushState({step:'configurator'}, '', window.location.pathname + _pachetNow + '#configurator');
     if(window.innerWidth>=900&&configModeChoice!=='manual'){
       configModeChoice='manual';
       updateConfigModeUI();
@@ -7279,27 +7458,6 @@ function finalizeOrder(customer){
     `TOTAL: ${grandTotal} RON\n\n`+
     `Detalii complete în PDF-ul atașat (generat în browser).`
   );
-  // TASK 1: URL tracking — Pas 4: Confirmare comandă
-  var _pachetParamFinal = window._lastSelectedPachet ? '?pachet=' + window._lastSelectedPachet : '';
-  history.pushState({step:'order-confirmation'}, '', window.location.pathname + _pachetParamFinal + '#order-confirmation');
-  // Snapshot cart items înainte de golire (pentru tracking)
-  var _trackingCartItems = cartItems.slice();
-  var _trackingGrandTotal = grandTotal || 0;
-  // Meta Pixel Purchase event (dacă fbq e disponibil)
-  try {
-    if(typeof fbq === 'function') {
-      fbq('track', 'Purchase', {value: _trackingGrandTotal, currency: 'RON'});
-    }
-  } catch(e) { /* fbq not loaded */ }
-  // GA4 purchase event
-  try {
-    gtag('event', 'purchase', {
-      transaction_id: Date.now().toString(),
-      value: _trackingGrandTotal,
-      currency: 'RON',
-      items: _trackingCartItems.map(function(it){ return {item_id: it.zone, item_name: it.zoneName, price: it.total}; })
-    });
-  } catch(e) { /* gtag error */ }
   // Blocheaza inchiderea cu click pe backdrop + goleste cosul
   _orderFinalized=true;
   cartItems=[];
@@ -7473,7 +7631,7 @@ function showFullPackage(targetId){
     <div style="text-align:center;margin-bottom:16px">
       <div style="font-size:22px;font-weight:800;color:#1a1a1a">${t('fpTitle')}</div>
       ${carLabel?`<div style="font-size:13px;color:#888;margin-top:3px">${carLabel}</div>`:''}
-      <div class="dealer-only" class="superadmin-only" style="font-size:12px;color:#d63031;font-weight:700;margin-top:5px">~${totalArea} m² suprafață totală</div>
+      <div class="dealer-only" style="font-size:12px;color:#d63031;font-weight:700;margin-top:5px">~${totalArea} m² suprafață totală</div>
     </div>
     <div style="background:#f0f4ff;border:1px solid #c8d8f8;border-radius:10px;padding:9px 12px;
       margin-bottom:14px;font-size:11px;color:#3a5080;line-height:1.5;text-align:center">
@@ -7579,12 +7737,12 @@ function showFullPackage(targetId){
     html+=`<tr style="border-top:1px solid #f5f5f5">
       <td style="padding:4px 6px;color:#333">${z.label}</td>
       <td style="text-align:center;color:#999">${z.layers}</td>
-      ${document.body.classList.contains('superadmin-mode')?`<td style="text-align:right;color:#555;font-weight:600">${area.toFixed(2)} m²</td>`:'<td></td>'}
+      <td style="text-align:right;color:#555;font-weight:600">${area.toFixed(2)} m²</td>
     </tr>`;
   });
   html+=`<tr style="border-top:2px solid #eee;font-weight:800">
       <td style="padding:5px 6px;color:#d63031">TOTAL</td><td></td>
-      ${document.body.classList.contains('superadmin-mode')?`<td style="text-align:right;color:#d63031">~${totalArea} m²</td>`:'<td></td>'}
+      <td style="text-align:right;color:#d63031">~${totalArea} m²</td>
     </tr></table>
   </details>
   <p style="font-size:10px;color:#ccc;text-align:center">
@@ -7603,10 +7761,6 @@ function showFullPackage(targetId){
 }
 
 function selectPkgQuality(q){
-  // TASK 2: URL unic per pachet selectat
-  var _pachetSlug = q === 'ev_elite' ? 'ev-elite' : q;
-  window._lastSelectedPachet = _pachetSlug;
-  history.pushState({pachet: _pachetSlug}, '', window.location.pathname + '?pachet=' + _pachetSlug);
   const colors={basic:'#2980b9',pro:'#27ae60',luxury:'#8e44ad',ev_elite:'#00897b'};
   const bgColors={basic:'#eef6ff',pro:'#f0fff4',luxury:'#f8f0ff',ev_elite:'#e0f2f1'};
   const prevQ=window._pkgSelQ;
